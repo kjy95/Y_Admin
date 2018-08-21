@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BFD0B19E212AEE84002B94D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD0B19D212AEE84002B94D1 /* Foundation.framework */; };
 		BFD0B1B6212AF219002B94D1 /* Pods_atticYAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0064CD8B24175E3D76828B /* Pods_atticYAdmin.framework */; };
+		BFD0B1B8212C6E53002B94D1 /* Insert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B1B7212C6E53002B94D1 /* Insert.storyboard */; };
+		BFD0B1BB212C7344002B94D1 /* InsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1BA212C7344002B94D1 /* InsertViewController.swift */; };
 		BFF66145212ADE7000825968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF66144212ADE7000825968 /* AppDelegate.swift */; };
 		BFF66147212ADE7000825968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF66146212ADE7000825968 /* ViewController.swift */; };
 		BFF6614A212ADE7000825968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF66148212ADE7000825968 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 		26A1E6E41FC42CBAE0BB5574 /* Pods-atticYAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atticYAdmin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-atticYAdmin/Pods-atticYAdmin.debug.xcconfig"; sourceTree = "<group>"; };
 		7D0064CD8B24175E3D76828B /* Pods_atticYAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_atticYAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD0B19D212AEE84002B94D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BFD0B1B7212C6E53002B94D1 /* Insert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Insert.storyboard; sourceTree = "<group>"; };
+		BFD0B1BA212C7344002B94D1 /* InsertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertViewController.swift; sourceTree = "<group>"; };
 		BFF66141212ADE7000825968 /* atticYAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = atticYAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF66144212ADE7000825968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF66146212ADE7000825968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BFD0B1B9212C6EE5002B94D1 /* Insert */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0B1B7212C6E53002B94D1 /* Insert.storyboard */,
+				BFD0B1BA212C7344002B94D1 /* InsertViewController.swift */,
+			);
+			path = Insert;
+			sourceTree = "<group>";
+		};
 		BFF66138212ADE7000825968 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +99,7 @@
 		BFF66143212ADE7000825968 /* atticYAdmin */ = {
 			isa = PBXGroup;
 			children = (
+				BFD0B1B9212C6EE5002B94D1 /* Insert */,
 				BFF66159212ADEE200825968 /* GoogleService-Info.plist */,
 				BFF66144212ADE7000825968 /* AppDelegate.swift */,
 				BFF66146212ADE7000825968 /* ViewController.swift */,
@@ -161,6 +175,7 @@
 				BFF66152212ADE7100825968 /* LaunchScreen.storyboard in Resources */,
 				BFF6615A212ADEE200825968 /* GoogleService-Info.plist in Resources */,
 				BFF6614F212ADE7100825968 /* Assets.xcassets in Resources */,
+				BFD0B1B8212C6E53002B94D1 /* Insert.storyboard in Resources */,
 				BFF6614A212ADE7000825968 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF6614D212ADE7000825968 /* atticYAdmin.xcdatamodeld in Sources */,
+				BFD0B1BB212C7344002B94D1 /* InsertViewController.swift in Sources */,
 				BFF66147212ADE7000825968 /* ViewController.swift in Sources */,
 				BFF66145212ADE7000825968 /* AppDelegate.swift in Sources */,
 			);
