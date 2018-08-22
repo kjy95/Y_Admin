@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		BFD0B19E212AEE84002B94D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD0B19D212AEE84002B94D1 /* Foundation.framework */; };
 		BFD0B1B6212AF219002B94D1 /* Pods_atticYAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0064CD8B24175E3D76828B /* Pods_atticYAdmin.framework */; };
-		BFD0B1B8212C6E53002B94D1 /* Insert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B1B7212C6E53002B94D1 /* Insert.storyboard */; };
-		BFD0B1BB212C7344002B94D1 /* InsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1BA212C7344002B94D1 /* InsertViewController.swift */; };
+		BFD0B1C6212D993E002B94D1 /* InsertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B1C5212D993E002B94D1 /* InsertView.xib */; };
+		BFD0B1C8212D9966002B94D1 /* InsertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1C7212D9966002B94D1 /* InsertView.swift */; };
 		BFF66145212ADE7000825968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF66144212ADE7000825968 /* AppDelegate.swift */; };
 		BFF66147212ADE7000825968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF66146212ADE7000825968 /* ViewController.swift */; };
 		BFF6614A212ADE7000825968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF66148212ADE7000825968 /* Main.storyboard */; };
@@ -24,8 +24,8 @@
 		26A1E6E41FC42CBAE0BB5574 /* Pods-atticYAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atticYAdmin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-atticYAdmin/Pods-atticYAdmin.debug.xcconfig"; sourceTree = "<group>"; };
 		7D0064CD8B24175E3D76828B /* Pods_atticYAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_atticYAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD0B19D212AEE84002B94D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		BFD0B1B7212C6E53002B94D1 /* Insert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Insert.storyboard; sourceTree = "<group>"; };
-		BFD0B1BA212C7344002B94D1 /* InsertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertViewController.swift; sourceTree = "<group>"; };
+		BFD0B1C5212D993E002B94D1 /* InsertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InsertView.xib; sourceTree = "<group>"; };
+		BFD0B1C7212D9966002B94D1 /* InsertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertView.swift; sourceTree = "<group>"; };
 		BFF66141212ADE7000825968 /* atticYAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = atticYAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF66144212ADE7000825968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF66146212ADE7000825968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,13 +69,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		BFD0B1B9212C6EE5002B94D1 /* Insert */ = {
+		BFD0B1BC212D3048002B94D1 /* Insert */ = {
 			isa = PBXGroup;
 			children = (
-				BFD0B1B7212C6E53002B94D1 /* Insert.storyboard */,
-				BFD0B1BA212C7344002B94D1 /* InsertViewController.swift */,
+				BFD0B1C5212D993E002B94D1 /* InsertView.xib */,
+				BFD0B1C7212D9966002B94D1 /* InsertView.swift */,
 			);
-			path = Insert;
+			name = Insert;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		BFF66138212ADE7000825968 = {
@@ -99,7 +100,7 @@
 		BFF66143212ADE7000825968 /* atticYAdmin */ = {
 			isa = PBXGroup;
 			children = (
-				BFD0B1B9212C6EE5002B94D1 /* Insert */,
+				BFD0B1BC212D3048002B94D1 /* Insert */,
 				BFF66159212ADEE200825968 /* GoogleService-Info.plist */,
 				BFF66144212ADE7000825968 /* AppDelegate.swift */,
 				BFF66146212ADE7000825968 /* ViewController.swift */,
@@ -173,9 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF66152212ADE7100825968 /* LaunchScreen.storyboard in Resources */,
+				BFD0B1C6212D993E002B94D1 /* InsertView.xib in Resources */,
 				BFF6615A212ADEE200825968 /* GoogleService-Info.plist in Resources */,
 				BFF6614F212ADE7100825968 /* Assets.xcassets in Resources */,
-				BFD0B1B8212C6E53002B94D1 /* Insert.storyboard in Resources */,
 				BFF6614A212ADE7000825968 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,11 +192,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-atticYAdmin/Pods-atticYAdmin-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,9 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF6614D212ADE7000825968 /* atticYAdmin.xcdatamodeld in Sources */,
-				BFD0B1BB212C7344002B94D1 /* InsertViewController.swift in Sources */,
 				BFF66147212ADE7000825968 /* ViewController.swift in Sources */,
 				BFF66145212ADE7000825968 /* AppDelegate.swift in Sources */,
+				BFD0B1C8212D9966002B94D1 /* InsertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
