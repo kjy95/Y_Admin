@@ -1,5 +1,5 @@
 //
-//  InsertView.swift
+//  ReadView.swift
 //  atticYAdmin
 //
 //  Created by 김지영 on 2018. 8. 22..
@@ -11,11 +11,11 @@ import Firebase
 import FirebaseDatabase
 
 
-class InsertView: UIView {
+class ReadView: UIView {
     
-    private let xibName = "InsertView"
+    private let xibName = "ReadView"
     var ref: DatabaseReference!
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()

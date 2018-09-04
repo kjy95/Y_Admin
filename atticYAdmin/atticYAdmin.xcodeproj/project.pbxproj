@@ -11,6 +11,8 @@
 		BFD0B1B6212AF219002B94D1 /* Pods_atticYAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0064CD8B24175E3D76828B /* Pods_atticYAdmin.framework */; };
 		BFD0B1C6212D993E002B94D1 /* InsertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B1C5212D993E002B94D1 /* InsertView.xib */; };
 		BFD0B1C8212D9966002B94D1 /* InsertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1C7212D9966002B94D1 /* InsertView.swift */; };
+		BFD0B1CB212E8F3C002B94D1 /* ReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1CA212E8F3C002B94D1 /* ReadView.swift */; };
+		BFD0B1CD212E8F4B002B94D1 /* ReadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B1CC212E8F4B002B94D1 /* ReadView.xib */; };
 		BFF66145212ADE7000825968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF66144212ADE7000825968 /* AppDelegate.swift */; };
 		BFF66147212ADE7000825968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF66146212ADE7000825968 /* ViewController.swift */; };
 		BFF6614A212ADE7000825968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF66148212ADE7000825968 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 		BFD0B19D212AEE84002B94D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BFD0B1C5212D993E002B94D1 /* InsertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InsertView.xib; sourceTree = "<group>"; };
 		BFD0B1C7212D9966002B94D1 /* InsertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertView.swift; sourceTree = "<group>"; };
+		BFD0B1CA212E8F3C002B94D1 /* ReadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadView.swift; sourceTree = "<group>"; };
+		BFD0B1CC212E8F4B002B94D1 /* ReadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadView.xib; sourceTree = "<group>"; };
 		BFF66141212ADE7000825968 /* atticYAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = atticYAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF66144212ADE7000825968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF66146212ADE7000825968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,15 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		BFD0B1C9212E8F26002B94D1 /* Read */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0B1CA212E8F3C002B94D1 /* ReadView.swift */,
+				BFD0B1CC212E8F4B002B94D1 /* ReadView.xib */,
+			);
+			path = Read;
+			sourceTree = "<group>";
+		};
 		BFF66138212ADE7000825968 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +113,7 @@
 		BFF66143212ADE7000825968 /* atticYAdmin */ = {
 			isa = PBXGroup;
 			children = (
+				BFD0B1C9212E8F26002B94D1 /* Read */,
 				BFD0B1BC212D3048002B94D1 /* Insert */,
 				BFF66159212ADEE200825968 /* GoogleService-Info.plist */,
 				BFF66144212ADE7000825968 /* AppDelegate.swift */,
@@ -175,6 +189,7 @@
 			files = (
 				BFF66152212ADE7100825968 /* LaunchScreen.storyboard in Resources */,
 				BFD0B1C6212D993E002B94D1 /* InsertView.xib in Resources */,
+				BFD0B1CD212E8F4B002B94D1 /* ReadView.xib in Resources */,
 				BFF6615A212ADEE200825968 /* GoogleService-Info.plist in Resources */,
 				BFF6614F212ADE7100825968 /* Assets.xcassets in Resources */,
 				BFF6614A212ADE7000825968 /* Main.storyboard in Resources */,
@@ -233,6 +248,7 @@
 			files = (
 				BFF6614D212ADE7000825968 /* atticYAdmin.xcdatamodeld in Sources */,
 				BFF66147212ADE7000825968 /* ViewController.swift in Sources */,
+				BFD0B1CB212E8F3C002B94D1 /* ReadView.swift in Sources */,
 				BFF66145212ADE7000825968 /* AppDelegate.swift in Sources */,
 				BFD0B1C8212D9966002B94D1 /* InsertView.swift in Sources */,
 			);
