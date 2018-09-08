@@ -1,17 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 
 <head>
   <!-- jQuery  -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- CDN -->
-  <script src="https://cdn.firebase.com/libs/firebaseui/3.4.0/firebaseui.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.0/firebaseui.css" />
-  <script src="https://www.gstatic.com/firebasejs/ui/3.4.0/firebase-ui-auth__ko.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/3.4.0/firebase-ui-auth.css" />
-  <!-- npm moduel -->
-  <script src="node_modules/firebaseui/dist/firebaseui.js"></script>
-  <link type="text/css" rel="stylesheet" href="node_modules/firebaseui/dist/firebaseui.css" />
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
 
   <!-- Starting the sign-in flow -->
   <meta charset="UTF-8">
@@ -25,12 +20,12 @@
 
 </head>
 
-<body> 
+<body>
 
-<!-- The surrounding HTML is left untouched by FirebaseUI.
-     Your app may use that space for branding, controls and other customizations.-->
-     <div id="firebaseui-auth-container"></div>
-
+  <!-- The surrounding HTML is left untouched by FirebaseUI.
+   Your app may use that space for branding, controls and other customizations.-->
+  <div id="firebaseui-auth-container"></div>
+  
   <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
   <script>
     // Initialize Firebase
@@ -52,31 +47,37 @@
     dbTestRef.on('child_added', function (data) {
       console.log(data.val())
     })
-     
-    // FirebaseUI config.
-    var uiConfig = {
-      signInSuccessUrl: 'insert.html',//'<url-to-redirect-to-on-success>',
-      signInOptions: [
-        // Leave the lines as is for the providers you want to offer your users.
-        firebase.auth.GoogleAuthProvider.PROVIDER_ID
-      ],
-      // tosUrl and privacyPolicyUrl accept either url string or a callback
-      // function.
-      // Terms of service url/callback.
-      tosUrl: 'insert.html',//'<your-tos-url>',
-      // Privacy policy url/callback.
-      privacyPolicyUrl: function () {
-        window.location.assign('insert.html');//'<your-privacy-policy-url>');
-      }
-    };
-
+    
     // Initialize the FirebaseUI Widget using Firebase.
     var ui = new firebaseui.auth.AuthUI(firebase.auth());
-    // The start method will wait until the DOM is loaded.
-    ui.start('#firebaseui-auth-container', uiConfig);
-    
-    
-
+  
+    // FirebaseUI config.
+    var uiConfig = {
+    callbacks: {
+    signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+      // User successfully signed in.
+      // Return type determines whether we continue the redirect automatically
+      // or whether we leave that to developer to handle.
+      console.log('sign in success');
+      console.log("uid"+authResult);
+      return true;
+    }
+  },
+  // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+  signInFlow: 'popup',
+  signInSuccessUrl: 'insert.html',//'<url-to-redirect-to-on-success>',
+  signInOptions: [
+    // Leave the lines as is for the providers you want to offer your users.
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID 
+  ],
+  // Terms of service url.
+  tosUrl: 'index.html',
+  // Privacy policy url.
+  privacyPolicyUrl: '<your-privacy-policy-url>'
+};
+ 
+      // The start method will wait until the DOM is loaded.
+  ui.start('#firebaseui-auth-container', uiConfig); 
     /*/쓰기
     database.ref('plants/').push({ "name": "테스트", "location": "seoul" })
     database.ref('plants/').push({ "name": "테스트2", "intro": "인삿말" })
@@ -104,9 +105,6 @@
       var credential = error.credential;
       // ...
     });*/
-  </script>
-  <script type="text/javascript">
-
   </script>
 </body>
 

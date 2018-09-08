@@ -68,3 +68,153 @@
 [info] ✔  hosting[atticyadmin]: Local server: http://localhost:5000
 [debug] [2018-09-06T02:31:08.068Z] Parsing function triggers
 [info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
+[debug] [2018-09-08T07:33:40.278Z] ----------------------------------------------------------------------
+[debug] [2018-09-08T07:33:40.280Z] Command:       /usr/local/bin/node /Users/gimjiyeong/.npm-global/bin/firebase serve
+[debug] [2018-09-08T07:33:40.280Z] CLI Version:   4.2.1
+[debug] [2018-09-08T07:33:40.280Z] Platform:      darwin
+[debug] [2018-09-08T07:33:40.280Z] Node Version:  v8.11.4
+[debug] [2018-09-08T07:33:40.281Z] Time:          Sat Sep 08 2018 16:33:40 GMT+0900 (KST)
+[debug] [2018-09-08T07:33:40.281Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-08T07:33:40.298Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-08T07:33:40.299Z] > authorizing via signed-in user
+[debug] [2018-09-08T07:33:40.300Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-09-08T07:33:40.301Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+
+[debug] [2018-09-08T07:33:40.613Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-08T07:33:40.623Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/atticyadmin  
+ 
+[debug] [2018-09-08T07:33:41.728Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-08T07:33:41.730Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/atticyadmin  
+ 
+[debug] [2018-09-08T07:33:42.786Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/gimjiyeong/Y_Admin/webAtticYAdmin'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-09-08T07:33:43.648Z] Fetching environment
+[debug] [2018-09-08T07:33:43.650Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/754529537193:getServerAppConfig  
+ 
+[debug] [2018-09-08T07:33:43.651Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/754529537193/clients/_:getWebAppConfig  
+ 
+[debug] [2018-09-08T07:33:44.251Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-08T07:33:44.252Z] Starting @google-cloud/functions-emulator
+[debug] [2018-09-08T07:33:44.352Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[info] i  hosting[atticyadmin]: Serving hosting files from: public
+[info] ✔  hosting[atticyadmin]: Local server: http://localhost:5005
+[debug] [2018-09-08T07:33:45.795Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
+[debug] [2018-09-08T10:32:04.232Z] ----------------------------------------------------------------------
+[debug] [2018-09-08T10:32:04.234Z] Command:       /usr/local/bin/node /Users/gimjiyeong/.npm-global/bin/firebase serve
+[debug] [2018-09-08T10:32:04.234Z] CLI Version:   4.2.1
+[debug] [2018-09-08T10:32:04.234Z] Platform:      darwin
+[debug] [2018-09-08T10:32:04.234Z] Node Version:  v8.11.4
+[debug] [2018-09-08T10:32:04.234Z] Time:          Sat Sep 08 2018 19:32:04 GMT+0900 (KST)
+[debug] [2018-09-08T10:32:04.234Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-08T10:32:04.247Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-08T10:32:04.247Z] > authorizing via signed-in user
+[debug] [2018-09-08T10:32:04.248Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-09-08T10:32:04.249Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+
+[debug] [2018-09-08T10:32:04.538Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-08T10:32:04.548Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/atticyadmin  
+ 
+[debug] [2018-09-08T10:32:06.220Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-08T10:32:06.222Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/atticyadmin  
+ 
+[debug] [2018-09-08T10:32:07.448Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/gimjiyeong/Y_Admin/webAtticYAdmin'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-09-08T10:32:08.248Z] Fetching environment
+[debug] [2018-09-08T10:32:08.251Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/754529537193:getServerAppConfig  
+ 
+[debug] [2018-09-08T10:32:08.251Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/754529537193/clients/_:getWebAppConfig  
+ 
+[debug] [2018-09-08T10:32:08.985Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-08T10:32:08.986Z] Starting @google-cloud/functions-emulator
+[debug] [2018-09-08T10:32:09.290Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[info] i  hosting[atticyadmin]: Serving hosting files from: public
+[info] ✔  hosting[atticyadmin]: Local server: http://localhost:5010
+[debug] [2018-09-08T10:32:10.534Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
+[debug] [2018-09-08T10:55:33.362Z] ----------------------------------------------------------------------
+[debug] [2018-09-08T10:55:33.364Z] Command:       /usr/local/bin/node /Users/gimjiyeong/.npm-global/bin/firebase serve
+[debug] [2018-09-08T10:55:33.364Z] CLI Version:   4.2.1
+[debug] [2018-09-08T10:55:33.364Z] Platform:      darwin
+[debug] [2018-09-08T10:55:33.364Z] Node Version:  v8.11.4
+[debug] [2018-09-08T10:55:33.365Z] Time:          Sat Sep 08 2018 19:55:33 GMT+0900 (KST)
+[debug] [2018-09-08T10:55:33.365Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-08T10:55:33.377Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-08T10:55:33.377Z] > authorizing via signed-in user
+[debug] [2018-09-08T10:55:33.379Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/atticyadmin  
+ 
+[debug] [2018-09-08T10:55:34.760Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-08T10:55:34.761Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/atticyadmin  
+ 
+[debug] [2018-09-08T10:55:35.982Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/gimjiyeong/Y_Admin/webAtticYAdmin'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-09-08T10:55:36.785Z] Fetching environment
+[debug] [2018-09-08T10:55:36.790Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/754529537193:getServerAppConfig  
+ 
+[debug] [2018-09-08T10:55:36.791Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/754529537193/clients/_:getWebAppConfig  
+ 
+[debug] [2018-09-08T10:55:37.336Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-08T10:55:37.337Z] Starting @google-cloud/functions-emulator
+[debug] [2018-09-08T10:55:37.387Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[info] i  hosting[atticyadmin]: Serving hosting files from: public
+[info] ✔  hosting[atticyadmin]: Local server: http://localhost:5015
+[debug] [2018-09-08T10:55:38.878Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
+[debug] [2018-09-08T12:09:20.446Z] ----------------------------------------------------------------------
+[debug] [2018-09-08T12:09:20.449Z] Command:       /usr/local/bin/node /Users/gimjiyeong/.npm-global/bin/firebase serve
+[debug] [2018-09-08T12:09:20.449Z] CLI Version:   4.2.1
+[debug] [2018-09-08T12:09:20.449Z] Platform:      darwin
+[debug] [2018-09-08T12:09:20.449Z] Node Version:  v8.11.4
+[debug] [2018-09-08T12:09:20.449Z] Time:          Sat Sep 08 2018 21:09:20 GMT+0900 (KST)
+[debug] [2018-09-08T12:09:20.449Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-08T12:09:20.461Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-08T12:09:20.461Z] > authorizing via signed-in user
+[debug] [2018-09-08T12:09:20.463Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-09-08T12:09:20.463Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+
+[debug] [2018-09-08T12:09:20.795Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-08T12:09:20.804Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/atticyadmin  
+ 
+[debug] [2018-09-08T12:09:22.876Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-08T12:09:22.878Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/atticyadmin  
+ 
+[debug] [2018-09-08T12:09:24.104Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/gimjiyeong/Y_Admin/webAtticYAdmin'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-09-08T12:09:24.866Z] Fetching environment
+[debug] [2018-09-08T12:09:24.871Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/754529537193:getServerAppConfig  
+ 
+[debug] [2018-09-08T12:09:24.872Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/754529537193/clients/_:getWebAppConfig  
+ 
+[debug] [2018-09-08T12:09:25.640Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-08T12:09:25.641Z] Starting @google-cloud/functions-emulator
+[debug] [2018-09-08T12:09:25.665Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[info] i  hosting[atticyadmin]: Serving hosting files from: public
+[info] ✔  hosting[atticyadmin]: Local server: http://localhost:5020
+[debug] [2018-09-08T12:09:27.213Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
