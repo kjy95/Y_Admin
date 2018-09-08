@@ -1,0 +1,70 @@
+[debug] [2018-09-06T02:30:07.736Z] ----------------------------------------------------------------------
+[debug] [2018-09-06T02:30:07.738Z] Command:       /usr/local/bin/node /Users/gimjiyeong/.npm-global/bin/firebase serve
+[debug] [2018-09-06T02:30:07.739Z] CLI Version:   4.2.1
+[debug] [2018-09-06T02:30:07.739Z] Platform:      darwin
+[debug] [2018-09-06T02:30:07.739Z] Node Version:  v8.11.4
+[debug] [2018-09-06T02:30:07.739Z] Time:          Thu Sep 06 2018 11:30:07 GMT+0900 (KST)
+[debug] [2018-09-06T02:30:07.740Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-06T02:30:07.755Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-06T02:30:07.755Z] > authorizing via signed-in user
+[debug] [2018-09-06T02:30:07.757Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-09-06T02:30:07.757Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+
+[debug] [2018-09-06T02:30:08.043Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-06T02:30:08.053Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/atticyadmin  
+ 
+[debug] [2018-09-06T02:30:09.138Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-06T02:30:09.140Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/atticyadmin  
+ 
+[debug] [2018-09-06T02:30:10.270Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/gimjiyeong/Y_Admin/webAtticYAdmin'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-09-06T02:30:11.155Z] Fetching environment
+[debug] [2018-09-06T02:30:11.400Z] Error: EACCES: permission denied, open '/Users/gimjiyeong/.config/gcloud/application_default_credentials.json'
+    at Object.fs.openSync (fs.js:646:18)
+    at Object.fs.writeFileSync (fs.js:1299:33)
+    at module.exports (/Users/gimjiyeong/.npm-global/lib/node_modules/firebase-tools/lib/ensureDefaultCredentials.js:44:6)
+    at FunctionsEmulator.start (/Users/gimjiyeong/.npm-global/lib/node_modules/firebase-tools/lib/functionsEmulator.js:118:3)
+    at Object.start (/Users/gimjiyeong/.npm-global/lib/node_modules/firebase-tools/lib/serve/functions.js:9:29)
+    at /Users/gimjiyeong/.npm-global/lib/node_modules/firebase-tools/lib/serve/index.js:17:21
+    at arrayMap (/Users/gimjiyeong/.npm-global/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:639:23)
+    at Function.map (/Users/gimjiyeong/.npm-global/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:9554:14)
+    at _serve (/Users/gimjiyeong/.npm-global/lib/node_modules/firebase-tools/lib/serve/index.js:15:7)
+    at Command._action (/Users/gimjiyeong/.npm-global/lib/node_modules/firebase-tools/commands/serve.js:48:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-09-06T02:31:03.309Z] ----------------------------------------------------------------------
+[debug] [2018-09-06T02:31:03.311Z] Command:       /usr/local/bin/node /Users/gimjiyeong/.npm-global/bin/firebase serve
+[debug] [2018-09-06T02:31:03.311Z] CLI Version:   4.2.1
+[debug] [2018-09-06T02:31:03.311Z] Platform:      darwin
+[debug] [2018-09-06T02:31:03.311Z] Node Version:  v8.11.4
+[debug] [2018-09-06T02:31:03.312Z] Time:          Thu Sep 06 2018 11:31:03 GMT+0900 (KST)
+[debug] [2018-09-06T02:31:03.312Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-06T02:31:03.325Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-06T02:31:03.325Z] > authorizing via signed-in user
+[debug] [2018-09-06T02:31:03.327Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/atticyadmin  
+ 
+[debug] [2018-09-06T02:31:04.346Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-06T02:31:04.347Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/atticyadmin  
+ 
+[debug] [2018-09-06T02:31:05.260Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/gimjiyeong/Y_Admin/webAtticYAdmin'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-09-06T02:31:05.991Z] Fetching environment
+[debug] [2018-09-06T02:31:05.994Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/754529537193:getServerAppConfig  
+ 
+[debug] [2018-09-06T02:31:05.994Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/754529537193/clients/_:getWebAppConfig  
+ 
+[debug] [2018-09-06T02:31:06.512Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-06T02:31:06.513Z] Starting @google-cloud/functions-emulator
+[debug] [2018-09-06T02:31:06.657Z] <<< HTTP RESPONSE 200
+[info] i  hosting[atticyadmin]: Serving hosting files from: public
+[info] ✔  hosting[atticyadmin]: Local server: http://localhost:5000
+[debug] [2018-09-06T02:31:08.068Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
