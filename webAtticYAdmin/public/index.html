@@ -25,7 +25,7 @@
   <!-- The surrounding HTML is left untouched by FirebaseUI.
    Your app may use that space for branding, controls and other customizations.-->
   <div id="firebaseui-auth-container"></div>
-  
+
   <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
   <script>
     // Initialize Firebase
@@ -47,23 +47,17 @@
     dbTestRef.on('child_added', function (data) {
       console.log(data.val())
     })
-    
+    var uid = ""
     // Initialize the FirebaseUI Widget using Firebase.
     var ui = new firebaseui.auth.AuthUI(firebase.auth());
   
     // FirebaseUI config.
     var uiConfig = {
-    callbacks: {
+  callbacks: {
     signInSuccessWithAuthResult: function(authResult, redirectUrl) {
       // User successfully signed in.
       // Return type determines whether we continue the redirect automatically
       // or whether we leave that to developer to handle.
-      firebase.auth().signInWithCustomToken(token).catch(function (error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // ...
-        });
       console.log('sign in success');
       console.log("uid"+authResult);
       return true;
@@ -81,9 +75,12 @@
   // Privacy policy url.
   privacyPolicyUrl: '<your-privacy-policy-url>'
 };
- 
+
+  
       // The start method will wait until the DOM is loaded.
-  ui.start('#firebaseui-auth-container', uiConfig); 
+  ui.start('#firebaseui-auth-container', uiConfig);
+  var user = firebase.auth().currentUser;
+  console.log("uid"+user);
     /*/쓰기
     database.ref('plants/').push({ "name": "테스트", "location": "seoul" })
     database.ref('plants/').push({ "name": "테스트2", "intro": "인삿말" })
