@@ -3,80 +3,111 @@
 <html>
 
 <head>
-
+    <!--bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!--bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-    <!-- The surrounding HTML is left untouched by FirebaseUI.
+    <table class="table" id="data-table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">이름</th>
+                <th scope="col">화분위치</th>
+                <th scope="col">설명</th>
+                <th scope="col">물주기</th>
+                <th scope="col">장소</th>
+            </tr>
+        </thead>
+        </table>
+            <!-- The surrounding HTML is left untouched by FirebaseUI.
    Your app may use that space for branding, controls and other customizations.-->
+            <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+            <script>
+                function writeUserData(userId) {
+                    firebase.database().ref('/' + userId + '/plant' + 2).set({
+                        "Explanation": {
+                            "Flowerpot": "3개월에 한번 분갈이 해주세요",
+                            "explanation": "어디서나 볼 수 있는 식물입니다",
+                            "frequency": "일주일에 한번 물을 주세요",
+                            "place": "호호호 좋아요"
+                        },
+                        "NumericalData": {
+                            "f_fall": 0,
+                            "f_spring": 2,
+                            "f_summer": 1,
+                            "f_winter": 2,
+                            "flowerpot": 3,
+                            "p_fall": 0,
+                            "p_spring": 1,
+                            "p_summer": 2,
+                            "p_winter": 2
+                        },
+                        "name": "avocado"
 
-    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
-    <script>
-        function writeUserData(userId) {
-            firebase.database().ref('/' + userId + '/plant' + 2).set({
-                "Explanation": {
-                    "Flowerpot": "3개월에 한번 분갈이 해주세요",
-                    "explanation": "어디서나 볼 수 있는 식물입니다",
-                    "frequency": "일주일에 한번 물을 주세요",
-                    "place": "양지가 좋아요"
-                },
-                "NumericalData": {
-                    "f_fall": 0,
-                    "f_spring": 2,
-                    "f_summer": 1,
-                    "f_winter": 2,
-                    "flowerpot": 3,
-                    "p_fall": 0,
-                    "p_spring": 1,
-                    "p_summer": 2,
-                    "p_winter": 2
-                },
-                "name": "avocado"
-
-            });
-        }
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyCxG3ejbKIM9ZDrktgJKvgKsXB9HHLftAQ",
-            authDomain: "atticyadmin.firebaseapp.com",
-            databaseURL: "https://atticyadmin.firebaseio.com",
-            projectId: "atticyadmin",
-            storageBucket: "atticyadmin.appspot.com",
-            messagingSenderId: "754529537193"
-        };
-        firebase.initializeApp(config);
-
-
-        firebase.auth().onAuthStateChanged(function (user) {
-            if (user) {
-                // User is signed in.
-
-                user.providerData.forEach(function (profile) {
-                    console.log("Sign-in provider: " + profile.providerId);
-                    console.log("  Provider-specific UID: " + profile.uid);
-                    console.log("  Name: " + profile.displayName);
-                    console.log("  Email: " + profile.email);
-                    console.log("  Photo URL: " + profile.photoURL);
-                    console.log("  uid: " + user.uid);
-
-                    // [데이터베이스] SDK 초기화
-                    var database = firebase.database();
-                    //읽기
-                    var dbTestRef = database.ref('/' + user.uid)
-                    dbTestRef.on('child_added', function (data) {
-                        console.log(data.val())
-                    })
-                    writeUserData(user.uid)
-                })
-            } else {
-                // No user is signed in.
-                console.log("  no");
-            }
-        });
+                    });
+                }
+                // Initialize Firebase
+                var config = {
+                    apiKey: "AIzaSyCxG3ejbKIM9ZDrktgJKvgKsXB9HHLftAQ",
+                    authDomain: "atticyadmin.firebaseapp.com",
+                    databaseURL: "https://atticyadmin.firebaseio.com",
+                    projectId: "atticyadmin",
+                    storageBucket: "atticyadmin.appspot.com",
+                    messagingSenderId: "754529537193"
+                };
+                firebase.initializeApp(config);
 
 
-    </script>
+                firebase.auth().onAuthStateChanged(function (user) {
+                    if (user) {
+                        // User is signed in.
+
+                        user.providerData.forEach(function (profile) {
+                            console.log("Sign-in provider: " + profile.providerId);
+                            console.log("  Provider-specific UID: " + profile.uid);
+                            console.log("  Name: " + profile.displayName);
+                            console.log("  Email: " + profile.email);
+                            console.log("  Photo URL: " + profile.photoURL);
+                            console.log("  uid: " + user.uid);
+
+                            // [데이터베이스] SDK 초기화
+                            var database = firebase.database();
+                            //읽기
+                            var dbTestRef = database.ref('/' + user.uid)
+                            dbTestRef.on('child_added', function (data) {
+                                var val = data.val();
+                                var content = '';
+
+                                content += '<tr>';
+                                content += '<th scope="row">' + val.name + '</td>';
+                                content += '<td>' + val.Explanation.Flowerpot + '</td>';
+                                content += '<td>' + val.Explanation.explanation + '</td>';
+                                content += '<td>' + val.Explanation.frequency + '</td>';
+                                content += '<td>' + val.Explanation.place + '</td>';
+                                content += '</tr>';
+
+                                $('#data-table').append(content);
+                                console.log(data.val())
+                            })
+
+                            writeUserData(user.uid)
+                        })
+                    } else {
+                        // No user is signed in.
+                        console.log("  no");
+                    }
+                });
+
+
+            </script>
 </body>
 
 </html>
