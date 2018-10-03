@@ -18,13 +18,28 @@
 <body>
 
     <!-- 입력폼.-->
-    <input type="text" class="form-control" placeholder="식물 이름">
-    <textarea class="form-control" rows="3"></textarea>
-    <input type="text"  class="form-control" rows="3" placeholder="식물 설명">
-    
-    <div>
+    <form action="insert.php" method="post" pageEncoding="UTF-8">
+        <span>식물추가</span>
+        <input type="text" name="plant_name" class="form-control" placeholder="식물 이름">
+        <input type="text" class="form-control" placeholder="식물 설명">
+        <textarea class="form-control" rows="3"></textarea>
         <div>
-            <span>봄</span>
+            <div>
+                <span>봄</span>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> 음지
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> 반음지
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> 양지
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> 반양지
+                </label>
+            </div>
+            <span>여름</span>
             <label class="checkbox-inline">
                 <input type="checkbox" id="inlineCheckbox1" value="option1"> 음지
             </label>
@@ -38,21 +53,9 @@
                 <input type="checkbox" id="inlineCheckbox3" value="option3"> 반양지
             </label>
         </div>
-        <span>여름</span>
-        <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox1" value="option1"> 음지
-        </label>
-        <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox2" value="option2"> 반음지
-        </label>
-        <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox3" value="option3"> 양지
-        </label>
-        <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox3" value="option3"> 반양지
-        </label>
-    </div>
+        <button type="submit" class="btn btn-outline-primary" >등록</button>
 
+    </form>
 
     <!-- 테이블.-->
     <table class="table" id="data-table">
