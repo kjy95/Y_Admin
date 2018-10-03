@@ -29,17 +29,17 @@
         <div>
             <div>
                 <span>봄</span>
-                <label class="checkbox-inline"name="f_spring">
+                <label class="checkbox-inline" name="f_spring">
                     <input type="checkbox" id="f_spring" value="option1"> 음지
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox2" value="option2"> 반음지
+                    <input type="checkbox" id="f_spring" value="option2"> 반음지
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox3" value="option3"> 양지
+                    <input type="checkbox" id="f_spring" value="option3"> 양지
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox3" value="option3"> 반양지
+                    <input type="checkbox" id="f_spring" value="option3"> 반양지
                 </label>
             </div>
             <span>여름</span>
@@ -62,19 +62,23 @@
     </form>
     <script> 
         $("form").submit(function () {
-            plant_name =  $('input[name=plant_name]').val() 
+            plant_name = $('input[name=plant_name]').val()
             Flowerpot = $("input[name=Flowerpot]").val()
             explanation = $("input[name=explanation]").val()
             frequency = $("input[name=frequency]").val()
             place = $("input[name=place]").val()
-           
+            f_spring = $("input:checkbox[name='f_spring']").is(":checked")
+            $('#f_spring:checked').each(function () {
+                alert($(this).val());
+            });
+
             console.log(f_spring)
             function writeUserData(userId) {
                 firebase.database().ref('/' + userId + '/' + plant_name).set({
                     "Explanation": {
                         "Flowerpot": Flowerpot,
                         "explanation": explanation,
-                        "frequency":frequency,
+                        "frequency": frequency,
                         "place": place
                     },
                     "NumericalData": {
@@ -92,19 +96,19 @@
 
                 });
             }
-            
-           
+
+
 
             firebase.auth().onAuthStateChanged(function (user) {
                 if (user) {
                     // User is signed in.
 
                     user.providerData.forEach(function (profile) {
-                        
+
 
                         writeUserData(user.uid)
                     })
-                } 
+                }
             });
             return true;
         });
