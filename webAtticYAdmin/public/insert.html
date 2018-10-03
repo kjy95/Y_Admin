@@ -18,16 +18,19 @@
 <body>
 
     <!-- 입력폼.-->
-    <form action="insert.php" method="post" pageEncoding="UTF-8">
+    <form action="javascript:alert('success!');" method="post" pageEncoding="UTF-8">
         <span>식물추가</span>
         <input type="text" name="plant_name" class="form-control" placeholder="식물 이름">
-        <input type="text" class="form-control" placeholder="식물 설명">
+        <input type="text" name="Flowerpot" class="form-control" placeholder="식물 설명- Flowerpot -ex- 3개월에 한번 분갈이 해주세요">
+        <input type="text" name="explanation" class="form-control" placeholder="식물 설명- explanation -ex- 어디서나 볼 수 있는 식물입니다">
+        <input type="text" name="frequency" class="form-control" placeholder="식물 설명- frequency -ex- 일주일에 한번 물을 주세요">
+        <input type="text" name="place" class="form-control" placeholder="식물 설명- place -ex- 양지가 좋아요">
         <textarea class="form-control" rows="3"></textarea>
         <div>
             <div>
                 <span>봄</span>
-                <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox1" value="option1"> 음지
+                <label class="checkbox-inline"name="f_spring">
+                    <input type="checkbox" id="f_spring" value="option1"> 음지
                 </label>
                 <label class="checkbox-inline">
                     <input type="checkbox" id="inlineCheckbox2" value="option2"> 반음지
@@ -53,9 +56,61 @@
                 <input type="checkbox" id="inlineCheckbox3" value="option3"> 반양지
             </label>
         </div>
-        <button type="submit" class="btn btn-outline-primary" >등록</button>
+        <button type="submit" class="btn btn-outline-primary">등록</button>
+        <span></span>
 
     </form>
+    <script> 
+        $("form").submit(function () {
+            plant_name =  $('input[name=plant_name]').val() 
+            Flowerpot = $("input[name=Flowerpot]").val()
+            explanation = $("input[name=explanation]").val()
+            frequency = $("input[name=frequency]").val()
+            place = $("input[name=place]").val()
+           
+            console.log(f_spring)
+            function writeUserData(userId) {
+                firebase.database().ref('/' + userId + '/' + plant_name).set({
+                    "Explanation": {
+                        "Flowerpot": Flowerpot,
+                        "explanation": explanation,
+                        "frequency":frequency,
+                        "place": place
+                    },
+                    "NumericalData": {
+                        "f_fall": 0,
+                        "f_spring": 2,
+                        "f_summer": 1,
+                        "f_winter": 2,
+                        "flowerpot": 3,
+                        "p_fall": 0,
+                        "p_spring": 1,
+                        "p_summer": 2,
+                        "p_winter": 2
+                    },
+                    "name": plant_name
+
+                });
+            }
+            
+           
+
+            firebase.auth().onAuthStateChanged(function (user) {
+                if (user) {
+                    // User is signed in.
+
+                    user.providerData.forEach(function (profile) {
+                        
+
+                        writeUserData(user.uid)
+                    })
+                } 
+            });
+            return true;
+        });
+
+    </script>
+
 
     <!-- 테이블.-->
     <table class="table" id="data-table">
