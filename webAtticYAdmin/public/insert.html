@@ -19,41 +19,78 @@
 
     <!-- 입력폼.-->
     <form action="javascript:alert('success!');" method="post" pageEncoding="UTF-8">
-        <span>식물추가</span>
+        <span>식물추가(이름은 필수로 적아야 함.)</span>
         <input type="text" name="plant_name" class="form-control" placeholder="식물 이름">
         <input type="text" name="Flowerpot" class="form-control" placeholder="식물 설명- Flowerpot -ex- 3개월에 한번 분갈이 해주세요">
         <input type="text" name="explanation" class="form-control" placeholder="식물 설명- explanation -ex- 어디서나 볼 수 있는 식물입니다">
         <input type="text" name="frequency" class="form-control" placeholder="식물 설명- frequency -ex- 일주일에 한번 물을 주세요">
         <input type="text" name="place" class="form-control" placeholder="식물 설명- place -ex- 양지가 좋아요">
-        <textarea class="form-control" rows="3"></textarea>
+        <div>분갈이 주기 숫자(실수)만 쓸 것(연 2회 이면 2 만 기입 2년에 1번이면 0.5기입).</div>
+        <input type="text" name="flowerpot" class="form-control" placeholder="flowerpot -ex- 0.5">
+        <div>물주기 주기 숫자(실수)만 쓸 것(월 2.3회 이면 2.3 만 기입).</div>
+        <input type="text" name="f_spring" class="form-control" placeholder=" 봄 -ex-2.3">
+        <input type="text" name="f_summer" class="form-control" placeholder="여름 -ex-2.3">
+        <input type="text" name="f_fall" class="form-control" placeholder=" 가을 -ex-2.3">
+        <input type="text" name="f_winter" class="form-control" placeholder="겨울 -ex-2.3">
+
         <div>
+            화분위치
             <div>
                 <span>봄</span>
-                <label class="checkbox-inline" name="f_spring">
-                    <input type="checkbox" id="f_spring" value="option1"> 음지
+                <label class="checkbox-inline" name="p_spring">
+                    <input type="checkbox" id="p_spring" value="음지"> 음지
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="f_spring" value="option2"> 반음지
+                    <input type="checkbox" id="p_spring" value="반음지"> 반음지
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="f_spring" value="option3"> 양지
+                    <input type="checkbox" id="p_spring" value="양지"> 양지
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="f_spring" value="option3"> 반양지
+                    <input type="checkbox" id="p_spring" value="반양지"> 반양지
                 </label>
             </div>
             <span>여름</span>
             <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox1" value="option1"> 음지
+                <input type="checkbox" id="p_summer" value="음지"> 음지
             </label>
             <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox2" value="option2"> 반음지
+                <input type="checkbox" id="p_summer" value="반음지"> 반음지
             </label>
             <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox3" value="option3"> 양지
+                <input type="checkbox" id="p_summer" value="양지"> 양지
             </label>
             <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox3" value="option3"> 반양지
+                <input type="checkbox" id="p_summer" value="반양지"> 반양지
+            </label>
+            <div>
+            <span>가을</span>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_fall" value="음지"> 음지
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_fall" value="반음지"> 반음지
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_fall" value="양지"> 양지
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_fall" value="반양지"> 반양지
+            </label>
+        </div>
+
+            <span>겨울</span>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_winter" value="음지"> 음지
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_winter" value="반음지"> 반음지
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_winter" value="양지"> 양지
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_winter" value="반양지"> 반양지
             </label>
         </div>
         <button type="submit" class="btn btn-outline-primary">등록</button>
@@ -63,34 +100,52 @@
     <script> 
         $("form").submit(function () {
             plant_name = $('input[name=plant_name]').val()
-            Flowerpot = $("input[name=Flowerpot]").val()
+            E_Flowerpot = $("input[name=Flowerpot]").val()
             explanation = $("input[name=explanation]").val()
             frequency = $("input[name=frequency]").val()
             place = $("input[name=place]").val()
-            f_spring = $("input:checkbox[name='f_spring']").is(":checked")
-            $('#f_spring:checked').each(function () {
-                alert($(this).val());
+            flowerpot =  $("input[name=flowerpot]").val()
+            f_spring = $("input[name=f_spring]").val()
+            f_fall =  $("input[name=f_fall]").val()
+            f_summer =  $("input[name=f_summer]").val()
+            f_winter =  $("input[name=f_winter]").val()
+            p_spring =""
+            p_fall = ""
+            p_summer = ""
+            p_winter = ""
+            $('#p_spring:checked').each(function () {
+                p_spring = p_spring +$(this).val() + "."
+            });
+            $('#p_fall:checked').each(function () {
+                p_fall = p_fall +$(this).val() + "."
+            });
+            $('#p_summer:checked').each(function () {
+                p_summer = p_summer +$(this).val() + "."
+            });
+            $('#p_winter:checked').each(function () {
+                p_winter = p_winter +$(this).val() + "."
+                alert(p_winter);
             });
 
             console.log(f_spring)
             function writeUserData(userId) {
                 firebase.database().ref('/' + userId + '/' + plant_name).set({
                     "Explanation": {
-                        "Flowerpot": Flowerpot,
+                        "Flowerpot": E_Flowerpot,
                         "explanation": explanation,
                         "frequency": frequency,
                         "place": place
                     },
                     "NumericalData": {
-                        "f_fall": 0,
-                        "f_spring": 2,
-                        "f_summer": 1,
-                        "f_winter": 2,
-                        "flowerpot": 3,
-                        "p_fall": 0,
-                        "p_spring": 1,
-                        "p_summer": 2,
-                        "p_winter": 2
+                        "f_fall": f_fall,
+                        "f_spring": f_spring,
+                        "f_summer": f_summer,
+                        "f_winter": f_winter,
+                        "flowerpot": flowerpot,//분갈이
+                        "p_fall": p_fall,
+                        "p_spring": p_spring,
+                        "p_summer": p_summer,
+                        "p_winter": p_winter
                     },
                     "name": plant_name
 
@@ -125,6 +180,15 @@
                 <th scope="col">설명</th>
                 <th scope="col">물주기</th>
                 <th scope="col">장소</th>
+                <th scope="col">물주기(봄)</th>
+                <th scope="col">물주기(여름)</th>
+                <th scope="col">물주기(가을)</th>
+                <th scope="col">물주기(겨울)</th>
+                <th scope="col">위치(봄)</th>
+                <th scope="col">위치(여름)</th>
+                <th scope="col">위치(가을)</th>
+                <th scope="col">위치(겨울)</th> 
+                <th scope="col">분갈이</th>
             </tr>
         </thead>
     </table>
@@ -132,29 +196,7 @@
    Your app may use that space for branding, controls and other customizations.-->
     <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
     <script>
-        function writeUserData(userId) {
-            firebase.database().ref('/' + userId + '/plant' + 2).set({
-                "Explanation": {
-                    "Flowerpot": "3개월에 한번 분갈이 해주세요",
-                    "explanation": "어디서나 볼 수 있는 식물입니다",
-                    "frequency": "일주일에 한번 물을 주세요",
-                    "place": "호호호 좋아요"
-                },
-                "NumericalData": {
-                    "f_fall": 0,
-                    "f_spring": 2,
-                    "f_summer": 1,
-                    "f_winter": 2,
-                    "flowerpot": 3,
-                    "p_fall": 0,
-                    "p_spring": 1,
-                    "p_summer": 2,
-                    "p_winter": 2
-                },
-                "name": "avocado"
-
-            });
-        }
+         
         // Initialize Firebase
         var config = {
             apiKey: "AIzaSyCxG3ejbKIM9ZDrktgJKvgKsXB9HHLftAQ",
@@ -193,6 +235,15 @@
                         content += '<td>' + val.Explanation.explanation + '</td>';
                         content += '<td>' + val.Explanation.frequency + '</td>';
                         content += '<td>' + val.Explanation.place + '</td>';
+                        content += '<td>' + val.NumericalData.f_spring + '</td>';
+                        content += '<td>' + val.NumericalData.f_summer + '</td>';
+                        content += '<td>' + val.NumericalData.f_fall + '</td>';
+                        content += '<td>' + val.NumericalData.f_winter + '</td>';
+                        content += '<td>' + val.NumericalData.p_spring + '</td>';
+                        content += '<td>' + val.NumericalData.p_summer + '</td>';
+                        content += '<td>' + val.NumericalData.p_fall + '</td>';
+                        content += '<td>' + val.NumericalData.p_winter + '</td>';
+                        content += '<td>' + val.NumericalData.flowerpot + '</td>';
                         content += '</tr>';
 
                         $('#data-table').append(content);
