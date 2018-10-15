@@ -1,6 +1,0 @@
-framework module Pods_atticYAdmin {
-  umbrella header "Pods-atticYAdmin-umbrella.h"
-
-  export *
-  module * { export * }
-}
