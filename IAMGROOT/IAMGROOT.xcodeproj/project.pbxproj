@@ -15,6 +15,8 @@
 		BFD0B1E82174DDC2002B94D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B1E62174DDC2002B94D1 /* LaunchScreen.storyboard */; };
 		BFD0B1F32174DDC2002B94D1 /* IAMGROOTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1F22174DDC2002B94D1 /* IAMGROOTTests.swift */; };
 		BFD0B1FE2174DDC2002B94D1 /* IAMGROOTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1FD2174DDC2002B94D1 /* IAMGROOTUITests.swift */; };
+		BFD0B20D21758C8E002B94D1 /* FBLoginConnectPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B20C21758C8E002B94D1 /* FBLoginConnectPageViewController.xib */; };
+		BFD0B20F21758E76002B94D1 /* FBLoginConnectPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B20E21758E76002B94D1 /* FBLoginConnectPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		BFD0B1F92174DDC2002B94D1 /* IAMGROOTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IAMGROOTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD0B1FD2174DDC2002B94D1 /* IAMGROOTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAMGROOTUITests.swift; sourceTree = "<group>"; };
 		BFD0B1FF2174DDC2002B94D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFD0B20C21758C8E002B94D1 /* FBLoginConnectPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FBLoginConnectPageViewController.xib; sourceTree = "<group>"; };
+		BFD0B20E21758E76002B94D1 /* FBLoginConnectPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLoginConnectPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		BFD0B1D92174DDBD002B94D1 /* IAMGROOT */ = {
 			isa = PBXGroup;
 			children = (
+				BFD0B20B21758C3D002B94D1 /* FBLogin */,
 				BFD0B1DA2174DDBE002B94D1 /* AppDelegate.swift */,
 				BFD0B1DC2174DDBE002B94D1 /* ViewController.swift */,
 				BFD0B1DE2174DDBE002B94D1 /* Main.storyboard */,
@@ -126,6 +131,15 @@
 				BFD0B1FF2174DDC2002B94D1 /* Info.plist */,
 			);
 			path = IAMGROOTUITests;
+			sourceTree = "<group>";
+		};
+		BFD0B20B21758C3D002B94D1 /* FBLogin */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0B20C21758C8E002B94D1 /* FBLoginConnectPageViewController.xib */,
+				BFD0B20E21758E76002B94D1 /* FBLoginConnectPageViewController.swift */,
+			);
+			path = FBLogin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +249,7 @@
 				BFD0B1E82174DDC2002B94D1 /* LaunchScreen.storyboard in Resources */,
 				BFD0B1E52174DDC2002B94D1 /* Assets.xcassets in Resources */,
 				BFD0B1E02174DDBE002B94D1 /* Main.storyboard in Resources */,
+				BFD0B20D21758C8E002B94D1 /* FBLoginConnectPageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD0B20F21758E76002B94D1 /* FBLoginConnectPageViewController.swift in Sources */,
 				BFD0B1E32174DDBE002B94D1 /* IAMGROOT.xcdatamodeld in Sources */,
 				BFD0B1DD2174DDBE002B94D1 /* ViewController.swift in Sources */,
 				BFD0B1DB2174DDBE002B94D1 /* AppDelegate.swift in Sources */,
