@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		139B5DDBFF756502E9D8051B /* Pods_IAMGROOT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6675C867C49AEE1A217A94D2 /* Pods_IAMGROOT.framework */; };
 		BFD0B1DB2174DDBE002B94D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1DA2174DDBE002B94D1 /* AppDelegate.swift */; };
 		BFD0B1DD2174DDBE002B94D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1DC2174DDBE002B94D1 /* ViewController.swift */; };
 		BFD0B1E02174DDBE002B94D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B1DE2174DDBE002B94D1 /* Main.storyboard */; };
@@ -17,6 +18,11 @@
 		BFD0B1FE2174DDC2002B94D1 /* IAMGROOTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1FD2174DDC2002B94D1 /* IAMGROOTUITests.swift */; };
 		BFD0B20D21758C8E002B94D1 /* FBLoginConnectPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B20C21758C8E002B94D1 /* FBLoginConnectPageViewController.xib */; };
 		BFD0B20F21758E76002B94D1 /* FBLoginConnectPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B20E21758E76002B94D1 /* FBLoginConnectPageViewController.swift */; };
+		BFD0B2112175A736002B94D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B2102175A736002B94D1 /* GoogleService-Info.plist */; };
+		BFD0B2122175A736002B94D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B2102175A736002B94D1 /* GoogleService-Info.plist */; };
+		BFD0B2132175A736002B94D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B2102175A736002B94D1 /* GoogleService-Info.plist */; };
+		BFDD096D2175B0D3009728C0 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFDD096C2175B0D3009728C0 /* FirebaseCore.framework */; };
+		BFDD096F2175B0DC009728C0 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFDD096E2175B0DC009728C0 /* FirebaseDatabase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		450B95E1968B62644A6501F2 /* Pods-IAMGROOT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IAMGROOT.release.xcconfig"; path = "Pods/Target Support Files/Pods-IAMGROOT/Pods-IAMGROOT.release.xcconfig"; sourceTree = "<group>"; };
+		6675C867C49AEE1A217A94D2 /* Pods_IAMGROOT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IAMGROOT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97DFE37831A87245F6D4C3AC /* Pods-IAMGROOT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IAMGROOT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IAMGROOT/Pods-IAMGROOT.debug.xcconfig"; sourceTree = "<group>"; };
 		BFD0B1D72174DDBD002B94D1 /* IAMGROOT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IAMGROOT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD0B1DA2174DDBE002B94D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD0B1DC2174DDBE002B94D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +62,9 @@
 		BFD0B1FF2174DDC2002B94D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFD0B20C21758C8E002B94D1 /* FBLoginConnectPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FBLoginConnectPageViewController.xib; sourceTree = "<group>"; };
 		BFD0B20E21758E76002B94D1 /* FBLoginConnectPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLoginConnectPageViewController.swift; sourceTree = "<group>"; };
+		BFD0B2102175A736002B94D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BFDD096C2175B0D3009728C0 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFDD096E2175B0DC009728C0 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFDD096F2175B0DC009728C0 /* FirebaseDatabase.framework in Frameworks */,
+				BFDD096D2175B0D3009728C0 /* FirebaseCore.framework in Frameworks */,
+				139B5DDBFF756502E9D8051B /* Pods_IAMGROOT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +95,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AC564BA1A6D012A681EE1BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97DFE37831A87245F6D4C3AC /* Pods-IAMGROOT.debug.xcconfig */,
+				450B95E1968B62644A6501F2 /* Pods-IAMGROOT.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A59D5E24E5CF66713D819684 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFDD096E2175B0DC009728C0 /* FirebaseDatabase.framework */,
+				BFDD096C2175B0D3009728C0 /* FirebaseCore.framework */,
+				6675C867C49AEE1A217A94D2 /* Pods_IAMGROOT.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BFD0B1CE2174DDBD002B94D1 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +121,8 @@
 				BFD0B1F12174DDC2002B94D1 /* IAMGROOTTests */,
 				BFD0B1FC2174DDC2002B94D1 /* IAMGROOTUITests */,
 				BFD0B1D82174DDBD002B94D1 /* Products */,
+				0AC564BA1A6D012A681EE1BA /* Pods */,
+				A59D5E24E5CF66713D819684 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +139,7 @@
 		BFD0B1D92174DDBD002B94D1 /* IAMGROOT */ = {
 			isa = PBXGroup;
 			children = (
+				BFD0B2102175A736002B94D1 /* GoogleService-Info.plist */,
 				BFD0B20B21758C3D002B94D1 /* FBLogin */,
 				BFD0B1DA2174DDBE002B94D1 /* AppDelegate.swift */,
 				BFD0B1DC2174DDBE002B94D1 /* ViewController.swift */,
@@ -149,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFD0B2022174DDC2002B94D1 /* Build configuration list for PBXNativeTarget "IAMGROOT" */;
 			buildPhases = (
+				5F9A92EC73CAFB45217EFED7 /* [CP] Check Pods Manifest.lock */,
 				BFD0B1D32174DDBD002B94D1 /* Sources */,
 				BFD0B1D42174DDBD002B94D1 /* Frameworks */,
 				BFD0B1D52174DDBD002B94D1 /* Resources */,
+				1FCD3A4407C5150503523DA2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +287,7 @@
 			files = (
 				BFD0B1E82174DDC2002B94D1 /* LaunchScreen.storyboard in Resources */,
 				BFD0B1E52174DDC2002B94D1 /* Assets.xcassets in Resources */,
+				BFD0B2112175A736002B94D1 /* GoogleService-Info.plist in Resources */,
 				BFD0B1E02174DDBE002B94D1 /* Main.storyboard in Resources */,
 				BFD0B20D21758C8E002B94D1 /* FBLoginConnectPageViewController.xib in Resources */,
 			);
@@ -257,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD0B2122175A736002B94D1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,10 +305,54 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD0B2132175A736002B94D1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FCD3A4407C5150503523DA2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IAMGROOT/Pods-IAMGROOT-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IAMGROOT/Pods-IAMGROOT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F9A92EC73CAFB45217EFED7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IAMGROOT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BFD0B1D32174DDBD002B94D1 /* Sources */ = {
@@ -448,6 +533,7 @@
 		};
 		BFD0B2032174DDC2002B94D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97DFE37831A87245F6D4C3AC /* Pods-IAMGROOT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +552,7 @@
 		};
 		BFD0B2042174DDC2002B94D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 450B95E1968B62644A6501F2 /* Pods-IAMGROOT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
