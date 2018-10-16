@@ -1,0 +1,8 @@
+{
+  "rules": { 
+      "$uid": {
+        ".read": "$uid == 'EP8HR2gkeGSH2RAQpEGbVglVh0J3'",
+        ".write": "$uid === auth.uid"
+      } 
+  }
+}
