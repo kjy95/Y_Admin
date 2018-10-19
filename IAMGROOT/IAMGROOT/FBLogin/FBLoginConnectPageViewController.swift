@@ -12,16 +12,19 @@ import Firebase
 import GoogleSignIn
 import FirebaseUI
 
-class FBLoginConnectPageViewController : UIViewController{ 
-  
+class FBLoginConnectPageViewController : UIViewController, GIDSignInUIDelegate {
+    @IBOutlet weak var signInButton: GIDSignInButton!
     override func viewDidLoad() {
-        super.viewDidLoad()
-
+    super.viewDidLoad()
+    GIDSignIn.sharedInstance().uiDelegate = self
+    GIDSignIn.sharedInstance().signIn()
+    
     }
     
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
     }
+    
     
 }

@@ -13,12 +13,12 @@ import Firebase
 import GoogleSignIn
 import FirebaseUI
 
-class ViewController: UIViewController, GIDSignInUIDelegate {
-    @IBOutlet weak var signInButton: GIDSignInButton!
+class ViewController: UIViewController {
     override func viewDidLoad() {
-        super.viewDidLoad()
-        GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().signIn()
+        super.viewDidLoad() 
+        let gameScene = UIStoryboard(name: "FBLoginConnectPageViewController", bundle:nil).instantiateViewController(withIdentifier: "FBLoginConnectPageViewController") as UIViewController
+        let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        appDelegate.window?.rootViewController = gameScene
         
     }
     
@@ -26,13 +26,5 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func application(_ app: UIApplication, open url: URL,
-                     options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
-        let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String?
-        if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
-            return true
-        }
-        // other URL handling goes here.
-        return false
-    }
+ 
 }
