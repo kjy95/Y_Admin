@@ -16,9 +16,9 @@ import FirebaseUI
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad() 
-        let gameScene = UIStoryboard(name: "FBLoginConnectPageViewController", bundle:nil).instantiateViewController(withIdentifier: "FBLoginConnectPageViewController") as UIViewController
+        let loginScene = UIStoryboard(name: "FBLoginConnectPageViewController", bundle:nil).instantiateViewController(withIdentifier: "FBLoginConnectPageViewController") as UIViewController
         let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
-        appDelegate.window?.rootViewController = gameScene
+        appDelegate.window?.rootViewController = loginScene
         
     }
     

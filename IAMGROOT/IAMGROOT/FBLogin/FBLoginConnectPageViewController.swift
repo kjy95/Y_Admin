@@ -15,9 +15,9 @@ import FirebaseUI
 class FBLoginConnectPageViewController : UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var signInButton: GIDSignInButton!
     override func viewDidLoad() {
-    super.viewDidLoad()
-    GIDSignIn.sharedInstance().uiDelegate = self
-    GIDSignIn.sharedInstance().signIn()
+        super.viewDidLoad()
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
     
     }
     
