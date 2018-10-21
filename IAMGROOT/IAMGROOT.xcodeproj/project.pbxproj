@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		139B5DDBFF756502E9D8051B /* Pods_IAMGROOT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6675C867C49AEE1A217A94D2 /* Pods_IAMGROOT.framework */; };
+		BF1DEAB6217C738F00EB818B /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1DEAB5217C738F00EB818B /* MainViewController.storyboard */; };
+		BF1DEAB8217C73A600EB818B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DEAB7217C73A600EB818B /* MainViewController.swift */; };
 		BFD0B1DB2174DDBE002B94D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1DA2174DDBE002B94D1 /* AppDelegate.swift */; };
 		BFD0B1DD2174DDBE002B94D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1DC2174DDBE002B94D1 /* ViewController.swift */; };
 		BFD0B1E02174DDBE002B94D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B1DE2174DDBE002B94D1 /* Main.storyboard */; };
@@ -67,6 +69,8 @@
 		450B95E1968B62644A6501F2 /* Pods-IAMGROOT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IAMGROOT.release.xcconfig"; path = "Pods/Target Support Files/Pods-IAMGROOT/Pods-IAMGROOT.release.xcconfig"; sourceTree = "<group>"; };
 		6675C867C49AEE1A217A94D2 /* Pods_IAMGROOT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IAMGROOT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DFE37831A87245F6D4C3AC /* Pods-IAMGROOT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IAMGROOT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IAMGROOT/Pods-IAMGROOT.debug.xcconfig"; sourceTree = "<group>"; };
+		BF1DEAB5217C738F00EB818B /* MainViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
+		BF1DEAB7217C73A600EB818B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BFD0B1D72174DDBD002B94D1 /* IAMGROOT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IAMGROOT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD0B1DA2174DDBE002B94D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD0B1DC2174DDBE002B94D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -312,6 +316,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BF1DEAB4217C736600EB818B /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				BF1DEAB5217C738F00EB818B /* MainViewController.storyboard */,
+				BF1DEAB7217C73A600EB818B /* MainViewController.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
 		BFD0B1CE2174DDBD002B94D1 = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD0B2102175A736002B94D1 /* GoogleService-Info.plist */,
+				BF1DEAB4217C736600EB818B /* MainView */,
 				BFD0B20B21758C3D002B94D1 /* FBLogin */,
 				BFD0B1DA2174DDBE002B94D1 /* AppDelegate.swift */,
 				BFD0B1DC2174DDBE002B94D1 /* ViewController.swift */,
@@ -488,6 +502,7 @@
 				BFD0B1E82174DDC2002B94D1 /* LaunchScreen.storyboard in Resources */,
 				BFD0B1E52174DDC2002B94D1 /* Assets.xcassets in Resources */,
 				BFD0B2112175A736002B94D1 /* GoogleService-Info.plist in Resources */,
+				BF1DEAB6217C738F00EB818B /* MainViewController.storyboard in Resources */,
 				BFD0B1E02174DDBE002B94D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,6 +641,7 @@
 				BFD0B1E32174DDBE002B94D1 /* IAMGROOT.xcdatamodeld in Sources */,
 				BFD0B1DD2174DDBE002B94D1 /* ViewController.swift in Sources */,
 				BFD0B1DB2174DDBE002B94D1 /* AppDelegate.swift in Sources */,
+				BF1DEAB8217C73A600EB818B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
