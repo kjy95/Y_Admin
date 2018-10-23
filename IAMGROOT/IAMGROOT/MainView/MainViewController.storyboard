@@ -74,11 +74,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvs-bE-okk">
+                                <rect key="frame" x="192" y="248" width="109" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="04Y-DT-0JM" eventType="touchUpInside" id="yDR-TG-5EN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tg-Rk-uhP"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="groot_main" id="CDR-AU-5SG"/>
+                    <connections>
+                        <outlet property="textfield1" destination="bwd-ep-iuz" id="3zf-j0-cWF"/>
+                        <outlet property="textfield2" destination="Liy-b5-gJq" id="HBO-xh-2cL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZa-ZR-Q6t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,6 +118,7 @@
                 <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U0D-X4-Q1a" customClass="MainTabBarController" customModule="IAMGROOT" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b0L-WX-GpG">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -120,6 +133,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="groot_main" width="350" height="350"/>
+        <image name="groot_main" width="88" height="88"/>
     </resources>
 </document>

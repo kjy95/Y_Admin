@@ -14,11 +14,17 @@ import GoogleSignIn
 import FirebaseUI
 
 class MainViewController : UIViewController {
+    @IBOutlet weak var textfield1: UITextField!
+    @IBOutlet weak var textfield2: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
+    @IBAction func buttonAction(_ sender: Any) {
+        let location: String = textfield1.text!
+        print(location)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
