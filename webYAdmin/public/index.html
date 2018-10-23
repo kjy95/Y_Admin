@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- jQuery  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- CDN -->
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+
+  <!-- Starting the sign-in flow -->
+  <meta charset="UTF-8">
+  <title>식물도감 관리자</title>
+  <!-- *******************************************************************************************
+     * TODO(DEVELOPER): Paste the initialization snippet from:
+     * Firebase Console > Overview > Add Firebase to your web app. *
+     ***************************************************************************************** -->
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.4.0/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.0/firebaseui.css" />
+
+</head>
+
+<body>
+
+  <!-- The surrounding HTML is left untouched by FirebaseUI.
+   Your app may use that space for branding, controls and other customizations.-->
+  <div id="firebaseui-auth-container"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCxG3ejbKIM9ZDrktgJKvgKsXB9HHLftAQ",
+      authDomain: "atticyadmin.firebaseapp.com",
+      databaseURL: "https://atticyadmin.firebaseio.com",
+      projectId: "atticyadmin",
+      storageBucket: "atticyadmin.appspot.com",
+      messagingSenderId: "754529537193"
+    };
+    firebase.initializeApp(config);
+
+
+    // [데이터베이스] SDK 초기화
+    var database = firebase.database();
+    //읽기
+    var dbTestRef = database.ref('plants/')
+    dbTestRef.on('child_added', function (data) {
+      console.log(data.val())
+    })
+    var uid = ""
+    // Initialize the FirebaseUI Widget using Firebase.
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+  
+    // FirebaseUI config.
+    var uiConfig = {
+  callbacks: {
+    signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+      // User successfully signed in.
+      // Return type determines whether we continue the redirect automatically
+      // or whether we leave that to developer to handle.
+      console.log('sign in success');
+      console.log("uid"+authResult);
+      return true;
+    }
+  },
+  // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+  signInFlow: 'popup',
+  signInSuccessUrl: 'insert.html',//'<url-to-redirect-to-on-success>',
+  signInOptions: [
+    // Leave the lines as is for the providers you want to offer your users.
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID 
+  ],
+  // Terms of service url.
+  tosUrl: 'index.html',
+  // Privacy policy url.
+  privacyPolicyUrl: '<your-privacy-policy-url>'
+};
+
+  
+      // The start method will wait until the DOM is loaded.
+  ui.start('#firebaseui-auth-container', uiConfig);
+  var user = firebase.auth().currentUser;
+  console.log("uid"+user);
+    /*/쓰기
+    database.ref('plants/').push({ "name": "테스트", "location": "seoul" })
+    database.ref('plants/').push({ "name": "테스트2", "intro": "인삿말" })
+    */
+
+    /*/ 구글 인증 기능 추가
+    var provider = new firebase.auth.GoogleAuthProvider();
+
+    // 인증하기
+    firebase.auth().signInWithPopup(provider).then(function (result) {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = result.credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+
+      console.log(user)		// 인증 후 어떤 데이터를 받아오는지 확인해보기 위함.
+      // ...
+    }).catch(function (error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
+    });*/
+  </script>
+</body>
+
+</html>

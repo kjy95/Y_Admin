@@ -1,0 +1,263 @@
+<!-- eqaaQ3iCXrcvELEDU1LwtPl1rI22 -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!--bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!--bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- 입력폼.-->
+    <form action="javascript:alert('success!');" method="post" pageEncoding="UTF-8">
+        <span>식물추가(이름은 필수로 적아야 함.)</span>
+        <input type="text" name="plant_name" class="form-control" placeholder="식물 이름">
+        <input type="text" name="Flowerpot" class="form-control" placeholder="식물 설명- Flowerpot -ex- 3개월에 한번 분갈이 해주세요">
+        <input type="text" name="explanation" class="form-control" placeholder="식물 설명- explanation -ex- 어디서나 볼 수 있는 식물입니다">
+        <input type="text" name="frequency" class="form-control" placeholder="식물 설명- frequency -ex- 일주일에 한번 물을 주세요">
+        <input type="text" name="place" class="form-control" placeholder="식물 설명- place -ex- 양지가 좋아요">
+        <div>분갈이 주기 숫자(실수)만 쓸 것(연 2회 이면 2 만 기입 2년에 1번이면 0.5기입).</div>
+        <input type="text" name="flowerpot" class="form-control" placeholder="flowerpot -ex- 0.5">
+        <div>물주기 주기 숫자(실수)만 쓸 것(월 2.3회 이면 2.3 만 기입).</div>
+        <input type="text" name="f_spring" class="form-control" placeholder=" 봄 -ex-2.3">
+        <input type="text" name="f_summer" class="form-control" placeholder="여름 -ex-2.3">
+        <input type="text" name="f_fall" class="form-control" placeholder=" 가을 -ex-2.3">
+        <input type="text" name="f_winter" class="form-control" placeholder="겨울 -ex-2.3">
+
+        <div>
+            화분위치
+            <div>
+                <span>봄</span>
+                <label class="checkbox-inline" name="p_spring">
+                    <input type="checkbox" id="p_spring" value="음지"> 음지
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="p_spring" value="반음지"> 반음지
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="p_spring" value="양지"> 양지
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="p_spring" value="반양지"> 반양지
+                </label>
+            </div>
+            <span>여름</span>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_summer" value="음지"> 음지
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_summer" value="반음지"> 반음지
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_summer" value="양지"> 양지
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_summer" value="반양지"> 반양지
+            </label>
+            <div>
+            <span>가을</span>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_fall" value="음지"> 음지
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_fall" value="반음지"> 반음지
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_fall" value="양지"> 양지
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_fall" value="반양지"> 반양지
+            </label>
+        </div>
+
+            <span>겨울</span>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_winter" value="음지"> 음지
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_winter" value="반음지"> 반음지
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_winter" value="양지"> 양지
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="p_winter" value="반양지"> 반양지
+            </label>
+        </div>
+        <button type="submit" class="btn btn-outline-primary">등록</button>
+        <span></span>
+
+    </form>
+    <script> 
+        $("form").submit(function () {
+            plant_name = $('input[name=plant_name]').val()
+            E_Flowerpot = $("input[name=Flowerpot]").val()
+            explanation = $("input[name=explanation]").val()
+            frequency = $("input[name=frequency]").val()
+            place = $("input[name=place]").val()
+            flowerpot =  $("input[name=flowerpot]").val()
+            f_spring = $("input[name=f_spring]").val()
+            f_fall =  $("input[name=f_fall]").val()
+            f_summer =  $("input[name=f_summer]").val()
+            f_winter =  $("input[name=f_winter]").val()
+            p_spring =""
+            p_fall = ""
+            p_summer = ""
+            p_winter = ""
+            $('#p_spring:checked').each(function () {
+                p_spring = p_spring +$(this).val() + "."
+            });
+            $('#p_fall:checked').each(function () {
+                p_fall = p_fall +$(this).val() + "."
+            });
+            $('#p_summer:checked').each(function () {
+                p_summer = p_summer +$(this).val() + "."
+            });
+            $('#p_winter:checked').each(function () {
+                p_winter = p_winter +$(this).val() + "."
+            });
+
+            console.log(f_spring)
+            function writeUserData(userId) {
+                firebase.database().ref('/' + userId + '/' + plant_name).set({
+                    "Explanation": {
+                        "Flowerpot": E_Flowerpot,
+                        "explanation": explanation,
+                        "frequency": frequency,
+                        "place": place
+                    },
+                    "NumericalData": {
+                        "f_fall": f_fall,
+                        "f_spring": f_spring,
+                        "f_summer": f_summer,
+                        "f_winter": f_winter,
+                        "flowerpot": flowerpot,//분갈이
+                        "p_fall": p_fall,
+                        "p_spring": p_spring,
+                        "p_summer": p_summer,
+                        "p_winter": p_winter
+                    },
+                    "name": plant_name
+
+                });
+            }
+
+
+
+            firebase.auth().onAuthStateChanged(function (user) {
+                if (user) {
+                    // User is signed in.
+
+                    user.providerData.forEach(function (profile) {
+
+
+                        writeUserData(user.uid)
+                    })
+                }
+            });
+            return true;
+        });
+
+    </script>
+
+
+    <!-- 테이블.-->
+    <table class="table" id="data-table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">이름</th>
+                <th scope="col">화분위치</th>
+                <th scope="col">설명</th>
+                <th scope="col">물주기</th>
+                <th scope="col">장소</th>
+                <th scope="col">물주기(봄)</th>
+                <th scope="col">물주기(여름)</th>
+                <th scope="col">물주기(가을)</th>
+                <th scope="col">물주기(겨울)</th>
+                <th scope="col">위치(봄)</th>
+                <th scope="col">위치(여름)</th>
+                <th scope="col">위치(가을)</th>
+                <th scope="col">위치(겨울)</th> 
+                <th scope="col">분갈이</th>
+            </tr>
+        </thead>
+    </table>
+    <!-- The surrounding HTML is left untouched by FirebaseUI.
+   Your app may use that space for branding, controls and other customizations.-->
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script>
+         
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCxG3ejbKIM9ZDrktgJKvgKsXB9HHLftAQ",
+            authDomain: "atticyadmin.firebaseapp.com",
+            databaseURL: "https://atticyadmin.firebaseio.com",
+            projectId: "atticyadmin",
+            storageBucket: "atticyadmin.appspot.com",
+            messagingSenderId: "754529537193"
+        };
+        firebase.initializeApp(config);
+
+
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                // User is signed in.
+
+                user.providerData.forEach(function (profile) {
+                    console.log("Sign-in provider: " + profile.providerId);
+                    console.log("  Provider-specific UID: " + profile.uid);
+                    console.log("  Name: " + profile.displayName);
+                    console.log("  Email: " + profile.email);
+                    console.log("  Photo URL: " + profile.photoURL);
+                    console.log("  uid: " + user.uid);
+
+                    // [데이터베이스] SDK 초기화
+                    var database = firebase.database();
+                    //읽기
+                    var dbTestRef = database.ref('/' + user.uid)
+                    dbTestRef.on('child_added', function (data) {
+                        var val = data.val();
+                        var content = '';
+
+                        content += '<tr>';
+                        content += '<th scope="row">' + val.name + '</td>';
+                        content += '<td>' + val.Explanation.Flowerpot + '</td>';
+                        content += '<td>' + val.Explanation.explanation + '</td>';
+                        content += '<td>' + val.Explanation.frequency + '</td>';
+                        content += '<td>' + val.Explanation.place + '</td>';
+                        content += '<td>' + val.NumericalData.f_spring + '</td>';
+                        content += '<td>' + val.NumericalData.f_summer + '</td>';
+                        content += '<td>' + val.NumericalData.f_fall + '</td>';
+                        content += '<td>' + val.NumericalData.f_winter + '</td>';
+                        content += '<td>' + val.NumericalData.p_spring + '</td>';
+                        content += '<td>' + val.NumericalData.p_summer + '</td>';
+                        content += '<td>' + val.NumericalData.p_fall + '</td>';
+                        content += '<td>' + val.NumericalData.p_winter + '</td>';
+                        content += '<td>' + val.NumericalData.flowerpot + '</td>';
+                        content += '</tr>';
+
+                        $('#data-table').append(content);
+                        console.log(data.val())
+                    })
+
+                })
+            } else {
+                // No user is signed in.
+                console.log("  no");
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
