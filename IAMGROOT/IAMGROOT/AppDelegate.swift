@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
             
             print("uid")
             print(user?.uid)
-            let loginScene = UIStoryboard(name: "MainViewController", bundle:nil).instantiateViewController(withIdentifier: "MainViewController") as UIViewController
+            let loginScene = UIStoryboard(name: "MainViewController", bundle:nil).instantiateViewController(withIdentifier: "MainTabBarController") as UIViewController
             let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
             appDelegate.window?.rootViewController = loginScene
             
