@@ -11,6 +11,7 @@
 		BF1DEAB6217C738F00EB818B /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF1DEAB5217C738F00EB818B /* MainViewController.storyboard */; };
 		BF1DEAB8217C73A600EB818B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DEAB7217C73A600EB818B /* MainViewController.swift */; };
 		BF1DEABA217ED69400EB818B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DEAB9217ED69400EB818B /* MainTabBarController.swift */; };
+		BF1DEABD217F339B00EB818B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DEABC217F339B00EB818B /* User.swift */; };
 		BFD0B1DB2174DDBE002B94D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1DA2174DDBE002B94D1 /* AppDelegate.swift */; };
 		BFD0B1DD2174DDBE002B94D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1DC2174DDBE002B94D1 /* ViewController.swift */; };
 		BFD0B1E02174DDBE002B94D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B1DE2174DDBE002B94D1 /* Main.storyboard */; };
@@ -73,6 +74,7 @@
 		BF1DEAB5217C738F00EB818B /* MainViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
 		BF1DEAB7217C73A600EB818B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF1DEAB9217ED69400EB818B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		BF1DEABC217F339B00EB818B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BFD0B1D72174DDBD002B94D1 /* IAMGROOT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IAMGROOT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD0B1DA2174DDBE002B94D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD0B1DC2174DDBE002B94D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -328,6 +330,14 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
+		BF1DEABB217F338200EB818B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF1DEABC217F339B00EB818B /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BFD0B1CE2174DDBD002B94D1 = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +363,7 @@
 		BFD0B1D92174DDBD002B94D1 /* IAMGROOT */ = {
 			isa = PBXGroup;
 			children = (
+				BF1DEABB217F338200EB818B /* Model */,
 				BFD0B2102175A736002B94D1 /* GoogleService-Info.plist */,
 				BF1DEAB4217C736600EB818B /* MainView */,
 				BFD0B20B21758C3D002B94D1 /* FBLogin */,
@@ -646,6 +657,7 @@
 				BFD0B1DD2174DDBE002B94D1 /* ViewController.swift in Sources */,
 				BFD0B1DB2174DDBE002B94D1 /* AppDelegate.swift in Sources */,
 				BF1DEAB8217C73A600EB818B /* MainViewController.swift in Sources */,
+				BF1DEABD217F339B00EB818B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
