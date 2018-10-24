@@ -8,8 +8,8 @@
 
 import UIKit
 
-class User {
-    var uid: String = ""
+class User : NSObject{//Store Data Globally
+    static var uid: String! 
     var name: String = ""
     var age: String = ""
     var email: String = ""

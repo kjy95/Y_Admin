@@ -28,12 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
         if Auth.auth().currentUser != nil {
             // User is signed in.
             let user = Auth.auth().currentUser
-            
-            print("uid")
-            print(user?.uid)
+            User.uid = (user?.uid)! 
             let loginScene = UIStoryboard(name: "MainViewController", bundle:nil).instantiateViewController(withIdentifier: "MainTabBarController") as UIViewController
             let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
-            appDelegate.window?.rootViewController = loginScene
+             appDelegate.window?.rootViewController = loginScene
             
         } else {
             let loginScene = UIStoryboard(name: "FBLoginConnectPageViewController", bundle:nil).instantiateViewController(withIdentifier: "FBLoginConnectPageViewController") as UIViewController

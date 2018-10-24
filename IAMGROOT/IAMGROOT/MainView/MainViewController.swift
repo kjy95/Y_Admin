@@ -16,19 +16,20 @@ import FirebaseUI
 class MainViewController : UIViewController {
     @IBOutlet weak var textfield1: UITextField!
     @IBOutlet weak var textfield2: UITextField!
+    
+    var ref: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Get a secondary database instance by URL
-        var ref: DatabaseReference!
         ref = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()
-        
-        
+    
     }
     
     @IBAction func buttonAction(_ sender: Any) {
         //
         let location: String = textfield1.text!
-        //self.ref.child("users/\(user.uid)/username").setValue(username)
+        
+        self.ref.child("users").child(User.uid).setValue(["location": location])
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
