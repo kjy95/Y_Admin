@@ -60,8 +60,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7X-9s-8ZX">
-                                <rect key="frame" x="139" y="295" width="30" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" misplaced="YES" text="위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7X-9s-8ZX">
+                                <rect key="frame" x="139" y="295" width="131" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -88,6 +88,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="groot_main" id="CDR-AU-5SG"/>
                     <connections>
+                        <outlet property="label1" destination="J7X-9s-8ZX" id="e0T-iG-C4U"/>
                         <outlet property="textfield1" destination="bwd-ep-iuz" id="3zf-j0-cWF"/>
                         <outlet property="textfield2" destination="Liy-b5-gJq" id="HBO-xh-2cL"/>
                     </connections>
