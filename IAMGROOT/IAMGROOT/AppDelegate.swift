@@ -11,6 +11,8 @@ import CoreData
 import Firebase
 import FirebaseUI
 import GoogleSignIn 
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
@@ -38,6 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
             let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
             appDelegate.window?.rootViewController = loginScene
         }
+        //google map
+        GMSServices.provideAPIKey("AIzaSyALHhSpSP4KFGXrTgMbPUq7oeoxZ-98O5k")
+        GMSPlacesClient.provideAPIKey("AIzaSyALHhSpSP4KFGXrTgMbPUq7oeoxZ-98O5k")
+        
         return true
     }
     @available(iOS 9.0, *)
