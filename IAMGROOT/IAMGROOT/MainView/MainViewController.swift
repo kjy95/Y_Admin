@@ -65,7 +65,9 @@ class MainViewController : UIViewController {
         let numberFloatValuey = numbery?.floatValue
 
         mapView = GMSMapView.map(withFrame: CGRect(x: 39, y: 290, width: 350, height: 350), camera: GMSCameraPosition.camera(withLatitude: CLLocationDegrees(numberFloatValuex!), longitude: CLLocationDegrees(numberFloatValuey!), zoom: 6.5))
-        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: CLLocationDegrees(numberFloatValuex!), longitude: CLLocationDegrees(numberFloatValuey!))
+          marker.map = mapView
         //so the mapView is of width 200, height 200 and its center is same as center of the self.view
         //mapView?.center = self.view.center
         
