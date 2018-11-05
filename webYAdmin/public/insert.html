@@ -128,7 +128,7 @@
 
             console.log(f_spring)
             function writeUserData(userId) {
-                firebase.database().ref('/' + userId + '/' + plant_name).set({
+                firebase.database().ref('/EP8HR2gkeGSH2RAQpEGbVglVh0J3/' + plant_name).set({
                     "Explanation": {
                         "Flowerpot": E_Flowerpot,
                         "explanation": explanation,
@@ -223,7 +223,7 @@
                     // [데이터베이스] SDK 초기화
                     var database = firebase.database();
                     //읽기
-                    var dbTestRef = database.ref('/' + user.uid)
+                    var dbTestRef = database.ref('/EP8HR2gkeGSH2RAQpEGbVglVh0J3')
                     dbTestRef.on('child_added', function (data) {
                         var val = data.val();
                         var content = '';
