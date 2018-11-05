@@ -30,7 +30,7 @@ class MainViewController : UIViewController {
         super.viewDidLoad()
         // Get a secondary database instance by URL
         ref = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()
-        //changeLabel_getInfoFromFBRDB()
+        changeLabel_getInfoFromFBRDB()
         
     }
     
