@@ -12,6 +12,7 @@
 		BF1DEAB8217C73A600EB818B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DEAB7217C73A600EB818B /* MainViewController.swift */; };
 		BF1DEABA217ED69400EB818B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DEAB9217ED69400EB818B /* MainTabBarController.swift */; };
 		BF1DEABD217F339B00EB818B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DEABC217F339B00EB818B /* User.swift */; };
+		BF808350219462DB00A81B1E /* FBLoginConnectPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDD097021786698009728C0 /* FBLoginConnectPageViewController.storyboard */; };
 		BFD0B1DB2174DDBE002B94D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1DA2174DDBE002B94D1 /* AppDelegate.swift */; };
 		BFD0B1DD2174DDBE002B94D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0B1DC2174DDBE002B94D1 /* ViewController.swift */; };
 		BFD0B1E02174DDBE002B94D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B1DE2174DDBE002B94D1 /* Main.storyboard */; };
@@ -26,7 +27,6 @@
 		BFD0B2132175A736002B94D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B2102175A736002B94D1 /* GoogleService-Info.plist */; };
 		BFDD096D2175B0D3009728C0 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFDD096C2175B0D3009728C0 /* FirebaseCore.framework */; };
 		BFDD096F2175B0DC009728C0 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFDD096E2175B0DC009728C0 /* FirebaseDatabase.framework */; };
-		BFDD097121786698009728C0 /* FBLoginConnectPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDD097021786698009728C0 /* FBLoginConnectPageViewController.storyboard */; };
 		BFDD097321786704009728C0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFDD097221786704009728C0 /* Bolts.framework */; };
 		BFDD097521786704009728C0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFDD097421786704009728C0 /* FBSDKCoreKit.framework */; };
 		BFDD097721786704009728C0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFDD097621786704009728C0 /* FBSDKLoginKit.framework */; };
@@ -512,10 +512,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFDD097121786698009728C0 /* FBLoginConnectPageViewController.storyboard in Resources */,
 				BFD0B1E82174DDC2002B94D1 /* LaunchScreen.storyboard in Resources */,
 				BFD0B1E52174DDC2002B94D1 /* Assets.xcassets in Resources */,
 				BFD0B2112175A736002B94D1 /* GoogleService-Info.plist in Resources */,
+				BF808350219462DB00A81B1E /* FBLoginConnectPageViewController.storyboard in Resources */,
 				BF1DEAB6217C738F00EB818B /* MainViewController.storyboard in Resources */,
 				BFD0B1E02174DDBE002B94D1 /* Main.storyboard in Resources */,
 			);
