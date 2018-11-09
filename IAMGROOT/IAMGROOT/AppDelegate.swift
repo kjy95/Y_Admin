@@ -20,29 +20,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
     
     var window: UIWindow?
 
-
+    func prepareloginScene(){
+        let loginScene = UIStoryboard(name: "FBLoginConnectPageViewController", bundle:nil).instantiateViewController(withIdentifier: "FBLoginConnectPageViewController") as UIViewController
+        let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        appDelegate.window?.rootViewController = loginScene
+    }
+    func prepareMainViewController(){
+        // User is signed in.
+        let user = Auth.auth().currentUser
+        User.uid = (user?.uid)!
+        let MainViewController = UIStoryboard(name: "MainViewController", bundle:nil).instantiateViewController(withIdentifier: "MainTabBarController") as UIViewController
+        let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        appDelegate.window?.rootViewController = MainViewController
+    }
+    func firbaseAuthManager(){
+        if Auth.auth().currentUser != nil {
+            prepareloginScene()
+        } else {
+            prepareloginScene()
+        }
+    }
+    func googleMapSettingManager(){
+        //google map
+        GMSServices.provideAPIKey("AIzaSyALHhSpSP4KFGXrTgMbPUq7oeoxZ-98O5k")
+        GMSPlacesClient.provideAPIKey("AIzaSyALHhSpSP4KFGXrTgMbPUq7oeoxZ-98O5k")
+        
+    }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-        if Auth.auth().currentUser != nil {
-            // User is signed in.
-            let user = Auth.auth().currentUser
-            User.uid = (user?.uid)! 
-            let loginScene = UIStoryboard(name: "MainViewController", bundle:nil).instantiateViewController(withIdentifier: "MainTabBarController") as UIViewController
-            let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
-             appDelegate.window?.rootViewController = loginScene
-            
-        } else {
-            let loginScene = UIStoryboard(name: "FBLoginConnectPageViewController", bundle:nil).instantiateViewController(withIdentifier: "FBLoginConnectPageViewController") as UIViewController
-            let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
-            appDelegate.window?.rootViewController = loginScene
-        }
-        //google map
-        GMSServices.provideAPIKey("AIzaSyALHhSpSP4KFGXrTgMbPUq7oeoxZ-98O5k")
-        GMSPlacesClient.provideAPIKey("AIzaSyALHhSpSP4KFGXrTgMbPUq7oeoxZ-98O5k")
+        firbaseAuthManager()
+        googleMapSettingManager()
         
         return true
     }
@@ -77,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
                 return
             }
             // User is signed in
-            // ...
+            self.prepareMainViewController()
             
             print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+"\(credential)")
         }
@@ -104,6 +115,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
