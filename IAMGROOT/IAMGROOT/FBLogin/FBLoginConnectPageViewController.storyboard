@@ -38,20 +38,27 @@
                                     <constraint firstAttribute="height" constant="56" id="ua1-x6-PVM"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am groot" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ds7-6L-0JZ">
-                                <rect key="frame" x="30" y="488" width="315" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i am groot" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ds7-6L-0JZ">
+                                <rect key="frame" x="30" y="391" width="315" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="315" id="Oeb-iq-PQF"/>
-                                    <constraint firstAttribute="height" constant="42" id="trk-MY-avR"/>
+                                    <constraint firstAttribute="height" constant="50" id="trk-MY-avR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PissjarSans-Regularpiss" family="Pissjar Sans" pointSize="58"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="specialize you're life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97K-ni-7PI">
+                                <rect key="frame" x="59.5" y="444" width="256.5" height="29"/>
+                                <fontDescription key="fontDescription" name="PissjarSans-Regularpiss" family="Pissjar Sans" pointSize="24"/>
+                                <color key="textColor" red="0.73209935426712036" green="0.9375157356262207" blue="0.93183040618896484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tku-Hp-qav" firstAttribute="trailing" secondItem="meB-DS-0TF" secondAttribute="trailing" id="0p7-Qu-eOf"/>
+                            <constraint firstItem="97K-ni-7PI" firstAttribute="top" secondItem="ds7-6L-0JZ" secondAttribute="bottom" constant="3" id="4gM-ct-FDq"/>
                             <constraint firstItem="tku-Hp-qav" firstAttribute="top" secondItem="meB-DS-0TF" secondAttribute="top" id="5DX-N4-imv"/>
                             <constraint firstItem="lCC-XY-aDW" firstAttribute="trailing" secondItem="meB-DS-0TF" secondAttribute="trailing" id="Dot-NK-2sk"/>
                             <constraint firstItem="tku-Hp-qav" firstAttribute="leading" secondItem="meB-DS-0TF" secondAttribute="leading" id="HNG-CA-DVF"/>
@@ -63,9 +70,10 @@
                             <constraint firstItem="tku-Hp-qav" firstAttribute="leading" secondItem="meB-DS-0TF" secondAttribute="leading" id="YqO-Rz-uZQ"/>
                             <constraint firstItem="tku-Hp-qav" firstAttribute="trailing" secondItem="meB-DS-0TF" secondAttribute="trailing" id="dRZ-0H-49e"/>
                             <constraint firstItem="tku-Hp-qav" firstAttribute="bottom" secondItem="meB-DS-0TF" secondAttribute="bottom" id="hBH-2J-4YR"/>
-                            <constraint firstItem="FTa-3n-cG4" firstAttribute="top" secondItem="ds7-6L-0JZ" secondAttribute="bottom" constant="11" id="ke6-4X-uHR"/>
+                            <constraint firstItem="FTa-3n-cG4" firstAttribute="top" secondItem="ds7-6L-0JZ" secondAttribute="bottom" constant="100" id="ke6-4X-uHR"/>
                             <constraint firstItem="FTa-3n-cG4" firstAttribute="centerX" secondItem="tku-Hp-qav" secondAttribute="centerX" id="o4s-dG-YzY"/>
                             <constraint firstItem="lCC-XY-aDW" firstAttribute="bottom" secondItem="meB-DS-0TF" secondAttribute="bottom" id="rP3-dH-gaa"/>
+                            <constraint firstItem="97K-ni-7PI" firstAttribute="centerX" secondItem="ds7-6L-0JZ" secondAttribute="centerX" id="s32-hx-Cic"/>
                             <constraint firstItem="tku-Hp-qav" firstAttribute="bottom" secondItem="meB-DS-0TF" secondAttribute="bottom" id="z0W-bS-dda"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="meB-DS-0TF"/>

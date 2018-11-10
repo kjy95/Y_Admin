@@ -13,6 +13,7 @@
 		BF1DEABA217ED69400EB818B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DEAB9217ED69400EB818B /* MainTabBarController.swift */; };
 		BF1DEABD217F339B00EB818B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DEABC217F339B00EB818B /* User.swift */; };
 		BF5FAD132196C461001397EF /* Pissjar Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5FAD122196C450001397EF /* Pissjar Sans.ttf */; };
+		BF5FAD152196DDDB001397EF /* Manoyri-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF5FAD142196DDDB001397EF /* Manoyri-Regular.otf */; };
 		BF808350219462DB00A81B1E /* FBLoginConnectPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDD097021786698009728C0 /* FBLoginConnectPageViewController.storyboard */; };
 		BF8083562195718A00A81B1E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083552195718A00A81B1E /* Bolts.framework */; };
 		BF8083582195718A00A81B1E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083572195718A00A81B1E /* FBSDKCoreKit.framework */; };
@@ -79,6 +80,7 @@
 		BF1DEAB9217ED69400EB818B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		BF1DEABC217F339B00EB818B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BF5FAD122196C450001397EF /* Pissjar Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pissjar Sans.ttf"; sourceTree = "<group>"; };
+		BF5FAD142196DDDB001397EF /* Manoyri-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manoyri-Regular.otf"; sourceTree = "<group>"; };
 		BF8083552195718A00A81B1E /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8083572195718A00A81B1E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8083592195718A00A81B1E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -395,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				BF5FAD122196C450001397EF /* Pissjar Sans.ttf */,
+				BF5FAD142196DDDB001397EF /* Manoyri-Regular.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5FAD152196DDDB001397EF /* Manoyri-Regular.otf in Resources */,
 				BFD0B1E82174DDC2002B94D1 /* LaunchScreen.storyboard in Resources */,
 				BF5FAD132196C461001397EF /* Pissjar Sans.ttf in Resources */,
 				BFD0B1E52174DDC2002B94D1 /* Assets.xcassets in Resources */,
