@@ -12,10 +12,11 @@ import UIKit
 import Firebase
 class MainPrivateViewController: UIViewController{
     
+    @IBOutlet weak var userName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setuserProfile()
     } 
     @IBAction func logoutButton(_ sender: Any) {
         print("button")
@@ -32,5 +33,8 @@ class MainPrivateViewController: UIViewController{
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
+    }
+    func setuserProfile(){
+        self.userName.text = User.name
     }
 }

@@ -196,6 +196,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="profile" image="groot_main" id="Juv-ci-db2"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="userName" destination="M5X-Oh-HGh" id="HcE-Rl-yEP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ihr-GY-jog" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

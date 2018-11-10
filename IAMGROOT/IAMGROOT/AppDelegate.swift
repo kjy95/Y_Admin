@@ -13,7 +13,6 @@ import FirebaseUI
 import GoogleSignIn 
 import GoogleMaps
 import GooglePlaces
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
  
@@ -27,8 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
     }
     func prepareMainViewController(){
         // User is signed in.
-        let user = Auth.auth().currentUser
-        User.uid = (user?.uid)!
+         
         let MainViewController = UIStoryboard(name: "MainViewController", bundle:nil).instantiateViewController(withIdentifier: "MainTabBarController") as UIViewController
         let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
         appDelegate.window?.rootViewController = MainViewController
@@ -39,6 +37,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
         } else {
             prepareloginScene()
         }
+    }
+    func setUserProfile(){
+        let user = Auth.auth().currentUser
+        User.uid = (user?.uid)!
+        User.email = (user?.email)!
+        User.id = (user?.providerID)!
+        User.name = (user?.displayName)!
+        //let photoURL = user.photoURL
+        
     }
     func googleMapSettingManager(){
         //google map
@@ -88,8 +95,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
                 return
             }
             // User is signed in
+            self.setUserProfile()
             self.prepareMainViewController()
-            
             print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+"\(credential)")
         }
     }
