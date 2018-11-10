@@ -12,6 +12,7 @@
 		BF1DEAB8217C73A600EB818B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DEAB7217C73A600EB818B /* MainViewController.swift */; };
 		BF1DEABA217ED69400EB818B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DEAB9217ED69400EB818B /* MainTabBarController.swift */; };
 		BF1DEABD217F339B00EB818B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DEABC217F339B00EB818B /* User.swift */; };
+		BF5FAD132196C461001397EF /* Pissjar Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5FAD122196C450001397EF /* Pissjar Sans.ttf */; };
 		BF808350219462DB00A81B1E /* FBLoginConnectPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDD097021786698009728C0 /* FBLoginConnectPageViewController.storyboard */; };
 		BF8083562195718A00A81B1E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083552195718A00A81B1E /* Bolts.framework */; };
 		BF8083582195718A00A81B1E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083572195718A00A81B1E /* FBSDKCoreKit.framework */; };
@@ -77,6 +78,7 @@
 		BF1DEAB7217C73A600EB818B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF1DEAB9217ED69400EB818B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		BF1DEABC217F339B00EB818B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BF5FAD122196C450001397EF /* Pissjar Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pissjar Sans.ttf"; sourceTree = "<group>"; };
 		BF8083552195718A00A81B1E /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8083572195718A00A81B1E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8083592195718A00A81B1E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -389,6 +391,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BF5FAD112196C440001397EF /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				BF5FAD122196C450001397EF /* Pissjar Sans.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		BF8083852196B65100A81B1E /* ImageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,6 +410,7 @@
 		BFD0B1CE2174DDBD002B94D1 = {
 			isa = PBXGroup;
 			children = (
+				BF5FAD112196C440001397EF /* Font */,
 				BFD0B1D92174DDBD002B94D1 /* IAMGROOT */,
 				BFD0B1F12174DDC2002B94D1 /* IAMGROOTTests */,
 				BFD0B1FC2174DDC2002B94D1 /* IAMGROOTUITests */,
@@ -573,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD0B1E82174DDC2002B94D1 /* LaunchScreen.storyboard in Resources */,
+				BF5FAD132196C461001397EF /* Pissjar Sans.ttf in Resources */,
 				BFD0B1E52174DDC2002B94D1 /* Assets.xcassets in Resources */,
 				BFD0B2112175A736002B94D1 /* GoogleService-Info.plist in Resources */,
 				BF808350219462DB00A81B1E /* FBLoginConnectPageViewController.storyboard in Resources */,
