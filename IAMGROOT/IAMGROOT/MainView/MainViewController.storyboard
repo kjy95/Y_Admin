@@ -128,7 +128,7 @@
             </objects>
             <point key="canvasLocation" x="1551.2" y="83.208395802098963"/>
         </scene>
-        <!--Item-->
+        <!--profile-->
         <scene sceneID="9OA-dL-m1W">
             <objects>
                 <viewController id="d6S-jE-J0x" customClass="MainPrivateViewController" customModule="IAMGROOT" customModuleProvider="target" sceneMemberID="viewController">
@@ -137,18 +137,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zem-EJ-uiZ">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <rect key="frame" x="321" y="402" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="logout"/>
                                 <connections>
                                     <action selector="logoutButton:" destination="d6S-jE-J0x" eventType="touchUpInside" id="Fsn-jm-8SD"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile_back" translatesAutoresizingMaskIntoConstraints="NO" id="odr-ZD-Q5a">
+                                <rect key="frame" x="-82" y="32" width="554" height="285"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-YZ-v6g" customClass="RoundedImageView" customModule="IAMGROOT" customModuleProvider="target">
+                                <rect key="frame" x="121" y="269" width="162" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="f9G-ag-RDY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="groot_main" id="Juv-ci-db2"/>
+                    <tabBarItem key="tabBarItem" title="profile" image="groot_main" id="Juv-ci-db2"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ihr-GY-jog" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -177,5 +185,7 @@
     </scenes>
     <resources>
         <image name="groot_main" width="88" height="88"/>
+        <image name="profile_back" width="1920" height="1285"/>
+        <image name="profile_image" width="1920" height="1280"/>
     </resources>
 </document>
