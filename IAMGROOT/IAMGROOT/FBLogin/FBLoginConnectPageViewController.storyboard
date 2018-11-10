@@ -18,35 +18,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8v-yk-YDw">
-                                <rect key="frame" x="287" y="578" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="lCC-XY-aDW">
-                                <rect key="frame" x="-66" y="-22" width="506" height="791"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="lCC-XY-aDW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                             <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tku-Hp-qav">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FTa-3n-cG4" customClass="GIDSignInButton">
-                                <rect key="frame" x="0.0" y="269" width="375" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTa-3n-cG4" customClass="GIDSignInButton">
+                                <rect key="frame" x="0.0" y="541" width="375" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FTa-3n-cG4" secondAttribute="height" multiplier="375:56" id="d28-oR-lWF"/>
+                                    <constraint firstAttribute="height" constant="56" id="ua1-x6-PVM"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tku-Hp-qav" firstAttribute="trailing" secondItem="meB-DS-0TF" secondAttribute="trailing" id="0p7-Qu-eOf"/>
                             <constraint firstItem="tku-Hp-qav" firstAttribute="top" secondItem="meB-DS-0TF" secondAttribute="top" id="5DX-N4-imv"/>
-                            <constraint firstAttribute="trailing" secondItem="lCC-XY-aDW" secondAttribute="trailing" constant="-65" id="BdY-4O-tQd"/>
-                            <constraint firstItem="lCC-XY-aDW" firstAttribute="leading" secondItem="bbB-D1-4BC" secondAttribute="leading" constant="-66" id="PX9-JR-2rt"/>
+                            <constraint firstItem="lCC-XY-aDW" firstAttribute="trailing" secondItem="meB-DS-0TF" secondAttribute="trailing" id="Dot-NK-2sk"/>
+                            <constraint firstItem="tku-Hp-qav" firstAttribute="leading" secondItem="meB-DS-0TF" secondAttribute="leading" id="HNG-CA-DVF"/>
+                            <constraint firstItem="tku-Hp-qav" firstAttribute="top" secondItem="meB-DS-0TF" secondAttribute="top" id="Izb-xA-ggP"/>
+                            <constraint firstItem="lCC-XY-aDW" firstAttribute="leading" secondItem="meB-DS-0TF" secondAttribute="leading" id="SMe-7V-ujl"/>
+                            <constraint firstItem="meB-DS-0TF" firstAttribute="bottom" secondItem="FTa-3n-cG4" secondAttribute="bottom" constant="70" id="Voa-yM-Ddl"/>
+                            <constraint firstItem="lCC-XY-aDW" firstAttribute="top" secondItem="meB-DS-0TF" secondAttribute="top" id="WKo-WC-fce"/>
                             <constraint firstItem="tku-Hp-qav" firstAttribute="leading" secondItem="meB-DS-0TF" secondAttribute="leading" id="YqO-Rz-uZQ"/>
-                            <constraint firstItem="lCC-XY-aDW" firstAttribute="top" secondItem="bbB-D1-4BC" secondAttribute="top" constant="-22" id="kAl-au-lmy"/>
-                            <constraint firstAttribute="bottom" secondItem="lCC-XY-aDW" secondAttribute="bottom" constant="-102" id="w17-0V-Eo8"/>
+                            <constraint firstItem="tku-Hp-qav" firstAttribute="trailing" secondItem="meB-DS-0TF" secondAttribute="trailing" id="dRZ-0H-49e"/>
+                            <constraint firstItem="tku-Hp-qav" firstAttribute="bottom" secondItem="meB-DS-0TF" secondAttribute="bottom" id="hBH-2J-4YR"/>
+                            <constraint firstItem="FTa-3n-cG4" firstAttribute="centerX" secondItem="tku-Hp-qav" secondAttribute="centerX" id="o4s-dG-YzY"/>
+                            <constraint firstItem="lCC-XY-aDW" firstAttribute="bottom" secondItem="meB-DS-0TF" secondAttribute="bottom" id="rP3-dH-gaa"/>
                             <constraint firstItem="tku-Hp-qav" firstAttribute="bottom" secondItem="meB-DS-0TF" secondAttribute="bottom" id="z0W-bS-dda"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="meB-DS-0TF"/>
@@ -61,6 +63,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="327" height="460"/>
+        <image name="Image" width="460.79998779296875" height="300.48001098632812"/>
     </resources>
 </document>
