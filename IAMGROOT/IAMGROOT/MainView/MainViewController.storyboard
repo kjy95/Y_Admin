@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="BMYEONSUNG_otf.otf">
+            <string>BMYEONSUNG-OTF</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Item-->
         <scene sceneID="lH3-kr-cU4">
@@ -161,10 +166,10 @@
                                     <constraint firstAttribute="width" constant="162" id="rbY-5A-Isx"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5X-Oh-HGh">
-                                <rect key="frame" x="46.5" y="205" width="281.5" height="52"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김지영" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5X-Oh-HGh">
+                                <rect key="frame" x="145.5" y="433" width="83" height="51"/>
+                                <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="42"/>
+                                <color key="textColor" red="0.086517177522182465" green="0.34191644191741943" blue="0.39926034212112427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -172,18 +177,18 @@
                         <constraints>
                             <constraint firstItem="yEI-Q0-aIK" firstAttribute="centerX" secondItem="hrf-YZ-v6g" secondAttribute="centerX" id="1Xr-5b-boG"/>
                             <constraint firstItem="Zem-EJ-uiZ" firstAttribute="leading" secondItem="hrf-YZ-v6g" secondAttribute="trailing" constant="8" id="9tC-Bh-haJ"/>
+                            <constraint firstItem="M5X-Oh-HGh" firstAttribute="centerX" secondItem="hrf-YZ-v6g" secondAttribute="centerX" id="A9r-ws-dgO"/>
                             <constraint firstItem="hrf-YZ-v6g" firstAttribute="centerX" secondItem="odr-ZD-Q5a" secondAttribute="centerX" id="BWz-8W-eVQ"/>
                             <constraint firstItem="odr-ZD-Q5a" firstAttribute="leading" secondItem="Spe-GN-SN7" secondAttribute="leading" constant="-18" id="FYy-8e-K52"/>
-                            <constraint firstItem="hrf-YZ-v6g" firstAttribute="top" secondItem="M5X-Oh-HGh" secondAttribute="bottom" constant="12" id="GBS-F2-0pl"/>
                             <constraint firstItem="yEI-Q0-aIK" firstAttribute="centerY" secondItem="odr-ZD-Q5a" secondAttribute="centerY" id="Hmt-h1-JiN"/>
                             <constraint firstItem="odr-ZD-Q5a" firstAttribute="top" secondItem="f9G-ag-RDY" secondAttribute="top" id="Iza-bU-USh"/>
                             <constraint firstItem="Zem-EJ-uiZ" firstAttribute="top" secondItem="odr-ZD-Q5a" secondAttribute="bottom" constant="36" id="L5t-fQ-zZa"/>
                             <constraint firstItem="odr-ZD-Q5a" firstAttribute="top" secondItem="f9G-ag-RDY" secondAttribute="top" id="M40-yn-4PJ"/>
                             <constraint firstItem="hrf-YZ-v6g" firstAttribute="top" secondItem="f9G-ag-RDY" secondAttribute="top" constant="249" id="NRU-tS-Efa"/>
                             <constraint firstAttribute="trailing" secondItem="odr-ZD-Q5a" secondAttribute="trailing" constant="-17" id="T7j-VO-ckn"/>
-                            <constraint firstItem="M5X-Oh-HGh" firstAttribute="centerX" secondItem="yEI-Q0-aIK" secondAttribute="centerX" id="UHe-Bu-bzw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="odr-ZD-Q5a" secondAttribute="trailing" constant="-33" id="Ua7-fY-UxA"/>
                             <constraint firstItem="odr-ZD-Q5a" firstAttribute="leading" secondItem="Spe-GN-SN7" secondAttribute="leadingMargin" constant="-34" id="f3C-KN-LXP"/>
+                            <constraint firstItem="M5X-Oh-HGh" firstAttribute="top" secondItem="hrf-YZ-v6g" secondAttribute="bottom" constant="2" id="jb0-tS-Eii"/>
                             <constraint firstItem="yEI-Q0-aIK" firstAttribute="height" secondItem="odr-ZD-Q5a" secondAttribute="height" id="qDx-tY-kK0"/>
                             <constraint firstItem="yEI-Q0-aIK" firstAttribute="width" secondItem="odr-ZD-Q5a" secondAttribute="width" id="u0Y-Cb-7C1"/>
                         </constraints>
