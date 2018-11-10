@@ -25,41 +25,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
         appDelegate.window?.rootViewController = loginScene
     }
     func prepareMainViewController(){
-        // User is signed in.
-         
         let MainViewController = UIStoryboard(name: "MainViewController", bundle:nil).instantiateViewController(withIdentifier: "MainTabBarController") as UIViewController
         let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
         appDelegate.window?.rootViewController = MainViewController
     }
-    func firbaseAuthManager(){
-        if Auth.auth().currentUser != nil {
+    func setFirstPageManager(){
+        if Auth.auth().currentUser == nil {
             prepareloginScene()
         } else {
-            prepareloginScene()
+            self.setUserProfile()
+            self.sendNewUserFirebaseRealtimeDB()
+            prepareMainViewController()
         }
     }
     func setUserProfile(){
         let user = Auth.auth().currentUser
         User.uid = (user?.uid)!
         User.email = (user?.email)!
-        User.id = (user?.providerID)!
+        User.phoneNum = (user?.phoneNumber)
+        User.accessibilityLanguage = (user?.accessibilityLanguage)
         User.name = (user?.displayName)!
         //let photoURL = user.photoURL
+        
+    }
+    func sendNewUserFirebaseRealtimeDB(){
+        var ref: DatabaseReference!
+        ref = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()
+        ref.child("users").child(User.uid).child("profile").setValue(["uid": User.uid,"email": User.email,"phoneNum": User.phoneNum, "name": User.name, "accessibilityLanguage": User.accessibilityLanguage])
         
     }
     func googleMapSettingManager(){
         //google map
         GMSServices.provideAPIKey("AIzaSyALHhSpSP4KFGXrTgMbPUq7oeoxZ-98O5k")
         GMSPlacesClient.provideAPIKey("AIzaSyALHhSpSP4KFGXrTgMbPUq7oeoxZ-98O5k")
-        
     }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
+        //setting siginin
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-        firbaseAuthManager()
+        setFirstPageManager()
+        
+        //setting google map
         googleMapSettingManager()
         
         return true
@@ -91,12 +102,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
         // . Firebase 사용자 인증 정보를 사용해 Firebase에 인증합니다..
         Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
             if let error = error {
-                // ...
                 return
             }
             // User is signed in
-            self.setUserProfile()
-            self.prepareMainViewController()
+            self.setFirstPageManager()
             print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+"\(credential)")
         }
     }

@@ -10,11 +10,11 @@ import UIKit
 
 class User : NSObject{//Store Data Globally
     static var uid: String! 
-    static var name: String = ""
-    static var age: String = ""
-    static var email: String = ""
-    static var id: String = ""
-    static var pw: String = ""
+    static var name: String!
+    static var age: String!
+    static var email: String!
+    static var phoneNum: String!
+    static var accessibilityLanguage: String! 
     //최대 20개~식물을 자신의 식물로 저장가능. 딕셔너리 리스트. 고유번호(인덱스 넣기)
     static var myPlants = [[]]
     static var myPlantEvaluation = [String]()
