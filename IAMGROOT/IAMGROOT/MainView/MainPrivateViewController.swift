@@ -9,14 +9,19 @@
 
 import UIKit
 
+import GoogleMaps
 import Firebase
 class MainPrivateViewController: UIViewController{
     
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var userName: UILabel!
-    
+    var mapView: GMSMapView!
+    @IBOutlet weak var profile_back: UIView!
+    @IBOutlet weak var profile_image: RoundedImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setuserProfile()
+        showgooglemap(x:"53",y:"54")
     } 
     @IBAction func logoutButton(_ sender: Any) {
         print("button")
@@ -36,5 +41,25 @@ class MainPrivateViewController: UIViewController{
     }
     func setuserProfile(){
         self.userName.text = User.name
+    }
+    func showgooglemap(x:String, y: String){
+        //google map
+        //string to float
+        let numberFormatter = NumberFormatter()
+        let numberx = numberFormatter.number(from: x)
+        let numberFloatValuex = numberx?.floatValue
+        let numbery = numberFormatter.number(from: y)
+        let numberFloatValuey = numbery?.floatValue
+        
+        mapView = GMSMapView.map(withFrame: CGRect(x: backgroundView.frame.minX+20, y: backgroundView.frame.minY+22, width: backgroundView.frame.width, height: backgroundView.frame.height), camera: GMSCameraPosition.camera(withLatitude: CLLocationDegrees(numberFloatValuex!), longitude: CLLocationDegrees(numberFloatValuey!), zoom: 6.5))
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: CLLocationDegrees(numberFloatValuex!), longitude: CLLocationDegrees(numberFloatValuey!))
+        marker.map = mapView
+        //so the mapView is of width 200, height 200 and its center is same as center of the self.view
+        //mapView?.center = self.view.center
+        self.view.addSubview(mapView!)
+        self.view.sendSubviewToBack(mapView)
+        self.view.sendSubviewToBack(profile_back)
+        self.view.sendSubviewToBack(backgroundView)
     }
 }
