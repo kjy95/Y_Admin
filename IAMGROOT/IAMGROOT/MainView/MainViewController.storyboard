@@ -166,12 +166,30 @@
                                     <constraint firstAttribute="width" constant="162" id="rbY-5A-Isx"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김지영" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5X-Oh-HGh">
-                                <rect key="frame" x="145.5" y="464" width="83" height="51"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="김지영" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5X-Oh-HGh">
+                                <rect key="frame" x="146" y="464" width="83" height="41"/>
                                 <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="42"/>
                                 <color key="textColor" red="0.086517177522182465" green="0.34191644191741943" blue="0.39926034212112427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WLZ-RT-WdW">
+                                <rect key="frame" x="0.0" y="504" width="375" height="114"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileCell" id="kgo-Ht-YJf">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kgo-Ht-YJf" id="6sr-sK-oXN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="d6S-jE-J0x" id="bQX-cC-XMI"/>
+                                    <outlet property="delegate" destination="d6S-jE-J0x" id="qUq-Qb-axc"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -188,8 +206,12 @@
                             <constraint firstAttribute="trailing" secondItem="odr-ZD-Q5a" secondAttribute="trailing" constant="-17" id="T7j-VO-ckn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="odr-ZD-Q5a" secondAttribute="trailing" constant="-33" id="Ua7-fY-UxA"/>
                             <constraint firstItem="odr-ZD-Q5a" firstAttribute="leading" secondItem="Spe-GN-SN7" secondAttribute="leadingMargin" constant="-34" id="f3C-KN-LXP"/>
+                            <constraint firstItem="WLZ-RT-WdW" firstAttribute="top" secondItem="hrf-YZ-v6g" secondAttribute="bottom" constant="42" id="f6K-cg-pxJ"/>
+                            <constraint firstItem="WLZ-RT-WdW" firstAttribute="trailing" secondItem="f9G-ag-RDY" secondAttribute="trailing" id="g6t-v9-gP3"/>
                             <constraint firstItem="M5X-Oh-HGh" firstAttribute="top" secondItem="hrf-YZ-v6g" secondAttribute="bottom" constant="2" id="jb0-tS-Eii"/>
                             <constraint firstItem="yEI-Q0-aIK" firstAttribute="height" secondItem="odr-ZD-Q5a" secondAttribute="height" id="qDx-tY-kK0"/>
+                            <constraint firstItem="WLZ-RT-WdW" firstAttribute="bottom" secondItem="f9G-ag-RDY" secondAttribute="bottom" id="rw0-ga-EPd"/>
+                            <constraint firstItem="WLZ-RT-WdW" firstAttribute="leading" secondItem="f9G-ag-RDY" secondAttribute="leading" id="tEq-bN-m0Z"/>
                             <constraint firstItem="yEI-Q0-aIK" firstAttribute="width" secondItem="odr-ZD-Q5a" secondAttribute="width" id="u0Y-Cb-7C1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f9G-ag-RDY"/>

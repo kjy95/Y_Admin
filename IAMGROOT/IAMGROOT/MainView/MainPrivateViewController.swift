@@ -11,7 +11,9 @@ import UIKit
 
 import GoogleMaps
 import Firebase
-class MainPrivateViewController: UIViewController{
+class MainPrivateViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
+    
     
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var userName: UILabel!
@@ -27,6 +29,7 @@ class MainPrivateViewController: UIViewController{
         print("button")
         logout()
     }
+    
     func logout(){
          let firebaseAuth = Auth.auth()
         do {
@@ -62,4 +65,15 @@ class MainPrivateViewController: UIViewController{
         self.view.sendSubviewToBack(profile_back)
         self.view.sendSubviewToBack(backgroundView)
     }
+    //table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell") as UITableViewCell!
+        return cell!
+    }
+    
+    
 }
