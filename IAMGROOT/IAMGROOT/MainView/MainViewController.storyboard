@@ -13,6 +13,9 @@
         <array key="BMYEONSUNG_otf.otf">
             <string>BMYEONSUNG-OTF</string>
         </array>
+        <array key="Manoyri-Regular.otf">
+            <string>Manoyri-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Item-->
@@ -141,9 +144,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zem-EJ-uiZ">
-                                <rect key="frame" x="276" y="401" width="44" height="30"/>
-                                <state key="normal" title="logout"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zem-EJ-uiZ">
+                                <rect key="frame" x="276" y="401" width="41" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="7Qj-gb-Ivq"/>
+                                    <constraint firstAttribute="width" constant="41" id="LJo-ek-iJt"/>
+                                </constraints>
+                                <state key="normal" title="logout" image="logout"/>
                                 <connections>
                                     <action selector="logoutButton:" destination="d6S-jE-J0x" eventType="touchUpInside" id="Fsn-jm-8SD"/>
                                 </connections>
@@ -190,9 +197,31 @@
                                     <outlet property="delegate" destination="d6S-jE-J0x" id="qUq-Qb-axc"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5C-K8-4MF">
+                                <rect key="frame" x="53" y="401" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Sq8-sR-use"/>
+                                    <constraint firstAttribute="width" constant="45" id="lJE-Nu-JYQ"/>
+                                </constraints>
+                                <state key="normal" image="setting"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXU-rD-buZ">
+                                <rect key="frame" x="58" y="378" width="42" height="17"/>
+                                <fontDescription key="fontDescription" name="Manoyri-Regular" family="Manoyri" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="logout" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGO-Fd-sKI">
+                                <rect key="frame" x="274" y="378" width="36" height="17"/>
+                                <fontDescription key="fontDescription" name="Manoyri-Regular" family="Manoyri" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hrf-YZ-v6g" firstAttribute="leading" secondItem="W5C-K8-4MF" secondAttribute="trailing" constant="8" id="03t-j8-QG7"/>
+                            <constraint firstItem="dGO-Fd-sKI" firstAttribute="leading" secondItem="hrf-YZ-v6g" secondAttribute="trailing" constant="6" id="1VK-L8-2Yg"/>
                             <constraint firstItem="yEI-Q0-aIK" firstAttribute="centerX" secondItem="hrf-YZ-v6g" secondAttribute="centerX" id="1Xr-5b-boG"/>
                             <constraint firstItem="Zem-EJ-uiZ" firstAttribute="leading" secondItem="hrf-YZ-v6g" secondAttribute="trailing" constant="8" id="9tC-Bh-haJ"/>
                             <constraint firstItem="M5X-Oh-HGh" firstAttribute="centerX" secondItem="hrf-YZ-v6g" secondAttribute="centerX" id="A9r-ws-dgO"/>
@@ -201,10 +230,14 @@
                             <constraint firstItem="yEI-Q0-aIK" firstAttribute="centerY" secondItem="odr-ZD-Q5a" secondAttribute="centerY" id="Hmt-h1-JiN"/>
                             <constraint firstItem="odr-ZD-Q5a" firstAttribute="top" secondItem="f9G-ag-RDY" secondAttribute="top" id="Iza-bU-USh"/>
                             <constraint firstItem="Zem-EJ-uiZ" firstAttribute="top" secondItem="odr-ZD-Q5a" secondAttribute="bottom" constant="36" id="L5t-fQ-zZa"/>
+                            <constraint firstItem="hrf-YZ-v6g" firstAttribute="leading" secondItem="IXU-rD-buZ" secondAttribute="trailing" constant="6" id="Lwd-7a-uyF"/>
                             <constraint firstItem="odr-ZD-Q5a" firstAttribute="top" secondItem="f9G-ag-RDY" secondAttribute="top" id="M40-yn-4PJ"/>
                             <constraint firstItem="hrf-YZ-v6g" firstAttribute="top" secondItem="f9G-ag-RDY" secondAttribute="top" constant="280" id="NRU-tS-Efa"/>
+                            <constraint firstItem="IXU-rD-buZ" firstAttribute="top" secondItem="odr-ZD-Q5a" secondAttribute="bottom" constant="13" id="Rv8-gM-DtG"/>
                             <constraint firstAttribute="trailing" secondItem="odr-ZD-Q5a" secondAttribute="trailing" constant="-17" id="T7j-VO-ckn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="odr-ZD-Q5a" secondAttribute="trailing" constant="-33" id="Ua7-fY-UxA"/>
+                            <constraint firstItem="dGO-Fd-sKI" firstAttribute="top" secondItem="odr-ZD-Q5a" secondAttribute="bottom" constant="13" id="Uzm-n4-DGG"/>
+                            <constraint firstItem="W5C-K8-4MF" firstAttribute="top" secondItem="odr-ZD-Q5a" secondAttribute="bottom" constant="36" id="eWg-RM-Ldh"/>
                             <constraint firstItem="odr-ZD-Q5a" firstAttribute="leading" secondItem="Spe-GN-SN7" secondAttribute="leadingMargin" constant="-34" id="f3C-KN-LXP"/>
                             <constraint firstItem="WLZ-RT-WdW" firstAttribute="top" secondItem="hrf-YZ-v6g" secondAttribute="bottom" constant="42" id="f6K-cg-pxJ"/>
                             <constraint firstItem="WLZ-RT-WdW" firstAttribute="trailing" secondItem="f9G-ag-RDY" secondAttribute="trailing" id="g6t-v9-gP3"/>
@@ -251,7 +284,9 @@
     </scenes>
     <resources>
         <image name="groot_main" width="88" height="88"/>
+        <image name="logout" width="128" height="128"/>
         <image name="profile_back" width="1920" height="1285"/>
         <image name="profile_image" width="1920" height="1280"/>
+        <image name="setting" width="128" height="128"/>
     </resources>
 </document>
