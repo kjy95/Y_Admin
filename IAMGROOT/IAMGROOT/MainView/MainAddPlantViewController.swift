@@ -7,16 +7,31 @@
 //
 
 import UIKit
+import Firebase
 
 class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
-
+    var ref: DatabaseReference!
+    //var
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.settingFBRDB()
+        getPlantsInfo()
     }
     
-
+    func settingFBRDB(){
+        // Get a secondary database instance by URL
+        ref = Database.database(url: "https://atticyadmin.firebaseio.com/").reference()
+    }
+    func getPlantsInfo(){
+        ref.child("/EP8HR2gkeGSH2RAQpEGbVglVh0J3").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            //self.label1.text = value!["withLatitude"] as? String
+            print(value!["name"] as? String)
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
     /*
     // MARK: - Navigation
 
