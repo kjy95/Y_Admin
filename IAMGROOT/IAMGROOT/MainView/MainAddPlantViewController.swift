@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainAddPlantViewController: UIViewController {
+class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,5 +26,14 @@ class MainAddPlantViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    //table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FBRDBplantsCell") as UITableViewCell!
+        return cell!
+    }
+    
 }

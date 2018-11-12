@@ -274,7 +274,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rB8-Hj-cAq">
-                                <rect key="frame" x="81" y="49" width="229" height="30"/>
+                                <rect key="frame" x="42" y="49" width="268" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -282,20 +282,41 @@
                             <tableView clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Wo-SJ-tUz">
                                 <rect key="frame" x="0.0" y="124" width="375" height="543"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FBRDBplantsCell" id="jlh-cX-Wdp">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jlh-cX-Wdp" id="zyC-vJ-X2f">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YKd-bZ-YjV" id="98G-uE-Q55"/>
+                                    <outlet property="delegate" destination="YKd-bZ-YjV" id="4JX-v4-kYf"/>
+                                </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEf-U7-phC">
+                                <rect key="frame" x="313" y="49" width="47" height="30"/>
+                                <state key="normal" title="search"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lds-gs-ksE" firstAttribute="top" secondItem="qMN-si-V6G" secondAttribute="top" id="2I6-Fw-8uh"/>
+                            <constraint firstItem="pEf-U7-phC" firstAttribute="top" secondItem="qMN-si-V6G" secondAttribute="top" constant="29" id="4S5-FX-uDo"/>
                             <constraint firstItem="lds-gs-ksE" firstAttribute="leading" secondItem="qMN-si-V6G" secondAttribute="leading" id="IS2-Bs-5bx"/>
+                            <constraint firstItem="pEf-U7-phC" firstAttribute="leading" secondItem="rB8-Hj-cAq" secondAttribute="trailing" constant="3" id="JEH-0M-v3w"/>
                             <constraint firstAttribute="bottom" secondItem="lds-gs-ksE" secondAttribute="bottom" id="SoQ-JK-SVN"/>
                             <constraint firstItem="lds-gs-ksE" firstAttribute="trailing" secondItem="qMN-si-V6G" secondAttribute="trailing" id="aYC-zH-fdc"/>
                             <constraint firstItem="7Wo-SJ-tUz" firstAttribute="leading" secondItem="qMN-si-V6G" secondAttribute="leading" id="d6z-RL-vLO"/>
                             <constraint firstItem="7Wo-SJ-tUz" firstAttribute="trailing" secondItem="qMN-si-V6G" secondAttribute="trailing" id="gyb-xo-khV"/>
-                            <constraint firstItem="rB8-Hj-cAq" firstAttribute="leading" secondItem="qMN-si-V6G" secondAttribute="leading" constant="81" id="ibe-U5-BmD"/>
                             <constraint firstItem="7Wo-SJ-tUz" firstAttribute="top" secondItem="rB8-Hj-cAq" secondAttribute="bottom" constant="45" id="lbu-jI-PVU"/>
                             <constraint firstItem="qMN-si-V6G" firstAttribute="trailing" secondItem="rB8-Hj-cAq" secondAttribute="trailing" constant="65" id="maC-Hk-5hr"/>
+                            <constraint firstItem="rB8-Hj-cAq" firstAttribute="leading" secondItem="qMN-si-V6G" secondAttribute="leading" constant="42" id="mh6-zj-PqU"/>
                             <constraint firstAttribute="bottom" secondItem="7Wo-SJ-tUz" secondAttribute="bottom" id="okJ-k1-vz9"/>
+                            <constraint firstItem="qMN-si-V6G" firstAttribute="trailing" secondItem="pEf-U7-phC" secondAttribute="trailing" constant="15" id="q1a-AN-cff"/>
                             <constraint firstItem="rB8-Hj-cAq" firstAttribute="top" secondItem="qMN-si-V6G" secondAttribute="top" constant="29" id="qVz-VB-sPP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qMN-si-V6G"/>
