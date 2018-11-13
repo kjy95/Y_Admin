@@ -32,7 +32,7 @@ class Plant{//Store Data Globally
     init(dictionary: [String: [String:String]], key: String){
         self.key = key
         self.Explanation = dictionary["Explanation"]!
-        self.Flowerpot = self.Explanation["Flowerpot"] as! String
+        self.Flowerpot = Explanation["Flowerpot"] as! String
         
     }
 }

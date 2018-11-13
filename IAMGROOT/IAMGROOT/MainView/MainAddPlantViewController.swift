@@ -12,11 +12,13 @@ import Firebase
 class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
     var ref: DatabaseReference!
     @IBOutlet weak var searchTextfield: UITextField!
-    
+    var  plants = [Plant]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.settingFBRDB()
         getPlantsInfo()
+        plants = [Plant]()
+        
     }
     
     func settingFBRDB(){
@@ -28,7 +30,7 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
             // Get user value
             let value = snapshot.value as? NSDictionary
             //self.label1.text = value!["withLatitude"] as? String
-            print(value!["name"] as? String)
+            print(value)
         }) { (error) in
             print(error.localizedDescription)
         }
@@ -36,10 +38,13 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
     @IBAction func SearchButton(_ sender: Any) {
         let plantName = searchTextfield.text!
         if !plantName.isEmpty{
-            ref.child("EP8HR2gkeGSH2RAQpEGbVglVh0J3").child(plantName).observeSingleEvent(of: .value, with: { (snapshot) in
+            ref.child("EP8HR2gkeGSH2RAQpEGbVglVh0J3").observeSingleEvent(of: .value, with: { (snapshot) in
                 // Get user value
                 let value = snapshot.value as? NSDictionary
-                print(value!["Explanation"])
+                
+                for plants in snapshot.children.allObjects as! [DataSnapshot]{
+                    print("!!\(plants.value as? [String: AnyObject])")
+                }
                 // self.label3.text = value!["lock"] as? String
             }) { (error) in
                 print(error.localizedDescription)

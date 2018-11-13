@@ -17,8 +17,7 @@ import GooglePlaces
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
  
     
-    var window: UIWindow?
-
+    var window: UIWindow? 
     func prepareloginScene(){
         let loginScene = UIStoryboard(name: "FBLoginConnectPageViewController", bundle:nil).instantiateViewController(withIdentifier: "FBLoginConnectPageViewController") as UIViewController
         let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
