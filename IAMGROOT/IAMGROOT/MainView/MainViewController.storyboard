@@ -300,6 +300,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEf-U7-phC">
                                 <rect key="frame" x="313" y="49" width="47" height="30"/>
                                 <state key="normal" title="search"/>
+                                <connections>
+                                    <action selector="SearchButton:" destination="YKd-bZ-YjV" eventType="touchUpInside" id="3RU-UY-fpC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -323,6 +326,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add Plant" id="fz3-7o-hIt"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchTextfield" destination="rB8-Hj-cAq" id="gAM-k1-dlb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lT-g7-5rQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

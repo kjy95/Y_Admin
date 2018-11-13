@@ -11,7 +11,8 @@ import Firebase
 
 class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
     var ref: DatabaseReference!
-    //var
+    @IBOutlet weak var searchTextfield: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.settingFBRDB()
@@ -31,6 +32,23 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
         }) { (error) in
             print(error.localizedDescription)
         }
+    }
+    @IBAction func SearchButton(_ sender: Any) {
+        let plantName = searchTextfield.text!
+        print("search@\(plantName)")
+        let typep = type(of: plantName)
+        print("'\(plantName)' of type '\(typep)'")
+        if !plantName.isEmpty{
+            ref.child("EP8HR2gkeGSH2RAQpEGbVglVh0J3").child(plantName).observeSingleEvent(of: .value, with: { (snapshot) in
+                // Get user value
+                let value = snapshot.value as? NSDictionary
+                print(value)
+                // self.label3.text = value!["lock"] as? String
+            }) { (error) in
+                print(error.localizedDescription)
+            }
+        }
+        /**/
     }
     /*
     // MARK: - Navigation
