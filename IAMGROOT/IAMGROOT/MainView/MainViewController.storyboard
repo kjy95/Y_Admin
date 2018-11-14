@@ -212,7 +212,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="logout" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGO-Fd-sKI">
-                                <rect key="frame" x="274" y="378" width="39.5" height="16.5"/>
+                                <rect key="frame" x="274" y="378" width="36" height="17"/>
                                 <fontDescription key="fontDescription" name="Manoyri-Regular" family="Manoyri" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -347,6 +347,7 @@
                     <tabBarItem key="tabBarItem" title="Add Plant" id="fz3-7o-hIt"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="plantsTableView" destination="7Wo-SJ-tUz" id="Qdx-Co-4aT"/>
                         <outlet property="searchTextfield" destination="rB8-Hj-cAq" id="gAM-k1-dlb"/>
                     </connections>
                 </viewController>

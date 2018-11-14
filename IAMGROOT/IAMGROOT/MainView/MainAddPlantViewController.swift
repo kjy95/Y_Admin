@@ -10,14 +10,15 @@ import UIKit
 import Firebase
 
 class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
+    @IBOutlet weak var plantsTableView: UITableView!
     var ref: DatabaseReference!
     @IBOutlet weak var searchTextfield: UITextField!
-    var  plants = [Plant]()
+    var  plantsList = [Plant]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.settingFBRDB()
         getPlantsInfo()
-        plants = [Plant]()
+        plantsList = [Plant]()
         
     }
     
@@ -49,6 +50,7 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
                     let f_fall = NumericalData?["f_fall"] as? [String: AnyObject]
                     
                     print(f_fall as Any)
+                    //let plants = plantsList
                 }
                 // self.label3.text = value!["lock"] as? String
             }) { (error) in
@@ -56,7 +58,7 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
             }
         }
     }
-    func getPlantsList(){
+    func setPlantsListModel(){
         ref.child("EP8HR2gkeGSH2RAQpEGbVglVh0J3").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             //let value = snapshot.value as? NSDictionary
@@ -89,7 +91,9 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FBRDBplantsCell") as UITableViewCell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FBRDBplantsCell") as! SearchPlantsTableViewCell!
+        let plant : Plant
+        
         return cell!
     }
     
