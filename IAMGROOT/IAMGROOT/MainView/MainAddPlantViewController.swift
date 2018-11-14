@@ -40,17 +40,39 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
         if !plantName.isEmpty{
             ref.child("EP8HR2gkeGSH2RAQpEGbVglVh0J3").observeSingleEvent(of: .value, with: { (snapshot) in
                 // Get user value
-                let value = snapshot.value as? NSDictionary
+                //let value = snapshot.value as? NSDictionary
                 
                 for plants in snapshot.children.allObjects as! [DataSnapshot]{
-                    print("!!\(plants.value as? [String: AnyObject])")
+                    let plantObject = plants.value as? [String: AnyObject]
+                    let NumericalData = plantObject?["NumericalData"] as? [String: AnyObject]
+                    let Explanation = plantObject?["Explanation"] as? [String: AnyObject]
+                    let f_fall = NumericalData?["f_fall"] as? [String: AnyObject]
+                    
+                    print(f_fall as Any)
                 }
                 // self.label3.text = value!["lock"] as? String
             }) { (error) in
                 print(error.localizedDescription)
             }
         }
-        /**/
+    }
+    func getPlantsList(){
+        ref.child("EP8HR2gkeGSH2RAQpEGbVglVh0J3").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            //let value = snapshot.value as? NSDictionary
+            
+            for plants in snapshot.children.allObjects as! [DataSnapshot]{
+                let plantObject = plants.value as? [String: AnyObject]
+                let NumericalData = plantObject?["NumericalData"] as? [String: AnyObject]
+                let Explanation = plantObject?["Explanation"] as? [String: AnyObject]
+                let f_fall = NumericalData?["f_fall"] as? [String: AnyObject]
+                
+                print(f_fall as Any)
+            }
+            // self.label3.text = value!["lock"] as? String
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
     /*
     // MARK: - Navigation

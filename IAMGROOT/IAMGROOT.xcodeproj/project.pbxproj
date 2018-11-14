@@ -18,6 +18,7 @@
 		BF5FAD1D2196EA26001397EF /* BMYEONSUNG_otf.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF5FAD1C2196EA26001397EF /* BMYEONSUNG_otf.otf */; };
 		BF5FAD212198355F001397EF /* MainAddPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5FAD202198355F001397EF /* MainAddPlantViewController.swift */; };
 		BF5FAD23219AC6C4001397EF /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5FAD22219AC6C4001397EF /* Plant.swift */; };
+		BF5FAD25219C38DB001397EF /* SearchPlantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5FAD24219C38DB001397EF /* SearchPlantsTableViewCell.swift */; };
 		BF808350219462DB00A81B1E /* FBLoginConnectPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDD097021786698009728C0 /* FBLoginConnectPageViewController.storyboard */; };
 		BF8083562195718A00A81B1E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083552195718A00A81B1E /* Bolts.framework */; };
 		BF8083582195718A00A81B1E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083572195718A00A81B1E /* FBSDKCoreKit.framework */; };
@@ -89,6 +90,7 @@
 		BF5FAD1C2196EA26001397EF /* BMYEONSUNG_otf.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMYEONSUNG_otf.otf; sourceTree = "<group>"; };
 		BF5FAD202198355F001397EF /* MainAddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAddPlantViewController.swift; sourceTree = "<group>"; };
 		BF5FAD22219AC6C4001397EF /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		BF5FAD24219C38DB001397EF /* SearchPlantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlantsTableViewCell.swift; sourceTree = "<group>"; };
 		BF8083552195718A00A81B1E /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8083572195718A00A81B1E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8083592195718A00A81B1E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -390,6 +392,7 @@
 				BF1DEAB9217ED69400EB818B /* MainTabBarController.swift */,
 				BF8083832195788000A81B1E /* MainPrivateViewController.swift */,
 				BF5FAD202198355F001397EF /* MainAddPlantViewController.swift */,
+				BF5FAD24219C38DB001397EF /* SearchPlantsTableViewCell.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 				BF5FAD23219AC6C4001397EF /* Plant.swift in Sources */,
 				BF1DEAB8217C73A600EB818B /* MainViewController.swift in Sources */,
 				BF1DEABD217F339B00EB818B /* User.swift in Sources */,
+				BF5FAD25219C38DB001397EF /* SearchPlantsTableViewCell.swift in Sources */,
 				BF5FAD212198355F001397EF /* MainAddPlantViewController.swift in Sources */,
 				BF8083872196B67800A81B1E /* RoundedImageView.swift in Sources */,
 			);
