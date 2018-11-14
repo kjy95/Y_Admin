@@ -16,65 +16,77 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
     var  plantsList = [Plant]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        plantsTableView.dataSource = self
+        plantsTableView.delegate = self
         self.settingFBRDB()
-        getPlantsInfo()
         plantsList = [Plant]()
-        
+        setPlantsListModel()
     }
     
     func settingFBRDB(){
         // Get a secondary database instance by URL
         ref = Database.database(url: "https://atticyadmin.firebaseio.com/").reference()
     }
-    func getPlantsInfo(){
-        ref.child("/EP8HR2gkeGSH2RAQpEGbVglVh0J3").observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            let value = snapshot.value as? NSDictionary
-            //self.label1.text = value!["withLatitude"] as? String
-            print(value)
-        }) { (error) in
-            print(error.localizedDescription)
-        }
-    }
+   
     @IBAction func SearchButton(_ sender: Any) {
         let plantName = searchTextfield.text!
         if !plantName.isEmpty{
+            
+            plantsList = [Plant]()
+            
             ref.child("EP8HR2gkeGSH2RAQpEGbVglVh0J3").observeSingleEvent(of: .value, with: { (snapshot) in
                 // Get user value
                 //let value = snapshot.value as? NSDictionary
                 
+                self.plantsList.removeAll()
                 for plants in snapshot.children.allObjects as! [DataSnapshot]{
                     let plantObject = plants.value as? [String: AnyObject]
                     let NumericalData = plantObject?["NumericalData"] as? [String: AnyObject]
                     let Explanation = plantObject?["Explanation"] as? [String: AnyObject]
-                    let f_fall = NumericalData?["f_fall"] as? [String: AnyObject]
+                    let name = plantObject!["name"]
                     
-                    print(f_fall as Any)
-                    //let plants = plantsList
+                    let plants = Plant(Explanation: (Explanation)!,NumericalData:  (NumericalData)!, name: name as! String)
+                     self.plantsList.append(plants)
+                    print("plantlist")
+                    print(plants.Explanation)
+                    print(plants.NumericalData)
+                    print(plants.name)
+                    
                 }
                 // self.label3.text = value!["lock"] as? String
             }) { (error) in
                 print(error.localizedDescription)
             }
         }
+        self.plantsTableView.reloadData()
     }
     func setPlantsListModel(){
+        plantsList = [Plant]()
         ref.child("EP8HR2gkeGSH2RAQpEGbVglVh0J3").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             //let value = snapshot.value as? NSDictionary
             
+            self.plantsList.removeAll()
             for plants in snapshot.children.allObjects as! [DataSnapshot]{
                 let plantObject = plants.value as? [String: AnyObject]
                 let NumericalData = plantObject?["NumericalData"] as? [String: AnyObject]
                 let Explanation = plantObject?["Explanation"] as? [String: AnyObject]
-                let f_fall = NumericalData?["f_fall"] as? [String: AnyObject]
+                let name = plantObject!["name"]
                 
-                print(f_fall as Any)
+                let plants = Plant(Explanation: (Explanation)!,NumericalData:  (NumericalData)!, name: name as! String)
+                self.plantsList.append(plants)
+                print("plantlist")
+                print(plants.Explanation)
+                print(plants.NumericalData)
+                print(plants.name)
+                print(self.plantsList.count)
             }
             // self.label3.text = value!["lock"] as? String
         }) { (error) in
             print(error.localizedDescription)
         }
+        
+        self.plantsTableView.reloadData()
     }
     /*
     // MARK: - Navigation
@@ -87,14 +99,19 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
     */
     //table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        print("왜안나와2")
+        return plantsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FBRDBplantsCell") as! SearchPlantsTableViewCell!
+        print("왜안나와")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchPlantsTableViewCell", for:indexPath) as! SearchPlantsTableViewCell
         let plant : Plant
+        plant = plantsList[indexPath.row]
+        cell.PlantName.text = plant.name
+        cell.explanation.text = plant.explanation
         
-        return cell!
+        return cell
     }
     
 }
