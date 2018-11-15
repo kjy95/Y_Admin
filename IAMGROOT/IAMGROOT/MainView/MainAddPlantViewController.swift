@@ -95,4 +95,9 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! SearchPlantsTableViewCell
+        let labelContent = cell.PlantName.text
+        print(labelContent)
+    }
 }
