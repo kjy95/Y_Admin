@@ -13,6 +13,7 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
     @IBOutlet weak var plantsTableView: UITableView!
     var ref: DatabaseReference!
     @IBOutlet weak var searchTextfield: UITextField!
+    @IBOutlet weak var plantInfoPopup: UIView!
     var  plantsList = [Plant]()//all plantlist
     var  showTableViewPlantsList = [Plant]()//select some plantlist from plantsList
     override func viewDidLoad() {
@@ -99,5 +100,6 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
         let cell = tableView.cellForRow(at: indexPath) as! SearchPlantsTableViewCell
         let labelContent = cell.PlantName.text
         print(labelContent)
+        plantInfoPopup.isHidden = false
     }
 }
