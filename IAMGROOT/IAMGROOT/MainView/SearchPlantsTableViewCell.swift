@@ -12,6 +12,7 @@ class SearchPlantsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var PlantName: UILabel!
     @IBOutlet weak var explanation: UILabel!
+    @IBOutlet weak var frequency: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="BMDOHYEON_otf.otf">
+            <string>BMDoHyeon-OTF</string>
+        </array>
         <array key="BMYEONSUNG_otf.otf">
             <string>BMYEONSUNG-OTF</string>
         </array>
@@ -212,7 +215,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="logout" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGO-Fd-sKI">
-                                <rect key="frame" x="274" y="378" width="39.5" height="16.5"/>
+                                <rect key="frame" x="274" y="378" width="36" height="17"/>
                                 <fontDescription key="fontDescription" name="Manoyri-Regular" family="Manoyri" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -279,7 +282,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Wo-SJ-tUz">
+                            <tableView clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Wo-SJ-tUz">
                                 <rect key="frame" x="0.0" y="124" width="375" height="543"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -291,28 +294,37 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장미" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfX-KF-TEh">
-                                                    <rect key="frame" x="15" y="1" width="37" height="32"/>
-                                                    <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="26"/>
-                                                    <color key="textColor" red="0.086517177522182465" green="0.34191644191741943" blue="0.39926034212112427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="15" y="1" width="46.5" height="29"/>
+                                                    <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="24"/>
+                                                    <color key="textColor" red="0.15885907411575317" green="0.34957233071327209" blue="0.49146360158920288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkD-ab-ObC">
-                                                    <rect key="frame" x="33" y="30" width="45" height="21"/>
+                                                    <rect key="frame" x="15" y="36" width="45" height="21"/>
                                                     <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
-                                                    <color key="textColor" red="0.61102741956710815" green="0.85819375514984131" blue="0.92260938882827759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" red="0.10960499197244644" green="0.59111499786376953" blue="0.65105092525482178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="highlightedColor" red="0.73209935426712036" green="0.9375157356262207" blue="0.93183040618896484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물주기 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBC-BS-BYk">
+                                                    <rect key="frame" x="17" y="59" width="62" height="21"/>
+                                                    <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
+                                                    <color key="textColor" red="0.67309480905532837" green="0.94908374547958374" blue="0.94883710145950317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="highlightedColor" red="0.73209935426712036" green="0.9375157356262207" blue="0.93183040618896484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="GkD-ab-ObC" firstAttribute="top" secondItem="PfX-KF-TEh" secondAttribute="bottom" constant="6" id="78w-kl-W6M"/>
                                                 <constraint firstItem="PfX-KF-TEh" firstAttribute="leading" secondItem="zyC-vJ-X2f" secondAttribute="leading" constant="15" id="Gu0-Oa-ZRU"/>
+                                                <constraint firstItem="dBC-BS-BYk" firstAttribute="top" secondItem="GkD-ab-ObC" secondAttribute="bottom" constant="2" id="VJw-XN-qRH"/>
+                                                <constraint firstItem="dBC-BS-BYk" firstAttribute="leading" secondItem="zyC-vJ-X2f" secondAttribute="leading" constant="17" id="ZvQ-65-bRL"/>
+                                                <constraint firstItem="GkD-ab-ObC" firstAttribute="leading" secondItem="zyC-vJ-X2f" secondAttribute="leadingMargin" id="hUQ-pO-YSm"/>
                                                 <constraint firstItem="PfX-KF-TEh" firstAttribute="top" secondItem="zyC-vJ-X2f" secondAttribute="top" constant="1" id="t2h-Fw-38y"/>
-                                                <constraint firstItem="GkD-ab-ObC" firstAttribute="top" secondItem="zyC-vJ-X2f" secondAttribute="topMargin" constant="19" id="zE3-06-Pa3"/>
-                                                <constraint firstItem="GkD-ab-ObC" firstAttribute="leading" secondItem="zyC-vJ-X2f" secondAttribute="leadingMargin" constant="18" id="zLS-IM-wxj"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="PlantName" destination="PfX-KF-TEh" id="ZGc-V0-AxY"/>
                                             <outlet property="explanation" destination="GkD-ab-ObC" id="2gT-2I-aGY"/>
+                                            <outlet property="frequency" destination="dBC-BS-BYk" id="VgU-31-uyt"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -359,6 +371,22 @@
             </objects>
             <point key="canvasLocation" x="1260" y="865.81709145427294"/>
         </scene>
+        <!--I'MGROOT-->
+        <scene sceneID="aIJ-cB-P5T">
+            <objects>
+                <viewController id="SjF-dc-80Y" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="whJ-bp-A9K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OQG-4y-L93"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="I'MGROOT" id="B01-lJ-05A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CU8-y1-har" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="868"/>
+        </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="YFI-Fc-hCw">
             <objects>
@@ -373,6 +401,7 @@
                         <segue destination="04Y-DT-0JM" kind="relationship" relationship="viewControllers" id="h6M-gU-eES"/>
                         <segue destination="d6S-jE-J0x" kind="relationship" relationship="viewControllers" id="u2B-yN-mjZ"/>
                         <segue destination="YKd-bZ-YjV" kind="relationship" relationship="viewControllers" id="8cS-Xc-jSH"/>
+                        <segue destination="SjF-dc-80Y" kind="relationship" relationship="viewControllers" id="sNL-Cl-fCx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7c-ke-B0G" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -91,7 +91,7 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
         plant = showTableViewPlantsList[indexPath.row]
         cell.PlantName.text = plant.name
         cell.explanation.text = plant.explanation
-        
+        cell.frequency.text = plant.frequency
         return cell
     }
     
