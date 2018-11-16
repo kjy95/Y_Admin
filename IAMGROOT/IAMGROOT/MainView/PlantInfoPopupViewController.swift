@@ -15,12 +15,15 @@ class PlantInfoPopupViewController: UIViewController {
     @IBOutlet weak var naviBar: UINavigationBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-        plantName.attributedText = NSAttributedString(string: plant[0].name)
-        print(plant)
+        changeInfoLabe()
         // Do any additional setup after loading the view.
     }
     
-    
+    func changeInfoLabe(){
+        plantName.attributedText = NSAttributedString(string: plant[0].name)
+        explanationLabel.attributedText = NSAttributedString(string: plant[0].explanation)
+        
+    }
 
     
     

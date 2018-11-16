@@ -452,7 +452,6 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="192"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="192" id="AzA-ir-WiY"/>
                                                     <constraint firstAttribute="width" secondItem="4m1-hP-mSH" secondAttribute="height" multiplier="125:64" id="Bxp-gK-FO6"/>
                                                 </constraints>
                                             </imageView>
@@ -460,15 +459,15 @@
                                                 <rect key="frame" x="0.0" y="221" width="375" height="145"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="꽃이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3m-hg-iQe">
-                                                        <rect key="frame" x="29" y="8" width="317" height="25.5"/>
-                                                        <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="21"/>
+                                                        <rect key="frame" x="29" y="8" width="317" height="31.5"/>
+                                                        <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="26"/>
                                                         <color key="textColor" red="0.086967967450618744" green="0.54424029588699341" blue="0.49153250455856323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="explanation" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bKA-EB-aIA">
-                                                        <rect key="frame" x="14" y="36" width="347" height="115"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="설명" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bKA-EB-aIA">
+                                                        <rect key="frame" x="14" y="42" width="347" height="109"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="24"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
@@ -482,7 +481,6 @@
                                                     <constraint firstAttribute="trailing" secondItem="o3m-hg-iQe" secondAttribute="trailing" constant="29" id="mwh-0I-jFH"/>
                                                     <constraint firstItem="bKA-EB-aIA" firstAttribute="top" secondItem="o3m-hg-iQe" secondAttribute="bottom" constant="2.5" id="uFU-oR-kiE"/>
                                                     <constraint firstAttribute="trailing" secondItem="bKA-EB-aIA" secondAttribute="trailing" constant="14" id="yrZ-bZ-lNH"/>
-                                                    <constraint firstAttribute="height" constant="145" id="yuX-ct-rMp"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
