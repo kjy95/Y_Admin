@@ -14,6 +14,7 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
     var ref: DatabaseReference!
     @IBOutlet weak var searchTextfield: UITextField!
     @IBOutlet weak var plantInfoPopup: UIView!
+   // @IBOutlet weak var PVplantName: UILabel!
     var  plantsList = [Plant]()//all plantlist
     var  showTableViewPlantsList = [Plant]()//select some plantlist from plantsList
     override func viewDidLoad() {
@@ -100,6 +101,19 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
         let cell = tableView.cellForRow(at: indexPath) as! SearchPlantsTableViewCell
         let labelContent = cell.PlantName.text
         print(labelContent)
-        plantInfoPopup.isHidden = false
+      //  PVplantName.text = cell.PlantName.text
+        initializeContainerView(plantInfoList: labelContent!)
+    }
+    func initializeContainerView(plantInfoList: String) {
+        //let Storyboard: UIStoryboard = UIStoryboard(name: "MainViewController", bundle: nil)
+       // let ViewController: PlantInfoPopupViewController = Storyboard.instantiateViewController(withIdentifier: "PlantInfoPopupViewController") as! PlantInfoPopupViewController
+        self.definesPresentationContext = true
+        self.modalTransitionStyle = .crossDissolve
+        let infoViewController = storyboard?.instantiateViewController(withIdentifier: "PlantInfoPopupViewController") as! PlantInfoPopupViewController
+        infoViewController.info = plantInfoList
+        infoViewController.modalPresentationStyle = .overCurrentContext
+        infoViewController.modalTransitionStyle = .flipHorizontal
+        infoViewController.size
+        present(infoViewController, animated: true, completion: nil)
     }
 }

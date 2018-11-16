@@ -57,6 +57,7 @@
 		BFD0B2112175A736002B94D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B2102175A736002B94D1 /* GoogleService-Info.plist */; };
 		BFD0B2122175A736002B94D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B2102175A736002B94D1 /* GoogleService-Info.plist */; };
 		BFD0B2132175A736002B94D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B2102175A736002B94D1 /* GoogleService-Info.plist */; };
+		BFDAF745219DEA7F00757F03 /* PlantInfoPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDAF744219DEA7F00757F03 /* PlantInfoPopupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		BFD0B1FF2174DDC2002B94D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFD0B20E21758E76002B94D1 /* FBLoginConnectPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLoginConnectPageViewController.swift; sourceTree = "<group>"; };
 		BFD0B2102175A736002B94D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BFDAF744219DEA7F00757F03 /* PlantInfoPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoPopupViewController.swift; sourceTree = "<group>"; };
 		BFDD096C2175B0D3009728C0 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDD096E2175B0DC009728C0 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDD097021786698009728C0 /* FBLoginConnectPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FBLoginConnectPageViewController.storyboard; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 				BF8083832195788000A81B1E /* MainPrivateViewController.swift */,
 				BF5FAD202198355F001397EF /* MainAddPlantViewController.swift */,
 				BF5FAD24219C38DB001397EF /* SearchPlantsTableViewCell.swift */,
+				BFDAF744219DEA7F00757F03 /* PlantInfoPopupViewController.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -748,6 +751,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFDAF745219DEA7F00757F03 /* PlantInfoPopupViewController.swift in Sources */,
 				BFD0B20F21758E76002B94D1 /* FBLoginConnectPageViewController.swift in Sources */,
 				BF8083842195788000A81B1E /* MainPrivateViewController.swift in Sources */,
 				BFD0B1E32174DDBE002B94D1 /* IAMGROOT.xcdatamodeld in Sources */,
