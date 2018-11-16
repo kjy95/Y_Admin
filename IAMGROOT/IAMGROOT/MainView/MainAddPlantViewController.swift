@@ -13,7 +13,6 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
     @IBOutlet weak var plantsTableView: UITableView!
     var ref: DatabaseReference!
     @IBOutlet weak var searchTextfield: UITextField!
-    @IBOutlet weak var plantInfoPopup: UIView!
    // @IBOutlet weak var PVplantName: UILabel!
     var  plantsList = [Plant]()//all plantlist
     var  showTableViewPlantsList = [Plant]()//select some plantlist from plantsList
@@ -40,8 +39,9 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
                 let NumericalData = plants.NumericalData
                 let Explanation = plants.Explanation
                 let name = plants.name
+                let pid = plants.pid
                 if(name == plantName){
-                    let plant = Plant(Explanation: Explanation,NumericalData:  NumericalData, name: name )
+                    let plant = Plant(Explanation: Explanation,NumericalData:  NumericalData, name: name, pid: pid )
                     self.showTableViewPlantsList.append(plant)
                 }
                 print("plantlist")
@@ -57,14 +57,16 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
         ref.child("EP8HR2gkeGSH2RAQpEGbVglVh0J3").observe(DataEventType.value, with: { (snapshot) in
             
             self.plantsList.removeAll()
+            var count = 0
             for plants in snapshot.children.allObjects as! [DataSnapshot]{
                 let plantObject = plants.value as? [String: AnyObject]
                 let NumericalData = plantObject?["NumericalData"] as? [String: AnyObject]
                 let Explanation = plantObject?["Explanation"] as? [String: AnyObject]
                 let name = plantObject!["name"]
                 
-                let plants = Plant(Explanation: (Explanation)!,NumericalData:  (NumericalData)!, name: name as! String)
+                let plants = Plant(Explanation: (Explanation)!,NumericalData:  (NumericalData)!, name: name as! String, pid: count)
                 self.plantsList.append(plants)
+                count += 1
             }
             self.showTableViewPlantsList = self.plantsList
             self.plantsTableView.reloadData()
@@ -94,23 +96,19 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
         cell.PlantName.text = plant.name
         cell.explanation.text = plant.explanation
         cell.frequency.text = plant.frequency
+        cell.pid.text = String(plant.pid)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! SearchPlantsTableViewCell
-        let labelContent = cell.PlantName.text
-        print(labelContent)
+        let pid = Int(cell.pid.text!)
       //  PVplantName.text = cell.PlantName.text
-        initializeContainerView(plantInfoList: labelContent!)
+        initializeContainerView(pid: pid!)
     }
-    func initializeContainerView(plantInfoList: String) {
-        //let Storyboard: UIStoryboard = UIStoryboard(name: "MainViewController", bundle: nil)
-       // let ViewController: PlantInfoPopupViewController = Storyboard.instantiateViewController(withIdentifier: "PlantInfoPopupViewController") as! PlantInfoPopupViewController
-        self.definesPresentationContext = true
-        self.modalTransitionStyle = .crossDissolve
+    func initializeContainerView(pid: Int) {
         let infoViewController = storyboard?.instantiateViewController(withIdentifier: "PlantInfoPopupViewController") as! PlantInfoPopupViewController
-        infoViewController.info = plantInfoList
+        infoViewController.plant.append(plantsList[pid])
         infoViewController.modalPresentationStyle = .overCurrentContext
         infoViewController.modalTransitionStyle = .flipHorizontal
         infoViewController.size

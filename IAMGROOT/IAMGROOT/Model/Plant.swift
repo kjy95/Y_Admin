@@ -8,8 +8,8 @@
 
 import UIKit
 
-class Plant{//Store Data Globally 
-    
+class Plant{
+    var pid : Int
     var Explanation:[String:AnyObject]
     var Flowerpot: String
     var explanation: String
@@ -29,7 +29,8 @@ class Plant{//Store Data Globally
  
     var name: String
     
-    init(Explanation: [String:AnyObject],NumericalData: [String:AnyObject], name: String){
+    init(Explanation: [String:AnyObject],NumericalData: [String:AnyObject], name: String, pid: Int){
+        self.pid = pid
         self.Explanation = Explanation
         self.Flowerpot = Explanation["Flowerpot"] as! String
         self.explanation = Explanation["explanation"] as! String
