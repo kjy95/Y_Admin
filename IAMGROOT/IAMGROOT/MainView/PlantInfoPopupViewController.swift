@@ -11,20 +11,34 @@ import UIKit
 class PlantInfoPopupViewController: UIViewController {
     var  plant = [Plant]()
     @IBOutlet weak var plantName: UILabel!
-    @IBOutlet weak var explanationLabel: UITextView!
     @IBOutlet weak var naviBar: UINavigationBar!
+    @IBOutlet weak var ExpLable: UILabel!
+    @IBOutlet weak var fstInfoView: UIView!
+    @IBOutlet weak var flowerImageView: UIImageView!
+    @IBOutlet weak var addPlantButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         changeInfoLabe()
+        viewborder()
         // Do any additional setup after loading the view.
     }
     
     func changeInfoLabe(){
         plantName.attributedText = NSAttributedString(string: plant[0].name)
-        explanationLabel.attributedText = NSAttributedString(string: plant[0].explanation)
+        ExpLable.attributedText = NSAttributedString(string: plant[0].explanation)
+        ExpLable.sizeToFit()
+        
         
     }
-
+    @IBAction func addPlant(_ sender: Any) {
+        
+    }
+    func viewborder(){
+        fstInfoView.layer.borderColor = UIColor.gray.cgColor
+        fstInfoView.layer.borderWidth = 1.0
+        //todo 선이 사진 위에 보이는거 해결해야된다
+        
+    }
     
     
     /*
@@ -41,3 +55,5 @@ class PlantInfoPopupViewController: UIViewController {
     }
 
 }
+
+
