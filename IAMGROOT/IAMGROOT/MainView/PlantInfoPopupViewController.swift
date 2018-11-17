@@ -16,6 +16,14 @@ class PlantInfoPopupViewController: UIViewController {
     @IBOutlet weak var fstInfoView: UIView!
     @IBOutlet weak var flowerImageView: UIImageView!
     @IBOutlet weak var addPlantButton: UIButton!
+    @IBOutlet weak var NumericalDataFlowerpotLabel: UILabel!
+    @IBOutlet weak var FlowerpotLabel: UILabel!
+    @IBOutlet weak var NumFLabel: UILabel!
+    @IBOutlet weak var NumF2Label: UILabel!
+    @IBOutlet weak var frequenceyLabel: UILabel!
+    @IBOutlet weak var NumPLabel: UILabel!
+    @IBOutlet weak var NumP2Label: UILabel!
+    @IBOutlet weak var placeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         changeInfoLabe()
@@ -27,8 +35,14 @@ class PlantInfoPopupViewController: UIViewController {
         plantName.attributedText = NSAttributedString(string: plant[0].name)
         ExpLable.attributedText = NSAttributedString(string: plant[0].explanation)
         ExpLable.sizeToFit()
-        
-        
+        NumericalDataFlowerpotLabel.attributedText = NSAttributedString(string: "1년에 \(plant[0].flowerpot)번" )
+        FlowerpotLabel.attributedText = NSAttributedString(string:plant[0].Flowerpot )
+        NumFLabel.attributedText = NSAttributedString(string: "봄: 1개월에 \(plant[0].f_spring)번 물을 주세요.\n가을: 1개월에 \(plant[0].f_spring)번 물을 주세요." )
+        NumF2Label.attributedText = NSAttributedString(string: "여름: 1개월에 \(plant[0].f_summer)번 물을 주세요.\n겨울: 1개월에 \(plant[0].f_winter)번 물을 주세요." )
+        frequenceyLabel.attributedText = NSAttributedString(string: plant[0].frequency )
+        NumPLabel.attributedText = NSAttributedString(string: "봄: \(plant[0].p_spring)\n가을: \(plant[0].p_spring)" )
+        NumP2Label.attributedText = NSAttributedString(string: "여름: \(plant[0].p_summer)\n겨울: \(plant[0].p_winter)" )
+        placeLabel.attributedText = NSAttributedString(string:plant[0].place )
     }
     @IBAction func addPlant(_ sender: Any) {
         

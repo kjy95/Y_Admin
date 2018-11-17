@@ -514,73 +514,99 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxP-KK-kwX">
                                                 <rect key="frame" x="0.0" y="416" width="375" height="413"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="분갈이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bj1-bk-12w">
-                                                        <rect key="frame" x="23" y="27" width="67" height="28"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="분갈이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bj1-bk-12w">
+                                                        <rect key="frame" x="23" y="19" width="67" height="28"/>
                                                         <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="23"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="물주기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ue-hJ-aCc">
-                                                        <rect key="frame" x="23" y="143" width="67" height="28"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물주기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ue-hJ-aCc">
+                                                        <rect key="frame" x="23" y="113.5" width="67" height="28"/>
                                                         <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="23"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="장소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPW-jT-JYa">
-                                                        <rect key="frame" x="23" y="308" width="45" height="28"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPW-jT-JYa">
+                                                        <rect key="frame" x="23" y="208" width="45" height="28"/>
                                                         <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="23"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1년에 1번 분갈이 해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wR4-RE-2ip">
-                                                        <rect key="frame" x="26" y="63" width="139" height="16"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1년에 1번 분갈이 해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wR4-RE-2ip">
+                                                        <rect key="frame" x="23" y="56" width="139" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="봄: 1개월에 1번 물을 주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0w-22-YUA">
-                                                        <rect key="frame" x="23" y="179" width="147" height="16"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="봄: 1개월에 1번 물을 주세요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0w-22-YUA">
+                                                        <rect key="frame" x="23" y="150.5" width="146.5" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="분갈이 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgl-zd-qj2">
-                                                        <rect key="frame" x="26" y="87" width="62" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="분갈이 설명" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgl-zd-qj2">
+                                                        <rect key="frame" x="23" y="80" width="62" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="물주기 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZ2-Ig-x7I">
-                                                        <rect key="frame" x="23" y="203" width="62" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물주기 설명" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZ2-Ig-x7I">
+                                                        <rect key="frame" x="23" y="174.5" width="330" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="봄: 양지에 놓는게 좋아요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHi-Gt-S4H">
-                                                        <rect key="frame" x="23" y="338" width="131" height="16"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장소설명" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5v-Mc-s6H">
+                                                        <rect key="frame" x="23" y="269" width="48" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykO-c2-KuQ">
+                                                        <rect key="frame" x="320" y="150.5" width="33" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="장소설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5v-Mc-s6H">
-                                                        <rect key="frame" x="23" y="362" width="48" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKm-HC-lGK">
+                                                        <rect key="frame" x="302" y="245" width="33" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="봄: 양지에 놓는게 좋아요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHi-Gt-S4H">
+                                                        <rect key="frame" x="23" y="245" width="131" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="9Ue-hJ-aCc" firstAttribute="top" secondItem="Sgl-zd-qj2" secondAttribute="bottom" constant="13" id="4bS-C4-J9W"/>
+                                                    <constraint firstItem="MZ2-Ig-x7I" firstAttribute="leading" secondItem="pxP-KK-kwX" secondAttribute="leading" constant="23" id="7C1-wm-4zz"/>
+                                                    <constraint firstItem="wR4-RE-2ip" firstAttribute="leading" secondItem="pxP-KK-kwX" secondAttribute="leading" constant="23" id="7hz-5b-3GG"/>
+                                                    <constraint firstItem="MZ2-Ig-x7I" firstAttribute="top" secondItem="b0w-22-YUA" secondAttribute="bottom" constant="8" id="85c-PJ-nMY"/>
+                                                    <constraint firstItem="Sgl-zd-qj2" firstAttribute="leading" secondItem="pxP-KK-kwX" secondAttribute="leading" constant="23" id="ABV-3H-Uck"/>
+                                                    <constraint firstItem="mPW-jT-JYa" firstAttribute="leading" secondItem="pxP-KK-kwX" secondAttribute="leading" constant="23" id="CnQ-2X-jee"/>
+                                                    <constraint firstItem="ykO-c2-KuQ" firstAttribute="top" secondItem="pxP-KK-kwX" secondAttribute="top" constant="150.5" id="Cv6-BB-5Jx"/>
+                                                    <constraint firstItem="b0w-22-YUA" firstAttribute="top" secondItem="9Ue-hJ-aCc" secondAttribute="bottom" constant="9" id="Fef-r3-gXY"/>
                                                     <constraint firstAttribute="height" constant="413" id="FhU-rS-FPN"/>
+                                                    <constraint firstItem="b0w-22-YUA" firstAttribute="leading" secondItem="pxP-KK-kwX" secondAttribute="leading" constant="23" id="OdE-iG-VZ7"/>
+                                                    <constraint firstItem="u5v-Mc-s6H" firstAttribute="top" secondItem="KHi-Gt-S4H" secondAttribute="bottom" constant="8" id="QMs-Pl-k37"/>
+                                                    <constraint firstItem="KHi-Gt-S4H" firstAttribute="leading" secondItem="pxP-KK-kwX" secondAttribute="leading" constant="23" id="Rsw-E4-Adj"/>
+                                                    <constraint firstItem="bj1-bk-12w" firstAttribute="top" secondItem="pxP-KK-kwX" secondAttribute="top" constant="19" id="W6F-Rh-NlK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MZ2-Ig-x7I" secondAttribute="trailing" constant="22" id="ann-jb-0cw"/>
+                                                    <constraint firstItem="mPW-jT-JYa" firstAttribute="top" secondItem="MZ2-Ig-x7I" secondAttribute="bottom" constant="13" id="ei9-u0-lxD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ykO-c2-KuQ" secondAttribute="trailing" constant="22" id="fFq-Yq-gwd"/>
+                                                    <constraint firstItem="KHi-Gt-S4H" firstAttribute="top" secondItem="mPW-jT-JYa" secondAttribute="bottom" constant="9" id="g73-Ao-dZE"/>
+                                                    <constraint firstItem="u5v-Mc-s6H" firstAttribute="leading" secondItem="pxP-KK-kwX" secondAttribute="leading" constant="23" id="gEf-bR-HUw"/>
+                                                    <constraint firstItem="9Ue-hJ-aCc" firstAttribute="leading" secondItem="pxP-KK-kwX" secondAttribute="leading" constant="23" id="kCy-v9-kZl"/>
+                                                    <constraint firstItem="wR4-RE-2ip" firstAttribute="top" secondItem="bj1-bk-12w" secondAttribute="bottom" constant="9" id="ojs-50-n2J"/>
+                                                    <constraint firstItem="bj1-bk-12w" firstAttribute="leading" secondItem="pxP-KK-kwX" secondAttribute="leading" constant="23" id="tNy-LU-fJP"/>
+                                                    <constraint firstItem="Sgl-zd-qj2" firstAttribute="top" secondItem="wR4-RE-2ip" secondAttribute="bottom" constant="8" id="vjk-r4-Czg"/>
+                                                    <constraint firstItem="XKm-HC-lGK" firstAttribute="top" secondItem="MZ2-Ig-x7I" secondAttribute="bottom" constant="50" id="vml-2C-QAN"/>
+                                                    <constraint firstAttribute="trailing" secondItem="XKm-HC-lGK" secondAttribute="trailing" constant="40" id="w7F-zR-y4y"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -628,10 +654,18 @@
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="ExpLable" destination="ATT-tk-Acw" id="pNr-GD-4Rr"/>
+                        <outlet property="FlowerpotLabel" destination="Sgl-zd-qj2" id="QiG-EK-jGp"/>
+                        <outlet property="NumF2Label" destination="ykO-c2-KuQ" id="Pbd-hs-Ed8"/>
+                        <outlet property="NumFLabel" destination="b0w-22-YUA" id="o6b-Aw-Fdm"/>
+                        <outlet property="NumP2Label" destination="XKm-HC-lGK" id="ZEN-3d-KeT"/>
+                        <outlet property="NumPLabel" destination="KHi-Gt-S4H" id="GR8-T9-5aM"/>
+                        <outlet property="NumericalDataFlowerpotLabel" destination="wR4-RE-2ip" id="0YZ-ph-PFa"/>
                         <outlet property="addPlantButton" destination="76b-Uy-5nJ" id="r7j-VF-JZM"/>
                         <outlet property="flowerImageView" destination="4m1-hP-mSH" id="vRs-ea-oCz"/>
+                        <outlet property="frequenceyLabel" destination="MZ2-Ig-x7I" id="mnZ-LQ-n9R"/>
                         <outlet property="fstInfoView" destination="nK0-hc-Vvi" id="XUt-re-bUg"/>
                         <outlet property="naviBar" destination="p7H-J0-SrY" id="IFG-6Z-UaI"/>
+                        <outlet property="placeLabel" destination="u5v-Mc-s6H" id="n1U-5P-YmQ"/>
                         <outlet property="plantName" destination="o3m-hg-iQe" id="6Eb-Ng-Cnj"/>
                     </connections>
                 </viewController>
