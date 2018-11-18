@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class PlantInfoPopupViewController: UIViewController {
     var  plant = [Plant]()
     @IBOutlet weak var plantName: UILabel!
@@ -46,16 +46,21 @@ class PlantInfoPopupViewController: UIViewController {
     }
     @IBAction func addPlant(_ sender: Any) {
         //todo 모든 식물데이터를 다 넣는다. nsdefault로 앱에 남겨둔다
-        let alert=UIAlertController(title:"내 식물로 추가", message: "내 식물로 추가하실 건가요?", preferredStyle:UIAlertController.Style.alert )
+        let alert=UIAlertController(title:"식물 추가", message: "내 식물에 추가하실 건가요?", preferredStyle:UIAlertController.Style.alert )
         
         alert.addAction(UIAlertAction(title: "네", style: UIAlertAction.Style.default, handler: {
-            _ in print("FOO ")
+            _ in self.userPlantUpdate()
         }))
         alert.addAction(UIAlertAction(title: "아니요", style: UIAlertAction.Style.cancel, handler: {
             _ in
         }))
         present(alert, animated: true, completion: nil)
 
+    }
+    func userPlantUpdate(){
+        var ref: DatabaseReference!
+        ref = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()
+        ref.child("users").child(User.uid).child("MyPlants").child(plant[0].name).setValue(["Explanation": plant[0].Explanation,"NumericalData": plant[0].NumericalData,"name": plant[0].name])
     }
     func viewborder(){
         fstInfoView.layer.borderColor = UIColor.gray.cgColor
