@@ -45,7 +45,7 @@ class PlantInfoPopupViewController: UIViewController {
         placeLabel.attributedText = NSAttributedString(string:plant[0].place )
     }
     @IBAction func addPlant(_ sender: Any) {
-        //todo 모든 식물데이터를 다 넣는다. nsdefault로 앱에 남겨둔다
+        //todo nsdefault로 앱에 남겨둔다
         let alert=UIAlertController(title:"식물 추가", message: "내 식물에 추가하실 건가요?", preferredStyle:UIAlertController.Style.alert )
         
         alert.addAction(UIAlertAction(title: "네", style: UIAlertAction.Style.default, handler: {

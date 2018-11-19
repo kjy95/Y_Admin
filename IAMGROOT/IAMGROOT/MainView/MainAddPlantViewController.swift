@@ -44,10 +44,6 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
                     let plant = Plant(Explanation: Explanation,NumericalData:  NumericalData, name: name, pid: pid )
                     self.showTableViewPlantsList.append(plant)
                 }
-                print("plantlist")
-                print(plants.Explanation)
-                print(plants.NumericalData)
-                print(plants.name)
                 
             }
             self.plantsTableView.reloadData()
