@@ -99,6 +99,7 @@ class MainPrivateViewController: UIViewController, UITableViewDelegate, UITableV
         //  PVplantName.text = cell.PlantName.text
         initializeContainerView(pid: pid!)
     }
+    
     func initializeContainerView(pid: Int) {
         let infoViewController = storyboard?.instantiateViewController(withIdentifier: "PlantInfoPopupViewController") as! PlantInfoPopupViewController
         infoViewController.plant.append(plantsList[pid])
@@ -107,6 +108,7 @@ class MainPrivateViewController: UIViewController, UITableViewDelegate, UITableV
         infoViewController.size
         present(infoViewController, animated: true, completion: nil)
     }
+    
     func setPlantsListModel(){
         var ref: DatabaseReference!
         ref = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()

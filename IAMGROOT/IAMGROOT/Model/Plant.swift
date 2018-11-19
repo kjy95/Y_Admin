@@ -26,8 +26,13 @@ class Plant{
     var p_spring: String
     var p_summer: String
     var p_winter: String
- 
+    
     var name: String
+    
+    var PrivateFrequency:[String:AnyObject]!
+    var private_water : Int!
+    var private_place : String!
+    var private_pot : String!
     
     init(Explanation: [String:AnyObject],NumericalData: [String:AnyObject], name: String, pid: Int){
         self.pid = pid
