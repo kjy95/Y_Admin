@@ -133,6 +133,10 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         cell.placeF.text = plant.place
         cell.waterF.text = plant.f_winter
         cell.pid.text = String(plant.pid)
+        //버튼에 인덱스 보냄
+        cell.detailButton.tag = indexPath.row
+        cell.detailButton.addTarget(self, action: #selector(showDetail), for: .touchUpInside)
+        
         return cell
     }
     
@@ -151,6 +155,11 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         infoViewController.size
         present(infoViewController, animated: true, completion: nil)
     }
+    @IBAction func showDetail(_ sender: Any) {
+        let pid = (sender as AnyObject).tag!
+        initializeContainerView(pid: pid)
+    }
+    
     
     func getCurrentSeason()->String{
         let date = Date()

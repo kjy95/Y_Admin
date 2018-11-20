@@ -15,13 +15,14 @@ class ProfileCellTableViewCell: UITableViewCell {
     @IBOutlet weak var potF: UILabel!
     @IBOutlet weak var placeF: UILabel!
     @IBOutlet weak var pid: UILabel!
+    @IBOutlet weak var detailButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
     @IBAction func showDetailButton(_ sender: Any) {
-        
+        print((sender as AnyObject).tag)
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

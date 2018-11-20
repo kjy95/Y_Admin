@@ -34,8 +34,11 @@ class Plant{
     var private_f_spring : String!
     var private_f_summer : String!
     var private_f_winter : String!
-    var private_place : String!
-    var private_pot : String!
+    var private_flowerpot : String!
+    var private_p_fall : String!
+    var private_p_spring : String!
+    var private_p_summer : String!
+    var private_p_winter : String!
     
     init(Explanation: [String:AnyObject],NumericalData: [String:AnyObject], name: String, pid: Int){
         self.pid = pid
