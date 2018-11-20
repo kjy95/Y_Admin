@@ -30,7 +30,10 @@ class Plant{
     var name: String
     
     var PrivateFrequency:[String:AnyObject]!
-    var private_water : Int!
+    var private_f_fall : String!
+    var private_f_spring : String!
+    var private_f_summer : String!
+    var private_f_winter : String!
     var private_place : String!
     var private_pot : String!
     

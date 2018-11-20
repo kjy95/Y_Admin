@@ -12,9 +12,14 @@ import Firebase
 import GoogleMaps
 import FSCalendar
 
-class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataSource{
+class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource{
     var scrollDirection: FSCalendarScrollDirection = .vertical
     var ref: DatabaseReference!
+    var refUser: DatabaseReference!
+    var  plantsList = [Plant]()//all plantlist
+    @IBOutlet weak var plantsTableView: UITableView!
+    var  showTableViewPlantsList = [Plant]()//select some plantlist from plantsList
+    
     //Take a Google Map Object. Don't make outlet from Storyboard, Break the outlet of GMSMapView if you made an outlet
     var mapView:GMSMapView?
     @IBOutlet weak var calendar: FSCalendar!
@@ -28,10 +33,15 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         super.viewDidLoad()
         // Get a secondary database instance by URL
         ref = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()
+        plantsTableView.dataSource = self
+        plantsTableView.delegate = self
+        settingFBRDB()
+        setPlantsListModel()
         setCalendar()
         
         
     }
+     
     func setCalendar(){
         calendar.allowsMultipleSelection = true //여러날짜를 동시에 선택할 수 있도록
         //calendar.clipsToBounds = true //달력 구분 선 제거
@@ -105,6 +115,85 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         
         self.view.addSubview(mapView!)
     }
+    func settingFBRDB(){
+        // Get a secondary database instance by URL
+        ref = Database.database(url: "https://atticyadmin.firebaseio.com/").reference()
+    }
+    //table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return showTableViewPlantsList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell", for:indexPath) as! ProfileCellTableViewCell
+        let plant : Plant
+        plant = showTableViewPlantsList[indexPath.row]
+        //todo user에 물주기,분갈이,장소날짜업데이트
+        cell.plantName.text = plant.name
+        cell.placeF.text = plant.place
+        cell.waterF.text = plant.f_winter
+        cell.pid.text = String(plant.pid)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! ProfileCellTableViewCell
+        let pid = Int(cell.pid.text!)
+        //  PVplantName.text = cell.PlantName.text
+        initializeContainerView(pid: pid!)
+    }
+    
+    func initializeContainerView(pid: Int) {
+        let infoViewController = storyboard?.instantiateViewController(withIdentifier: "PlantInfoPopupViewController") as! PlantInfoPopupViewController
+        infoViewController.plant.append(plantsList[pid])
+        infoViewController.modalPresentationStyle = .overCurrentContext
+        infoViewController.modalTransitionStyle = .flipHorizontal
+        infoViewController.size
+        present(infoViewController, animated: true, completion: nil)
+    }
+    
+    func getCurrentSeason()->String{
+        let date = Date()
+        let calendar = Calendar.current
+        let month = calendar.component(.month, from: date)
+        if (month==3 || month==4 || month==5){
+            return "spring"
+        }else if(month==6 || month==7 || month==8){
+            return "summer"
+        }else if(month==9 || month==10 || month==11){
+            return "fall"
+        }else if(month==12 || month==1 || month==2){
+            return "winter"
+        }else{
+            return "error"
+        }
+    }
+    func setPlantsListModel(){
+        var ref: DatabaseReference!
+        ref = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()
+        //ref.child("users").child(User.uid).child("MyPlants").child(plant[0].name).setValue(["Explanation": plant[0].Explanation,"NumericalData": plant[0].NumericalData,"name": plant[0].name])
+        ref.child("users").child(User.uid).child("MyPlants").observe(DataEventType.value, with: { (snapshot) in
+            
+            self.plantsList.removeAll()
+            var count = 0
+            for plants in snapshot.children.allObjects as! [DataSnapshot]{
+                let plantObject = plants.value as? [String: AnyObject]
+                let NumericalData = plantObject?["NumericalData"] as? [String: AnyObject]
+                let Explanation = plantObject?["Explanation"] as? [String: AnyObject]
+                let name = plantObject!["name"]
+                
+                let plants = Plant(Explanation: (Explanation)!,NumericalData:  (NumericalData)!, name: name as! String, pid: count)
+                self.plantsList.append(plants)
+                count += 1
+            }
+            self.showTableViewPlantsList = self.plantsList
+            self.plantsTableView.reloadData()
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

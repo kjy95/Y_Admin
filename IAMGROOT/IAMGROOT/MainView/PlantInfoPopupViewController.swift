@@ -60,33 +60,15 @@ class PlantInfoPopupViewController: UIViewController {
     func userPlantUpdate(){
         var ref: DatabaseReference!
         ref = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()
-        
-        //plant[0].PrivateFrequency = ["water": plant[0].w]
-         ref.child("users").child(User.uid).child("MyPlants").child(plant[0].name).setValue(["Explanation": plant[0].Explanation,"NumericalData": plant[0].NumericalData,"name": plant[0].name, "PrivateFrequency": plant[0].NumericalData])
+           ref.child("users").child(User.uid).child("MyPlants").child(plant[0].name).setValue(["Explanation": plant[0].Explanation,"NumericalData": plant[0].NumericalData,"name": plant[0].name, "PrivateFrequency": plant[0].NumericalData])
     }
-    func getCurrentSeason()->String{
-        let date = Date()
-        let calendar = Calendar.current
-        let month = calendar.component(.month, from: date)
-        if (month==3 || month==4 || month==5){
-            return "spring"
-        }else if(month==6 || month==7 || month==8){
-            return "summer"
-        }else if(month==9 || month==10 || month==11){
-            return "fall"
-        }else if(month==12 || month==1 || month==2){
-            return "winter"
-        }else{
-            return "error"
-        }
-    }
-    func setPrivateFreauency(){
+    /*func setPrivateFreauency(){
         let currentSeason = getCurrentSeason()
         if (currentSeason == "spring"){
-            //plant[0].PrivateFrequency = ["water": plant[0].PrivateFrequency[]
-        }
-        
-    }
+            plant[0].PrivateFrequency["private_f_spring"] = ""
+        } 
+    }*/
+    
     func viewborder(){
         fstInfoView.layer.borderColor = UIColor.gray.cgColor
         fstInfoView.layer.borderWidth = 1.0
