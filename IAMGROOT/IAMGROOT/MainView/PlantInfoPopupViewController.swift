@@ -50,6 +50,7 @@ class PlantInfoPopupViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "네", style: UIAlertAction.Style.default, handler: {
             _ in self.userPlantUpdate()
+             self.alert_growing()
         }))
         alert.addAction(UIAlertAction(title: "아니요", style: UIAlertAction.Style.cancel, handler: {
             _ in
@@ -57,10 +58,31 @@ class PlantInfoPopupViewController: UIViewController {
         present(alert, animated: true, completion: nil)
 
     }
+    func alert_growing(){
+        let alert=UIAlertController(title:"알림", message: "내 식물에 추가되었습니다.\n캘린더에서 마지막으로 물을 준 날짜를 선택해 주세요.\n 그러면 다음 물주는 날짜를 알려드려요. ", preferredStyle:UIAlertController.Style.alert )
+        
+        alert.addAction(UIAlertAction(title: "네! 캘린더로 이동할께요.", style: UIAlertAction.Style.default, handler: {
+            _ in
+            self.userPlantUpdate()
+            self.presentCalendar()
+        }))
+        alert.addAction(UIAlertAction(title: "나중에 할께요!", style: UIAlertAction.Style.cancel, handler: {
+            _ in
+        }))
+        present(alert, animated: true, completion: nil)
+    }
     func userPlantUpdate(){
         var ref: DatabaseReference!
         ref = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()
            ref.child("users").child(User.uid).child("MyPlants").child(plant[0].name).setValue(["Explanation": plant[0].Explanation,"NumericalData": plant[0].NumericalData,"name": plant[0].name, "PrivateFrequency": plant[0].NumericalData])
+    }
+    func presentCalendar(){
+        let MainViewController = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        MainViewController.getplantListFromAddPlantInfoVC.append(plant[0])
+        MainViewController.modalPresentationStyle = .overCurrentContext
+        MainViewController.modalTransitionStyle = .flipHorizontal
+        MainViewController.size
+        present(MainViewController, animated: true, completion: nil)
     }
     /*func setPrivateFreauency(){
         let currentSeason = getCurrentSeason()
@@ -68,7 +90,7 @@ class PlantInfoPopupViewController: UIViewController {
             plant[0].PrivateFrequency["private_f_spring"] = ""
         } 
     }*/
-    
+
     func viewborder(){
         fstInfoView.layer.borderColor = UIColor.gray.cgColor
         fstInfoView.layer.borderWidth = 1.0

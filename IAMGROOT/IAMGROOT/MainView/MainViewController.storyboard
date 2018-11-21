@@ -24,7 +24,7 @@
         <!--Item-->
         <scene sceneID="lH3-kr-cU4">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="04Y-DT-0JM" customClass="MainViewController" customModule="IAMGROOT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="04Y-DT-0JM" customClass="MainViewController" customModule="IAMGROOT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x6A-dv-kvV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,7 +255,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상세보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxW-DX-vkH">
-                                                    <rect key="frame" x="306.5" y="58" width="42.5" height="13"/>
+                                                    <rect key="frame" x="310.5" y="58" width="38.5" height="13"/>
                                                     <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

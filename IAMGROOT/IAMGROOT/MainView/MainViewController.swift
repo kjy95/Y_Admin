@@ -17,6 +17,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     var ref: DatabaseReference!
     var refUser: DatabaseReference!
     var  plantsList = [Plant]()//all plantlist
+    var  getplantListFromAddPlantInfoVC = [Plant]()//
     @IBOutlet weak var plantsTableView: UITableView!
     var  showTableViewPlantsList = [Plant]()//select some plantlist from plantsList
     
@@ -25,6 +26,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     @IBOutlet weak var calendar: FSCalendar!
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
+        
         formatter.dateFormat = "yyyy/MM/dd"
         return formatter
     }()
@@ -32,16 +34,18 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         // Get a secondary database instance by URL
-        ref = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()
         plantsTableView.dataSource = self
         plantsTableView.delegate = self
         settingFBRDB()
         setPlantsListModel()
         setCalendar()
-        
+    }
+    func settingFBRDB(){
+        // Get a secondary database instance by URL
+        ref = Database.database(url: "https://atticyadmin.firebaseio.com/").reference()
+        refUser = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()
         
     }
-     
     func setCalendar(){
         calendar.allowsMultipleSelection = true //여러날짜를 동시에 선택할 수 있도록
         //calendar.clipsToBounds = true //달력 구분 선 제거
@@ -74,29 +78,12 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         if monthPosition == .next || monthPosition == .previous {
             calendar.setCurrentPage(date, animated: true)
         }
-    }
-    
-    
-    @IBAction func buttonAction(_ sender: Any) {
-        /*let withLatitude: String = textfield1.text!
-        let longitude: String = textfield3.text!
-        let lock: String = textfield2.text!
+        print(getplantListFromAddPlantInfoVC[0].name)
         
-        self.ref.child("users").child(User.uid).setValue(["withLatitude": withLatitude,"longitude": longitude,"lock": lock])
-        changeLabel_getInfoFromFBRDB()
-        showgooglemap(x:withLatitude, y: longitude)*/
     }
-    func changeLabel_getInfoFromFBRDB(){
-        /*ref.child("users").child(User.uid).observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            let value = snapshot.value as? NSDictionary
-            self.label1.text = value!["withLatitude"] as? String
-            self.label2.text = value!["longitude"] as? String
-            self.label3.text = value!["lock"] as? String
-        }) { (error) in
-            print(error.localizedDescription)
-        }*/
-    }
+    
+    
+    
     func showgooglemap(x:String, y: String){
         //google map
         //string to float
@@ -115,10 +102,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         
         self.view.addSubview(mapView!)
     }
-    func settingFBRDB(){
-        // Get a secondary database instance by URL
-        ref = Database.database(url: "https://atticyadmin.firebaseio.com/").reference()
-    }
+    
     //table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return showTableViewPlantsList.count
@@ -130,7 +114,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         plant = showTableViewPlantsList[indexPath.row]
         //todo user에 물주기,분갈이,장소날짜업데이트
         cell.plantName.text = plant.name
-        cell.placeF.text = plant.place
+        cell.potF.text = plant.Flowerpot
         cell.waterF.text = plant.f_winter
         cell.pid.text = String(plant.pid)
         //버튼에 인덱스 보냄
@@ -144,9 +128,15 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         let cell = tableView.cellForRow(at: indexPath) as! ProfileCellTableViewCell
         let pid = Int(cell.pid.text!)
         //  PVplantName.text = cell.PlantName.text
+        
         initializeContainerView(pid: pid!)
     }
-    
+    func selectWaterDate()->Date{
+        // 물을 준 날 plant.private["water_endDate"] = 
+        
+        
+        return Date()
+    }
     func initializeContainerView(pid: Int) {
         let infoViewController = storyboard?.instantiateViewController(withIdentifier: "PlantInfoPopupViewController") as! PlantInfoPopupViewController
         infoViewController.plant.append(plantsList[pid])
@@ -178,10 +168,8 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         }
     }
     func setPlantsListModel(){
-        var ref: DatabaseReference!
-        ref = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()
         //ref.child("users").child(User.uid).child("MyPlants").child(plant[0].name).setValue(["Explanation": plant[0].Explanation,"NumericalData": plant[0].NumericalData,"name": plant[0].name])
-        ref.child("users").child(User.uid).child("MyPlants").observe(DataEventType.value, with: { (snapshot) in
+        self.refUser.child("users").child(User.uid).child("MyPlants").observe(DataEventType.value, with: { (snapshot) in
             
             self.plantsList.removeAll()
             var count = 0
