@@ -12,6 +12,7 @@
 		BF1DEAB8217C73A600EB818B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DEAB7217C73A600EB818B /* MainViewController.swift */; };
 		BF1DEABA217ED69400EB818B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DEAB9217ED69400EB818B /* MainTabBarController.swift */; };
 		BF1DEABD217F339B00EB818B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DEABC217F339B00EB818B /* User.swift */; };
+		BF23DD9B21A5B45A00434475 /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF23DD9A21A5B45A00434475 /* FSCalendar.framework */; };
 		BF5FAD132196C461001397EF /* Pissjar Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5FAD122196C450001397EF /* Pissjar Sans.ttf */; };
 		BF5FAD152196DDDB001397EF /* Manoyri-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF5FAD142196DDDB001397EF /* Manoyri-Regular.otf */; };
 		BF5FAD1B2196E91C001397EF /* BMDOHYEON_otf.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF5FAD1A2196E91C001397EF /* BMDOHYEON_otf.otf */; };
@@ -20,7 +21,6 @@
 		BF5FAD23219AC6C4001397EF /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5FAD22219AC6C4001397EF /* Plant.swift */; };
 		BF5FAD25219C38DB001397EF /* SearchPlantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5FAD24219C38DB001397EF /* SearchPlantsTableViewCell.swift */; };
 		BF808350219462DB00A81B1E /* FBLoginConnectPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDD097021786698009728C0 /* FBLoginConnectPageViewController.storyboard */; };
-		BF8083562195718A00A81B1E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083552195718A00A81B1E /* Bolts.framework */; };
 		BF8083582195718A00A81B1E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083572195718A00A81B1E /* FBSDKCoreKit.framework */; };
 		BF80835A2195718A00A81B1E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083592195718A00A81B1E /* FBSDKLoginKit.framework */; };
 		BF80835C2195718A00A81B1E /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF80835B2195718A00A81B1E /* FirebaseAuth.framework */; };
@@ -31,18 +31,6 @@
 		BF8083662195718A00A81B1E /* FirebaseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083652195718A00A81B1E /* FirebaseUI.framework */; };
 		BF8083682195718A00A81B1E /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083672195718A00A81B1E /* GoogleToolboxForMac.framework */; };
 		BF80836A2195718A00A81B1E /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083692195718A00A81B1E /* GoogleUtilities.framework */; };
-		BF80836C2195718A00A81B1E /* grpc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF80836B2195718A00A81B1E /* grpc.framework */; };
-		BF80836E2195718A00A81B1E /* GRPCClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF80836D2195718A00A81B1E /* GRPCClient.framework */; };
-		BF8083702195718A00A81B1E /* grpcpp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF80836F2195718A00A81B1E /* grpcpp.framework */; };
-		BF8083722195718A00A81B1E /* GTMOAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083712195718A00A81B1E /* GTMOAuth2.framework */; };
-		BF8083742195718A00A81B1E /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083732195718A00A81B1E /* GTMSessionFetcher.framework */; };
-		BF8083762195718A00A81B1E /* leveldb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083752195718A00A81B1E /* leveldb.framework */; };
-		BF8083782195718A00A81B1E /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083772195718A00A81B1E /* nanopb.framework */; };
-		BF80837A2195718A00A81B1E /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083792195718A00A81B1E /* openssl.framework */; };
-		BF80837C2195718A00A81B1E /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF80837B2195718A00A81B1E /* Protobuf.framework */; };
-		BF80837E2195718A00A81B1E /* ProtoRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF80837D2195718A00A81B1E /* ProtoRPC.framework */; };
-		BF8083802195718A00A81B1E /* RxLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF80837F2195718A00A81B1E /* RxLibrary.framework */; };
-		BF8083822195718A00A81B1E /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083812195718A00A81B1E /* SDWebImage.framework */; };
 		BF8083842195788000A81B1E /* MainPrivateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8083832195788000A81B1E /* MainPrivateViewController.swift */; };
 		BF8083872196B67800A81B1E /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8083862196B67800A81B1E /* RoundedImageView.swift */; };
 		BF8C5E5F21A168B600BEA4DF /* ProfileCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C5E5E21A168B600BEA4DF /* ProfileCellTableViewCell.swift */; };
@@ -86,6 +74,7 @@
 		BF1DEAB7217C73A600EB818B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF1DEAB9217ED69400EB818B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		BF1DEABC217F339B00EB818B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BF23DD9A21A5B45A00434475 /* FSCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5FAD122196C450001397EF /* Pissjar Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pissjar Sans.ttf"; sourceTree = "<group>"; };
 		BF5FAD142196DDDB001397EF /* Manoyri-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manoyri-Regular.otf"; sourceTree = "<group>"; };
 		BF5FAD1A2196E91C001397EF /* BMDOHYEON_otf.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = BMDOHYEON_otf.otf; path = ../../../Downloads/BMDOHYEON_otf.otf; sourceTree = "<group>"; };
@@ -224,7 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF8083562195718A00A81B1E /* Bolts.framework in Frameworks */,
+				BF23DD9B21A5B45A00434475 /* FSCalendar.framework in Frameworks */,
 				BF8083582195718A00A81B1E /* FBSDKCoreKit.framework in Frameworks */,
 				BF80835A2195718A00A81B1E /* FBSDKLoginKit.framework in Frameworks */,
 				BF80835C2195718A00A81B1E /* FirebaseAuth.framework in Frameworks */,
@@ -235,18 +224,6 @@
 				BF8083662195718A00A81B1E /* FirebaseUI.framework in Frameworks */,
 				BF8083682195718A00A81B1E /* GoogleToolboxForMac.framework in Frameworks */,
 				BF80836A2195718A00A81B1E /* GoogleUtilities.framework in Frameworks */,
-				BF80836C2195718A00A81B1E /* grpc.framework in Frameworks */,
-				BF80836E2195718A00A81B1E /* GRPCClient.framework in Frameworks */,
-				BF8083702195718A00A81B1E /* grpcpp.framework in Frameworks */,
-				BF8083722195718A00A81B1E /* GTMOAuth2.framework in Frameworks */,
-				BF8083742195718A00A81B1E /* GTMSessionFetcher.framework in Frameworks */,
-				BF8083762195718A00A81B1E /* leveldb.framework in Frameworks */,
-				BF8083782195718A00A81B1E /* nanopb.framework in Frameworks */,
-				BF80837A2195718A00A81B1E /* openssl.framework in Frameworks */,
-				BF80837C2195718A00A81B1E /* Protobuf.framework in Frameworks */,
-				BF80837E2195718A00A81B1E /* ProtoRPC.framework in Frameworks */,
-				BF8083802195718A00A81B1E /* RxLibrary.framework in Frameworks */,
-				BF8083822195718A00A81B1E /* SDWebImage.framework in Frameworks */,
 				139B5DDBFF756502E9D8051B /* Pods_IAMGROOT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +257,7 @@
 		A59D5E24E5CF66713D819684 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF23DD9A21A5B45A00434475 /* FSCalendar.framework */,
 				BF8083552195718A00A81B1E /* Bolts.framework */,
 				BF8083572195718A00A81B1E /* FBSDKCoreKit.framework */,
 				BF8083592195718A00A81B1E /* FBSDKLoginKit.framework */,
@@ -646,6 +624,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-IAMGROOT/Pods-IAMGROOT-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
@@ -659,6 +638,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
@@ -683,7 +663,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-IAMGROOT/Pods-IAMGROOT-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
@@ -695,18 +675,15 @@
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
@@ -718,11 +695,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);

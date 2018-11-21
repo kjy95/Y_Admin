@@ -17,7 +17,8 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     var ref: DatabaseReference!
     var refUser: DatabaseReference!
     var  plantsList = [Plant]()//all plantlist
-    var  getplantListFromAddPlantInfoVC = [Plant]()//
+    var  getplantListFromAddPlantInfoVC = [Plant]()//기르기 후 캘린더로 이동할 때 리스트받음
+    var  checkIsLoadedTV = false
     @IBOutlet weak var plantsTableView: UITableView!
     var  showTableViewPlantsList = [Plant]()//select some plantlist from plantsList
     
@@ -36,9 +37,11 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         // Get a secondary database instance by URL
         plantsTableView.dataSource = self
         plantsTableView.delegate = self
+        checkIsLoadedTV = false
         settingFBRDB()
         setPlantsListModel()
         setCalendar()
+        
     }
     func settingFBRDB(){
         // Get a secondary database instance by URL
@@ -123,13 +126,27 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         
         return cell
     }
-    
+   
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let lastVisibleIndexPath = tableView.indexPathsForVisibleRows?.last {
+            if indexPath == lastVisibleIndexPath && checkIsLoadedTV == false {
+                // table view 셀이 다 로드 되었을 때를 감지. do here...
+                selectGetPlantPidCell()
+                checkIsLoadedTV = true
+            }
+        }
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! ProfileCellTableViewCell
-        let pid = Int(cell.pid.text!)
-        //  PVplantName.text = cell.PlantName.text
+        //let cell = tableView.cellForRow(at: indexPath) as! ProfileCellTableViewCell
+        //let pid = Int(cell.pid.text!)
+    }
+    func selectGetPlantPidCell(){
+        if (getplantListFromAddPlantInfoVC.count == 1){
+            let indexPath = IndexPath(row: getplantListFromAddPlantInfoVC[0].pid, section: 0)
+            plantsTableView.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
+            plantsTableView.delegate?.tableView!(plantsTableView, didSelectRowAt: indexPath)
+        }
         
-        initializeContainerView(pid: pid!)
     }
     func selectWaterDate()->Date{
         // 물을 준 날 plant.private["water_endDate"] = 
@@ -193,7 +210,8 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // Dispose of any resources that can be recreated
+       
     }
     
     
