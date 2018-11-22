@@ -18,6 +18,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     var refUser: DatabaseReference!
     var  plantsList = [Plant]()//all plantlist
     var  getplantListFromAddPlantInfoVC = [Plant]()//기르기 후 캘린더로 이동할 때 리스트받음
+    var  CurrentPlantList = [Plant]()//현재 사용자가 선택한 플렌트리스트
     var  checkIsLoadedTV = false
     @IBOutlet weak var plantsTableView: UITableView!
     var  showTableViewPlantsList = [Plant]()//select some plantlist from plantsList
@@ -81,31 +82,26 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         if monthPosition == .next || monthPosition == .previous {
             calendar.setCurrentPage(date, animated: true)
         }
-        print(getplantListFromAddPlantInfoVC[0].name)
+        setFBData_WaterDate(dateList: selectedDates)
+        
+        if (CurrentPlantList.count == 1){print(CurrentPlantList[0].name)}
         
     }
     
     
-    
-    func showgooglemap(x:String, y: String){
-        //google map
-        //string to float
-        let numberFormatter = NumberFormatter()
-        let numberx = numberFormatter.number(from: x)
-        let numberFloatValuex = numberx?.floatValue
-        let numbery = numberFormatter.number(from: y)
-        let numberFloatValuey = numbery?.floatValue
-
-        mapView = GMSMapView.map(withFrame: CGRect(x: 39, y: 290, width: 350, height: 350), camera: GMSCameraPosition.camera(withLatitude: CLLocationDegrees(numberFloatValuex!), longitude: CLLocationDegrees(numberFloatValuey!), zoom: 6.5))
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: CLLocationDegrees(numberFloatValuex!), longitude: CLLocationDegrees(numberFloatValuey!))
-          marker.map = mapView
-        //so the mapView is of width 200, height 200 and its center is same as center of the self.view
-        //mapView?.center = self.view.center
-        
-        self.view.addSubview(mapView!)
+    func selectCalendarDate(dateList: [String]){
+        self.calendar.select(dateList)
     }
-    
+    func setFBData_WaterDate(dateList: [String]){
+         if (CurrentPlantList.count == 1){
+            CurrentPlantList[0].private_waterDate = dateList
+            refUser.child("users").child(User.uid).child("MyPlants").child(CurrentPlantList[0].name).setValue(["Explanation": CurrentPlantList[0].Explanation,"NumericalData": CurrentPlantList[0].NumericalData,"name": CurrentPlantList[0].name,"PrivateFrequency": CurrentPlantList[0].NumericalData, "private_waterDate":  CurrentPlantList[0].private_waterDate])
+            /*let key = refUser.child("users").child(User.uid).child("MyPlants").child(CurrentPlantList[0].name).child("PrivateFrequency").childByAutoId().key
+            let post = ["private_waterDate": CurrentPlantList[0].private_waterDate]
+            let childUpdates = [key: post]
+            ref.updateChildValues(childUpdates)*/
+        }
+    }
     //table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return showTableViewPlantsList.count
@@ -130,27 +126,39 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let lastVisibleIndexPath = tableView.indexPathsForVisibleRows?.last {
             if indexPath == lastVisibleIndexPath && checkIsLoadedTV == false {
+                 if (getplantListFromAddPlantInfoVC.count == 1){
                 // table view 셀이 다 로드 되었을 때를 감지. do here...
                 selectGetPlantPidCell()
+                selectCalendarDate(dateList: getplantListFromAddPlantInfoVC[0].private_waterDate)
                 checkIsLoadedTV = true
+                    if CurrentPlantList.count == 1{
+                        CurrentPlantList[1] = getplantListFromAddPlantInfoVC[0]
+                    }else if(CurrentPlantList.count == 0){
+                        CurrentPlantList.append(getplantListFromAddPlantInfoVC[0])
+                    }
+                }
             }
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //
-        if checkIsLoadedTV{
+        if (getplantListFromAddPlantInfoVC.count == 0){
             let cell = tableView.cellForRow(at: indexPath) as! ProfileCellTableViewCell
             let pid = Int(cell.pid.text!)
             print(pid)
+            if CurrentPlantList.count == 1{
+                CurrentPlantList[0] = plantsList[pid!]
+            }else if(CurrentPlantList.count == 0){
+                CurrentPlantList.append(plantsList[pid!])
+            }
         }
     }
+    
     func selectGetPlantPidCell(){
-        if (getplantListFromAddPlantInfoVC.count == 1){
             let indexPath = IndexPath(row: getplantListFromAddPlantInfoVC[0].pid, section: 0)
             plantsTableView.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
             plantsTableView.delegate?.tableView!(plantsTableView, didSelectRowAt: indexPath)
             print(getplantListFromAddPlantInfoVC[0].pid)
-        }
         
     }
     func selectWaterDate()->Date{
@@ -220,4 +228,23 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     }
     
     
+    
+    func showgooglemap(x:String, y: String){
+        //google map
+        //string to float
+        let numberFormatter = NumberFormatter()
+        let numberx = numberFormatter.number(from: x)
+        let numberFloatValuex = numberx?.floatValue
+        let numbery = numberFormatter.number(from: y)
+        let numberFloatValuey = numbery?.floatValue
+        
+        mapView = GMSMapView.map(withFrame: CGRect(x: 39, y: 290, width: 350, height: 350), camera: GMSCameraPosition.camera(withLatitude: CLLocationDegrees(numberFloatValuex!), longitude: CLLocationDegrees(numberFloatValuey!), zoom: 6.5))
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: CLLocationDegrees(numberFloatValuex!), longitude: CLLocationDegrees(numberFloatValuey!))
+        marker.map = mapView
+        //so the mapView is of width 200, height 200 and its center is same as center of the self.view
+        //mapView?.center = self.view.center
+        
+        self.view.addSubview(mapView!)
+    }
 }
