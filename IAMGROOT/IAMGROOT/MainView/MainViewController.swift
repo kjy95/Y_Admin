@@ -137,14 +137,19 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let cell = tableView.cellForRow(at: indexPath) as! ProfileCellTableViewCell
-        //let pid = Int(cell.pid.text!)
+        //
+        if checkIsLoadedTV{
+            let cell = tableView.cellForRow(at: indexPath) as! ProfileCellTableViewCell
+            let pid = Int(cell.pid.text!)
+            print(pid)
+        }
     }
     func selectGetPlantPidCell(){
         if (getplantListFromAddPlantInfoVC.count == 1){
             let indexPath = IndexPath(row: getplantListFromAddPlantInfoVC[0].pid, section: 0)
             plantsTableView.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
             plantsTableView.delegate?.tableView!(plantsTableView, didSelectRowAt: indexPath)
+            print(getplantListFromAddPlantInfoVC[0].pid)
         }
         
     }
