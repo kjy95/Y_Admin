@@ -40,6 +40,7 @@ class Plant{
     var private_p_summer : String!
     var private_p_winter : String!
     var private_waterDate = [String]()
+    var convert_waterDateToDate = [Date]()
     
     init(Explanation: [String:AnyObject],NumericalData: [String:AnyObject], name: String, pid: Int){
         self.pid = pid

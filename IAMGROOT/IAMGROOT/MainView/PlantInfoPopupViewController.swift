@@ -24,10 +24,14 @@ class PlantInfoPopupViewController: UIViewController {
     @IBOutlet weak var NumPLabel: UILabel!
     @IBOutlet weak var NumP2Label: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()
         changeInfoLabe()
         viewborder()
+        userGrowingModeButton()
         // Do any additional setup after loading the view.
     }
     
@@ -44,8 +48,27 @@ class PlantInfoPopupViewController: UIViewController {
         NumP2Label.attributedText = NSAttributedString(string: "여름: \(plant[0].p_summer)\n겨울: \(plant[0].p_winter)" )
         placeLabel.attributedText = NSAttributedString(string:plant[0].place )
     }
+    func userGrowingModeButton(){
+        
+        let queryRef = ref.child("users").child(User.uid).child("MyPlants").queryOrdered(byChild: "name").queryEqual(toValue: plant[0].name)
+        print("testqueryRef")
+        
+        queryRef.observe(.value, with: { (snapshot) in
+            if let foo = snapshot.value as? [String: AnyObject] {
+                let name = foo["name"] as? String
+                print("있음")
+                
+                self.addPlantButton.setTitle("기르는 중", for: .normal)
+            }else{
+                print("없음")
+                
+                self.addPlantButton.setTitle("기르기", for: .normal)
+            }
+        })
+    }
     @IBAction func addPlant(_ sender: Any) {
         //todo nsdefault로 앱에 남겨둔다
+        
         let alert=UIAlertController(title:"식물 추가", message: "내 식물에 추가하실 건가요?", preferredStyle:UIAlertController.Style.alert )
         
         alert.addAction(UIAlertAction(title: "네", style: UIAlertAction.Style.default, handler: {
@@ -65,6 +88,7 @@ class PlantInfoPopupViewController: UIViewController {
             _ in
             self.userPlantUpdate()
             self.presentCalendar()
+            //todo- 기르기->기르는 중 로 변경
         }))
         alert.addAction(UIAlertAction(title: "나중에 할께요!", style: UIAlertAction.Style.cancel, handler: {
             _ in
@@ -72,8 +96,7 @@ class PlantInfoPopupViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     func userPlantUpdate(){
-        var ref: DatabaseReference!
-        ref = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()
+       
            ref.child("users").child(User.uid).child("MyPlants").child(plant[0].name).setValue(["Explanation": plant[0].Explanation,"NumericalData": plant[0].NumericalData,"name": plant[0].name, "PrivateFrequency": plant[0].NumericalData])
     }
     func presentCalendar(){

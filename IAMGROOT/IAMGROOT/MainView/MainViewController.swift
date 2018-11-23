@@ -29,7 +29,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         
-        formatter.dateFormat = "yyyy/MM/dd"
+        formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
     
@@ -84,16 +84,23 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         }
         setFBData_WaterDate(dateList: selectedDates)
         
-        if (CurrentPlantList.count == 1){print(CurrentPlantList[0].name)}
+        if (CurrentPlantList.count == 1){
+            print(CurrentPlantList[0].name)
+                print(date)
+                print(self.dateFormatter.string(from: date))
+            }
+        
         
     }
     
     
-    func selectCalendarDate(dateList: [String]){
+    func selectCalendarDate(dateList: [Date]){
         self.calendar.select(dateList)
     }
     func setFBData_WaterDate(dateList: [String]){
          if (CurrentPlantList.count == 1){
+            var i = 0
+            
             CurrentPlantList[0].private_waterDate = dateList
             refUser.child("users").child(User.uid).child("MyPlants").child(CurrentPlantList[0].name).setValue(["Explanation": CurrentPlantList[0].Explanation,"NumericalData": CurrentPlantList[0].NumericalData,"name": CurrentPlantList[0].name,"PrivateFrequency": CurrentPlantList[0].NumericalData, "private_waterDate":  CurrentPlantList[0].private_waterDate])
             /*let key = refUser.child("users").child(User.uid).child("MyPlants").child(CurrentPlantList[0].name).child("PrivateFrequency").childByAutoId().key
@@ -129,7 +136,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
                  if (getplantListFromAddPlantInfoVC.count == 1){
                 // table view 셀이 다 로드 되었을 때를 감지. do here...
                 selectGetPlantPidCell()
-                selectCalendarDate(dateList: getplantListFromAddPlantInfoVC[0].private_waterDate)
+                //selectCalendarDate(dateList:ready)
                 checkIsLoadedTV = true
                     if CurrentPlantList.count == 1{
                         CurrentPlantList[1] = getplantListFromAddPlantInfoVC[0]
@@ -137,6 +144,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
                         CurrentPlantList.append(getplantListFromAddPlantInfoVC[0])
                     }
                 }
+                
             }
         }
     }
@@ -151,6 +159,25 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
             }else if(CurrentPlantList.count == 0){
                 CurrentPlantList.append(plantsList[pid!])
             }
+          
+            
+            /*let testArray = CurrentPlantList[0].private_waterDate
+            var convertedArray: [Date] = []
+            
+            var dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"// dd MM, yyyy"
+            
+            for dat in testArray {
+                let date = dateFormatter.date(from: dat)
+                if let date = date {
+                    convertedArray.append(date)
+                }
+            }
+            
+            var ready = convertedArray.sorted(by: { $0.compare($1) == .orderedDescending })
+            print(testArray)
+            print(ready)
+            selectCalendarDate(dateList:ready)*/
         }
     }
     
@@ -246,5 +273,35 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         //mapView?.center = self.view.center
         
         self.view.addSubview(mapView!)
+    }
+}
+
+extension DateFormatter {
+    
+    convenience init (format: String) {
+        self.init()
+        dateFormat = format
+        locale = Locale.current
+    }
+}
+
+extension String {
+    
+    func toDate (format: String) -> Date? {
+        return DateFormatter(format: format).date(from: self)
+    }
+    
+    func toDateString (inputFormat: String, outputFormat:String) -> String? {
+        if let date = toDate(format: inputFormat) {
+            return DateFormatter(format: outputFormat).string(from: date)
+        }
+        return nil
+    }
+}
+
+extension Date {
+    
+    func toString (format:String) -> String? {
+        return DateFormatter(format: format).string(from: self)
     }
 }
