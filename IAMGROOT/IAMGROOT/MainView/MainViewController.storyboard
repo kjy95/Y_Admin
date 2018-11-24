@@ -84,7 +84,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상세보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGW-0d-KiA">
-                                                    <rect key="frame" x="306.5" y="58" width="42.5" height="13"/>
+                                                    <rect key="frame" x="310.5" y="58" width="38.5" height="13"/>
                                                     <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -204,7 +204,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김지영" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5X-Oh-HGh">
-                                <rect key="frame" x="146" y="464" width="82.5" height="50.5"/>
+                                <rect key="frame" x="132.5" y="464" width="109" height="49"/>
                                 <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="42"/>
                                 <color key="textColor" red="0.086517177522182465" green="0.34191644191741943" blue="0.39926034212112427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -323,7 +323,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="logout" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGO-Fd-sKI">
-                                <rect key="frame" x="274" y="378" width="36" height="17"/>
+                                <rect key="frame" x="274" y="378" width="39.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Manoyri-Regular" family="Manoyri" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -403,19 +403,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장미" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfX-KF-TEh">
-                                                    <rect key="frame" x="15" y="1" width="46.5" height="29"/>
+                                                    <rect key="frame" x="15" y="1" width="42" height="28"/>
                                                     <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="24"/>
                                                     <color key="textColor" red="0.15885907411575317" green="0.34957233071327209" blue="0.49146360158920288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkD-ab-ObC">
-                                                    <rect key="frame" x="15" y="36" width="45" height="20"/>
+                                                    <rect key="frame" x="15" y="35" width="59" height="20"/>
                                                     <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
                                                     <color key="textColor" red="0.10960499197244644" green="0.59111499786376953" blue="0.65105092525482178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="highlightedColor" red="0.73209935426712036" green="0.9375157356262207" blue="0.93183040618896484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물주기 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBC-BS-BYk">
-                                                    <rect key="frame" x="17" y="58" width="61.5" height="20"/>
+                                                    <rect key="frame" x="17" y="57" width="78.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
                                                     <color key="textColor" red="0.67309480905532837" green="0.94908374547958374" blue="0.94883710145950317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="highlightedColor" red="0.73209935426712036" green="0.9375157356262207" blue="0.93183040618896484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -493,7 +493,7 @@
         <!--I'MGROOT-->
         <scene sceneID="aIJ-cB-P5T">
             <objects>
-                <viewController id="SjF-dc-80Y" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IMGrootViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SjF-dc-80Y" customClass="IMGrootViewController" customModule="IAMGROOT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="whJ-bp-A9K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -532,7 +532,7 @@
             <objects>
                 <viewController storyboardIdentifier="PlantInfoPopupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C0r-4N-U8b" customClass="PlantInfoPopupViewController" customModule="IAMGROOT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aFn-tR-CiT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7H-J0-SrY">
@@ -552,10 +552,10 @@
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eza-9d-wqR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3YX-C4-eq7">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat-flower" translatesAutoresizingMaskIntoConstraints="NO" id="4m1-hP-mSH">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="192"/>
@@ -627,7 +627,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxP-KK-kwX">
-                                                <rect key="frame" x="0.0" y="416" width="375" height="413"/>
+                                                <rect key="frame" x="0.0" y="416" width="375" height="700"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="분갈이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bj1-bk-12w">
                                                         <rect key="frame" x="23" y="19" width="66.5" height="28"/>
@@ -707,7 +707,7 @@
                                                     <constraint firstItem="mPW-jT-JYa" firstAttribute="leading" secondItem="pxP-KK-kwX" secondAttribute="leading" constant="23" id="CnQ-2X-jee"/>
                                                     <constraint firstItem="ykO-c2-KuQ" firstAttribute="top" secondItem="pxP-KK-kwX" secondAttribute="top" constant="150.5" id="Cv6-BB-5Jx"/>
                                                     <constraint firstItem="b0w-22-YUA" firstAttribute="top" secondItem="9Ue-hJ-aCc" secondAttribute="bottom" constant="9" id="Fef-r3-gXY"/>
-                                                    <constraint firstAttribute="height" constant="413" id="FhU-rS-FPN"/>
+                                                    <constraint firstAttribute="height" constant="700" id="FhU-rS-FPN"/>
                                                     <constraint firstItem="b0w-22-YUA" firstAttribute="leading" secondItem="pxP-KK-kwX" secondAttribute="leading" constant="23" id="OdE-iG-VZ7"/>
                                                     <constraint firstItem="u5v-Mc-s6H" firstAttribute="top" secondItem="KHi-Gt-S4H" secondAttribute="bottom" constant="8" id="QMs-Pl-k37"/>
                                                     <constraint firstItem="KHi-Gt-S4H" firstAttribute="leading" secondItem="pxP-KK-kwX" secondAttribute="leading" constant="23" id="Rsw-E4-Adj"/>
@@ -734,27 +734,29 @@
                                             <constraint firstItem="nK0-hc-Vvi" firstAttribute="top" secondItem="4m1-hP-mSH" secondAttribute="bottom" constant="29" id="AmB-Bo-rpy"/>
                                             <constraint firstItem="4m1-hP-mSH" firstAttribute="top" secondItem="3YX-C4-eq7" secondAttribute="top" id="Cl4-9P-1SA"/>
                                             <constraint firstItem="pxP-KK-kwX" firstAttribute="leading" secondItem="3YX-C4-eq7" secondAttribute="leading" id="DBU-i8-LcV"/>
+                                            <constraint firstAttribute="height" constant="1500" id="Ii9-qF-Uia"/>
                                             <constraint firstAttribute="trailing" secondItem="nK0-hc-Vvi" secondAttribute="trailing" id="NXv-XW-aaZ"/>
                                             <constraint firstItem="5sU-PL-F3Y" firstAttribute="leading" secondItem="3YX-C4-eq7" secondAttribute="leading" id="Ves-HV-aEf"/>
                                             <constraint firstItem="4m1-hP-mSH" firstAttribute="leading" secondItem="3YX-C4-eq7" secondAttribute="leading" id="VhW-o0-LjW"/>
                                             <constraint firstItem="nK0-hc-Vvi" firstAttribute="leading" secondItem="3YX-C4-eq7" secondAttribute="leading" id="WnQ-WC-1FU"/>
                                             <constraint firstAttribute="trailing" secondItem="pxP-KK-kwX" secondAttribute="trailing" id="ei0-tf-hM1"/>
                                             <constraint firstAttribute="trailing" secondItem="5sU-PL-F3Y" secondAttribute="trailing" id="oSN-xj-bfQ"/>
-                                            <constraint firstItem="4m1-hP-mSH" firstAttribute="top" secondItem="3YX-C4-eq7" secondAttribute="top" id="sZD-k6-ygy"/>
                                             <constraint firstItem="5sU-PL-F3Y" firstAttribute="top" secondItem="nK0-hc-Vvi" secondAttribute="bottom" id="zW6-Ie-JKr"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="3YX-C4-eq7" secondAttribute="bottom" id="8m7-dP-nD1"/>
-                                    <constraint firstItem="3YX-C4-eq7" firstAttribute="top" secondItem="Eza-9d-wqR" secondAttribute="top" id="9gu-8y-uh7"/>
+                                    <constraint firstAttribute="bottom" secondItem="3YX-C4-eq7" secondAttribute="bottom" id="0Rc-Pw-kFr"/>
+                                    <constraint firstAttribute="height" constant="1000" id="D7a-5l-EyT"/>
                                     <constraint firstAttribute="trailing" secondItem="3YX-C4-eq7" secondAttribute="trailing" id="cDC-Yg-Ool"/>
+                                    <constraint firstItem="3YX-C4-eq7" firstAttribute="top" secondItem="Eza-9d-wqR" secondAttribute="top" id="fgf-GP-ah1"/>
                                     <constraint firstItem="3YX-C4-eq7" firstAttribute="leading" secondItem="Eza-9d-wqR" secondAttribute="leading" id="q8i-YD-3pd"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Eza-9d-wqR" firstAttribute="top" secondItem="BJH-Au-Feg" secondAttribute="top" constant="44" id="0Dw-1E-Avn"/>
                             <constraint firstItem="p7H-J0-SrY" firstAttribute="trailing" secondItem="BJH-Au-Feg" secondAttribute="trailing" id="3Xn-6d-uRT"/>
                             <constraint firstItem="Eza-9d-wqR" firstAttribute="leading" secondItem="BJH-Au-Feg" secondAttribute="leading" id="8kk-Pk-FSy"/>
                             <constraint firstItem="3YX-C4-eq7" firstAttribute="width" secondItem="aFn-tR-CiT" secondAttribute="width" id="8oN-X6-zcv"/>
@@ -762,12 +764,10 @@
                             <constraint firstItem="p7H-J0-SrY" firstAttribute="top" secondItem="BJH-Au-Feg" secondAttribute="top" id="F87-wb-XcA"/>
                             <constraint firstItem="Eza-9d-wqR" firstAttribute="top" secondItem="p7H-J0-SrY" secondAttribute="bottom" id="XbL-qM-Ge6"/>
                             <constraint firstItem="p7H-J0-SrY" firstAttribute="leading" secondItem="BJH-Au-Feg" secondAttribute="leading" id="qH9-h4-BCI"/>
-                            <constraint firstItem="3YX-C4-eq7" firstAttribute="height" secondItem="aFn-tR-CiT" secondAttribute="height" id="tON-dx-nHl"/>
-                            <constraint firstItem="BJH-Au-Feg" firstAttribute="bottom" secondItem="Eza-9d-wqR" secondAttribute="bottom" id="xZa-4e-IcZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BJH-Au-Feg"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="375" height="1500"/>
                     <connections>
                         <outlet property="ExpLable" destination="ATT-tk-Acw" id="pNr-GD-4Rr"/>
                         <outlet property="FlowerpotLabel" destination="Sgl-zd-qj2" id="QiG-EK-jGp"/>

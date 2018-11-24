@@ -12,7 +12,11 @@ import Firebase
 import GoogleMaps
 import FSCalendar
 
-class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource{
+class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource,SendDataDelegate{
+    func sendData(data: String) {
+        print("hello")
+    }
+    
     var scrollDirection: FSCalendarScrollDirection = .vertical
     var ref: DatabaseReference!
     var refUser: DatabaseReference!
