@@ -55,31 +55,29 @@ class PlantInfoPopupViewController: UIViewController {
         
         queryRef.observe(.value, with: { (snapshot) in
             if let foo = snapshot.value as? [String: AnyObject] {
-                let name = foo["name"] as? String
-                print("있음")
-                
+                //내 파이어베이스에 식물이 저장되어 있을 때
                 self.addPlantButton.setTitle("기르는 중", for: .normal)
             }else{
-                print("없음")
-                
                 self.addPlantButton.setTitle("기르기", for: .normal)
             }
         })
     }
     @IBAction func addPlant(_ sender: Any) {
         //todo nsdefault로 앱에 남겨둔다
-        
-        let alert=UIAlertController(title:"식물 추가", message: "내 식물에 추가하실 건가요?", preferredStyle:UIAlertController.Style.alert )
-        
-        alert.addAction(UIAlertAction(title: "네", style: UIAlertAction.Style.default, handler: {
-            _ in self.userPlantUpdate()
-             self.alert_growing()
-        }))
-        alert.addAction(UIAlertAction(title: "아니요", style: UIAlertAction.Style.cancel, handler: {
-            _ in
-        }))
-        present(alert, animated: true, completion: nil)
-
+        if(self.addPlantButton.currentTitle == "기르기"){
+            let alert=UIAlertController(title:"식물 추가", message: "내 식물에 추가하실 건가요?", preferredStyle:UIAlertController.Style.alert )
+            
+            alert.addAction(UIAlertAction(title: "네", style: UIAlertAction.Style.default, handler: {
+                _ in self.userPlantUpdate()
+                 self.alert_growing()
+            }))
+            alert.addAction(UIAlertAction(title: "아니요", style: UIAlertAction.Style.cancel, handler: {
+                _ in
+            }))
+            present(alert, animated: true, completion: nil)
+        }else if(self.addPlantButton.currentTitle == "기르는 중"){
+            
+        }
     }
     func alert_growing(){
         let alert=UIAlertController(title:"알림", message: "내 식물에 추가되었습니다.\n캘린더에서 마지막으로 물을 준 날짜를 선택해 주세요.\n 그러면 다음 물주는 날짜를 알려드려요. ", preferredStyle:UIAlertController.Style.alert )
