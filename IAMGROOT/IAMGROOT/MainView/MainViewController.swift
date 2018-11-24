@@ -12,10 +12,7 @@ import Firebase
 import GoogleMaps
 import FSCalendar
 
-class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource,SendDataDelegate{
-    func sendData(data: String) {
-        print("hello")
-    }
+class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource{
     
     var scrollDirection: FSCalendarScrollDirection = .vertical
     var ref: DatabaseReference!
@@ -27,6 +24,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     @IBOutlet weak var plantsTableView: UITableView!
     var  showTableViewPlantsList = [Plant]()//select some plantlist from plantsList
     
+    @IBOutlet weak var SPNLabel: UILabel!
     //Take a Google Map Object. Don't make outlet from Storyboard, Break the outlet of GMSMapView if you made an outlet
     var mapView:GMSMapView?
     @IBOutlet weak var calendar: FSCalendar!
@@ -38,6 +36,10 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     }()
     
     override func viewDidLoad() {
+        //이전에 것들이 다지워짐
+        
+        //self.view.window?.rootViewController?.presentedViewController!.dismiss(animated: true, completion: nil)
+        //self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         super.viewDidLoad()
         // Get a secondary database instance by URL
         plantsTableView.dataSource = self
@@ -97,7 +99,9 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         
     }
     
-    
+    func changeLabelName(){
+        SPNLabel.text = CurrentPlantList[0].name
+    }
     func selectCalendarDate(dateList: [Date]){
         self.calendar.select(dateList)
     }
@@ -135,11 +139,19 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     }
    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+       
         if let lastVisibleIndexPath = tableView.indexPathsForVisibleRows?.last {
             if indexPath == lastVisibleIndexPath && checkIsLoadedTV == false {
                  if (getplantListFromAddPlantInfoVC.count == 1){
+                   //delete all subview
+                    //self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+                    
+                   /* for view in self.view.subviews {
+                        view.removeFromSuperview()
+                    }*/
                 // table view 셀이 다 로드 되었을 때를 감지. do here...
                 selectGetPlantPidCell()
+                    changeLabelName()
                 //selectCalendarDate(dateList:ready)
                 checkIsLoadedTV = true
                     if CurrentPlantList.count == 1{
@@ -182,6 +194,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
             print(testArray)
             print(ready)
             selectCalendarDate(dateList:ready)*/
+            changeLabelName()
         }
     }
     

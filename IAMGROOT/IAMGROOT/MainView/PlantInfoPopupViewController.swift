@@ -8,9 +8,6 @@
 
 import UIKit
 import Firebase
-protocol SendDataDelegate {
-    func sendData(data: String)
-}
 class PlantInfoPopupViewController: UIViewController {
     var  plant = [Plant]()
     @IBOutlet weak var plantName: UILabel!
@@ -28,7 +25,6 @@ class PlantInfoPopupViewController: UIViewController {
     @IBOutlet weak var NumP2Label: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
     var ref: DatabaseReference!
-    var delegate: SendDataDelegate?
     
     
     override func viewDidLoad() {
@@ -56,7 +52,6 @@ class PlantInfoPopupViewController: UIViewController {
     func userGrowingModeButton(){
         
         let queryRef = ref.child("users").child(User.uid).child("MyPlants").queryOrdered(byChild: "name").queryEqual(toValue: plant[0].name)
-        print("testqueryRef")
         
         queryRef.observe(.value, with: { (snapshot) in
             if let foo = snapshot.value as? [String: AnyObject] {
@@ -90,9 +85,8 @@ class PlantInfoPopupViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "네! 캘린더로 이동할께요.", style: UIAlertAction.Style.default, handler: {
             _ in
-            //self.userPlantUpdate()
-            //self.presentCalendar()
-            self.delegate?.sendData(data:"hello")
+            self.userPlantUpdate()
+            self.presentCalendar()
             //todo- 기르기->기르는 중 로 변경
         }))
         alert.addAction(UIAlertAction(title: "나중에 할께요!", style: UIAlertAction.Style.cancel, handler: {
@@ -105,20 +99,18 @@ class PlantInfoPopupViewController: UIViewController {
            ref.child("users").child(User.uid).child("MyPlants").child(plant[0].name).setValue(["Explanation": plant[0].Explanation,"NumericalData": plant[0].NumericalData,"name": plant[0].name, "PrivateFrequency": plant[0].NumericalData])
     }
     func presentCalendar(){
-        let MainViewControlle = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
-        MainViewControlle.getplantListFromAddPlantInfoVC.removeAll()
-        MainViewControlle.getplantListFromAddPlantInfoVC.append(plant[0])
-        MainViewControlle.modalPresentationStyle = .overCurrentContext
-        MainViewControlle.modalTransitionStyle = .flipHorizontal
-        MainViewControlle.size
-        let viewControllerList = [MainViewController(), MainPrivateViewController(), MainAddPlantViewController(),IMGrootViewController()]
-        var viewControllers = viewControllerList
-        viewControllers = viewControllerList.map { UINavigationController(rootViewController: $0) }
-        self.dismiss(animated: true, completion: nil)
+        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+        let MainViewController = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        MainViewController.getplantListFromAddPlantInfoVC.removeAll()
+        MainViewController.getplantListFromAddPlantInfoVC.append(plant[0])
+        MainViewController.modalPresentationStyle = .overCurrentContext
+        MainViewController.modalTransitionStyle = .flipHorizontal
+        MainViewController.size
+        //self.definesPresentationContext = true
         //present(MainViewController, animated: true, completion: nil)
-        /*if let tabViewController = storyboard!.instantiateViewController(withIdentifier: "MainTabBarController") as? UITabBarController {
-            present(tabViewController, animated: true, completion: nil)
-        }*/
+        self.tabBarController?.present(MainViewController, animated: true, completion: nil)
+        
+    // self.dismiss(animated: true, completion: nil)
     }
     /*func setPrivateFreauency(){
         let currentSeason = getCurrentSeason()
