@@ -108,8 +108,11 @@ class PlantInfoPopupViewController: UIViewController {
         MainViewController.size
         //self.definesPresentationContext = true
         //present(MainViewController, animated: true, completion: nil)
-        self.tabBarController?.present(MainViewController, animated: true, completion: nil)
         
+        if let tabViewController = storyboard!.instantiateViewController(withIdentifier: "MainTabBarController") as? UITabBarController {
+            tabViewController.present(MainViewController, animated: true, completion: nil)
+            //presentViewController(tabViewController, animated: true, completion: nil)
+        }
     // self.dismiss(animated: true, completion: nil)
     }
     /*func setPrivateFreauency(){

@@ -103,7 +103,10 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         SPNLabel.text = CurrentPlantList[0].name
     }
     func selectCalendarDate(dateList: [Date]){
-        self.calendar.select(dateList)
+        for temp in dateList{
+            self.calendar.select(temp)
+            
+        }
     }
     func setFBData_WaterDate(dateList: [String]){
          if (CurrentPlantList.count == 1){
@@ -176,7 +179,22 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
                 CurrentPlantList.append(plantsList[pid!])
             }
           
+            let testArray = CurrentPlantList[0].private_waterDate
+            var convertedArray: [Date] = []
             
+            var dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"// dd MM, yyyy"
+            
+            print(testArray)
+            for dat in testArray {
+                let date = dateFormatter.date(from: dat)
+                if let date = date {
+                    convertedArray.append(date)
+                }
+            }
+            selectCalendarDate(dateList:convertedArray)
+            print(convertedArray)
+            print("convertedArray")
             /*let testArray = CurrentPlantList[0].private_waterDate
             var convertedArray: [Date] = []
             
@@ -251,12 +269,17 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
                 let plantObject = plants.value as? [String: AnyObject]
                 let NumericalData = plantObject?["NumericalData"] as? [String: AnyObject]
                 let Explanation = plantObject?["Explanation"] as? [String: AnyObject]
+                let PrivateFrequency = plantObject?["PrivateFrequency"] as? [String: AnyObject]
                 let name = plantObject!["name"]
                 
                 let plants = Plant(Explanation: (Explanation)!,NumericalData:  (NumericalData)!, name: name as! String, pid: count)
+                if plantObject?["private_waterDate"] as! [String]! != nil{
+                    plants.private_waterDate = plantObject?["private_waterDate"] as! [String]!
+                }
+                plants.PrivateFrequency = PrivateFrequency
                 self.plantsList.append(plants)
                 count += 1
-            }
+            }//todo privatewaterdate가져오기
             self.showTableViewPlantsList = self.plantsList
             self.plantsTableView.reloadData()
         }) { (error) in
