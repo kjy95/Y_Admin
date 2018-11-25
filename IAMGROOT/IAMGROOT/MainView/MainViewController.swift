@@ -71,30 +71,41 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         
 
     }
+    
     // 각 날짜에 특정 문자열을 표시할 수 있습니다. 이미지를 표시하는 메소드도 있으니 API를 참조하세요.
     func calendar(calendar: FSCalendar, subtitleForDate date: NSDate) -> String? {
         return "W"
     }
     
-    // 특정 날짜를 선택했을 때, 발생하는 이벤트는 이 곳에서 처리할 수 있겠네요.
-    func calendar(calendar: FSCalendar, didSelectDate date: NSDate) {
-        print(date)
-    }
+   
     
     func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print("did deselect date \(self.dateFormatter.string(from: date))")
+        //print("did deselect date \(self.dateFormatter.string(from: date))")
         let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
-        print("deselected dates is \(selectedDates)")
-         setFBData_WaterDate(dateList: selectedDates)
+        //print("deselected dates is \(selectedDates)")
+        setFBData_WaterDate(dateList: selectedDates)
+        if (CurrentPlantList.count == 1){
+            //지워진 날짜에 맞ㅈ는 다음 날짜를 사용자에게 보여줄 수 있으므로 아래 함수를 실행하여 있다면 보여주도록한다.아래가 모두 한세트..
+            let testArray = CurrentPlantList[0].private_waterDate
+            var convertedArray: [Date] = []
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"// dd MM, yyyy"
+            for dat in testArray {
+                let date = dateFormatter.date(from: dat)
+                if let date = date {
+                    convertedArray.append(date)
+                }
+            }
+            infoWaterDate(date :convertedArray )
+        }
     }
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print("did select date \(self.dateFormatter.string(from: date))")
+        //print("did select date \(self.dateFormatter.string(from: date))")
         let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
-        print("selected dates is \(selectedDates)")
-        if monthPosition == .next || monthPosition == .previous {
-            calendar.setCurrentPage(date, animated: true)
-        }
+        //print("selected dates is \(selectedDates)")
         setFBData_WaterDate(dateList: selectedDates)
+        selectCalendarDate()
         
         if (CurrentPlantList.count == 1){
             print(CurrentPlantList[0].name)
@@ -109,22 +120,26 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         SPNLabel.text = CurrentPlantList[0].name
     }
     func selectCalendarDate(){
-        let testArray = CurrentPlantList[0].private_waterDate
-        var convertedArray: [Date] = []
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"// dd MM, yyyy"
-        for dat in testArray {
-            let date = dateFormatter.date(from: dat)
-            if let date = date {
-                convertedArray.append(date)
-            }
-        }
-        for temp in convertedArray{
-            self.calendar.select(temp)
+        if(CurrentPlantList.count != 0){
+            let testArray = CurrentPlantList[0].private_waterDate
+            var convertedArray: [Date] = []
             
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"// dd MM, yyyy"
+            for dat in testArray {
+                let date = dateFormatter.date(from: dat)
+                if let date = date {
+                    convertedArray.append(date)
+                }
+            }
+            for temp in convertedArray{
+                self.calendar.select(temp)
+                
+            }
+            infoWaterDate(date :convertedArray)
         }
     }
+    
     func deselectCalendarDate(){
         let testArray = CurrentPlantList[0].private_waterDate
         var convertedArray: [Date] = []
@@ -140,7 +155,39 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         for temp in convertedArray{
             self.calendar.deselect(temp)
         }
+        infoWaterDate(date :convertedArray)
+        
     }
+    func infoWaterDate(date :[Date] ){
+        //앞으로 물줘야 하는 날짜 하루를 알려줌
+        print("self.calendar.maximumDate")
+        print(self.calendar.selectedDates.max())
+        print( self.calendar.selectedDates.max()?.compare(Date()).rawValue as Any)//현재 날짜(Date())와 비교, 크면 1, 작으면 -1
+        if  self.calendar.selectedDates.max()?.compare(Date()).rawValue == -1{
+            self.calendar.select(Calendar.current.date(byAdding: .day, value: Int((CurrentPlantList[0].PrivateFrequency!["f_fall"] as! NSString) as String)!, to: self.calendar.selectedDates.max()!))
+                //print("최근꺼에서 +한 것을 select**")///todo 좀 다른 방식으로 표시
+                self.CurrentPlantList[0].private_waterDate.append(self.dateFormatter.string(from: self.calendar.selectedDates.max()!))
+               setFBData_WaterDate()
+        }else if(self.calendar.selectedDates.max()?.compare(Date()).rawValue == 1 && self.calendar.selectedDates.count == 1){
+            //현재 날짜보다 큰 날짜 만 선택되어 있을때는 모두 지운다.
+            self.calendar.deselect(self.calendar.selectedDates.max()!)
+            self.CurrentPlantList[0].private_waterDate.removeAll()
+            //next, FB upload
+            setFBData_WaterDate()
+        }else if(self.calendar.selectedDates.max()?.compare(Date()).rawValue == 1 && self.calendar.selectedDates.count > 1){
+            //현재 날짜보다 큰 날짜가 선택되어 있고 그전 날짜를 지웠는데 그 전전 날짜가 남았을 때. 마지막 날짜를 지우고 --> if 1  번과 같이함.
+            self.CurrentPlantList[0].private_waterDate.remove(at: self.CurrentPlantList[0].private_waterDate.firstIndex(of: self.dateFormatter.string(from: self.calendar.selectedDates.max()!))!)
+            self.calendar.deselect(self.calendar.selectedDates.max()!)
+            
+            
+            //if 1  번
+            self.calendar.select(Calendar.current.date(byAdding: .day, value: Int((CurrentPlantList[0].PrivateFrequency!["f_fall"] as! NSString) as String)!, to: self.calendar.selectedDates.max()!))
+            
+            self.CurrentPlantList[0].private_waterDate.append(self.dateFormatter.string(from: self.calendar.selectedDates.max()!))
+            setFBData_WaterDate()
+        }
+    }
+   
     func setFBData_WaterDate(dateList: [String]){
          if (CurrentPlantList.count == 1){
             CurrentPlantList[0].private_waterDate = dateList
@@ -149,6 +196,15 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
             let post = ["private_waterDate": CurrentPlantList[0].private_waterDate]
             let childUpdates = [key: post]
             ref.updateChildValues(childUpdates)*/
+        }
+    }
+    func setFBData_WaterDate(){
+        if (CurrentPlantList.count == 1){
+            refUser.child("users").child(User.uid).child("MyPlants").child(CurrentPlantList[0].name).setValue(["Explanation": CurrentPlantList[0].Explanation,"NumericalData": CurrentPlantList[0].NumericalData,"name": CurrentPlantList[0].name,"PrivateFrequency": CurrentPlantList[0].NumericalData, "private_waterDate":  CurrentPlantList[0].private_waterDate])
+            /*let key = refUser.child("users").child(User.uid).child("MyPlants").child(CurrentPlantList[0].name).child("PrivateFrequency").childByAutoId().key
+             let post = ["private_waterDate": CurrentPlantList[0].private_waterDate]
+             let childUpdates = [key: post]
+             ref.updateChildValues(childUpdates)*/
         }
     }
     //table view
