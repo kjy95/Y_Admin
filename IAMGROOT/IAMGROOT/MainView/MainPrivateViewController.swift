@@ -16,6 +16,7 @@ class MainPrivateViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     @IBOutlet weak var plantTableView: UITableView!
+    @IBOutlet weak var friendTableView: UITableView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var userName: UILabel!
     var mapView: GMSMapView!
