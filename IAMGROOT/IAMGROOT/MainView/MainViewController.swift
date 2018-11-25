@@ -102,10 +102,37 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     func changeLabelName(){
         SPNLabel.text = CurrentPlantList[0].name
     }
-    func selectCalendarDate(dateList: [Date]){
-        for temp in dateList{
+    func selectCalendarDate(){
+        let testArray = CurrentPlantList[0].private_waterDate
+        var convertedArray: [Date] = []
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"// dd MM, yyyy"
+        for dat in testArray {
+            let date = dateFormatter.date(from: dat)
+            if let date = date {
+                convertedArray.append(date)
+            }
+        }
+        for temp in convertedArray{
             self.calendar.select(temp)
             
+        }
+    }
+    func deselectCalendarDate(){
+        let testArray = CurrentPlantList[0].private_waterDate
+        var convertedArray: [Date] = []
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"// dd MM, yyyy"
+        for dat in testArray {
+            let date = dateFormatter.date(from: dat)
+            if let date = date {
+                convertedArray.append(date)
+            }
+        }
+        for temp in convertedArray{
+            self.calendar.deselect(temp)
         }
     }
     func setFBData_WaterDate(dateList: [String]){
@@ -168,50 +195,16 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
         if (getplantListFromAddPlantInfoVC.count == 0){
             let cell = tableView.cellForRow(at: indexPath) as! ProfileCellTableViewCell
             let pid = Int(cell.pid.text!)
-            print(pid)
             if CurrentPlantList.count == 1{
+                deselectCalendarDate()
                 CurrentPlantList[0] = plantsList[pid!]
             }else if(CurrentPlantList.count == 0){
                 CurrentPlantList.append(plantsList[pid!])
             }
-          
-            let testArray = CurrentPlantList[0].private_waterDate
-            var convertedArray: [Date] = []
-            
-            var dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"// dd MM, yyyy"
-            
-            print(testArray)
-            for dat in testArray {
-                let date = dateFormatter.date(from: dat)
-                if let date = date {
-                    convertedArray.append(date)
-                }
-            }
-            selectCalendarDate(dateList:convertedArray)
-            print(convertedArray)
-            print("convertedArray")
-            /*let testArray = CurrentPlantList[0].private_waterDate
-            var convertedArray: [Date] = []
-            
-            var dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"// dd MM, yyyy"
-            
-            for dat in testArray {
-                let date = dateFormatter.date(from: dat)
-                if let date = date {
-                    convertedArray.append(date)
-                }
-            }
-            
-            var ready = convertedArray.sorted(by: { $0.compare($1) == .orderedDescending })
-            print(testArray)
-            print(ready)
-            selectCalendarDate(dateList:ready)*/
+            selectCalendarDate()
             changeLabelName()
         }
     }
@@ -223,12 +216,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
             print(getplantListFromAddPlantInfoVC[0].pid)
         
     }
-    func selectWaterDate()->Date{
-        // 물을 준 날 plant.private["water_endDate"] = 
-        
-        
-        return Date()
-    }
+   
     func initializeContainerView(pid: Int) {
         let infoViewController = storyboard?.instantiateViewController(withIdentifier: "PlantInfoPopupViewController") as! PlantInfoPopupViewController
         infoViewController.plant.append(plantsList[pid])
@@ -279,7 +267,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
                 plants.PrivateFrequency = PrivateFrequency
                 self.plantsList.append(plants)
                 count += 1
-            }//todo privatewaterdate가져오기
+            }
             self.showTableViewPlantsList = self.plantsList
             self.plantsTableView.reloadData()
         }) { (error) in
