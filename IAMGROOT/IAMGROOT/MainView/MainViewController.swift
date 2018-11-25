@@ -68,6 +68,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
          self.calendar.scope = .month
         // For UITest
         self.calendar.accessibilityIdentifier = "calendar"
+        
 
     }
     // 각 날짜에 특정 문자열을 표시할 수 있습니다. 이미지를 표시하는 메소드도 있으니 API를 참조하세요.
@@ -80,7 +81,12 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         print(date)
     }
     
-    // 스와이프를 통해서 다른 달(month)의 달력으로 넘어갈 때 발생하는 이벤트를 이 곳에서 처리할 수 있겠네요.
+    func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        print("did deselect date \(self.dateFormatter.string(from: date))")
+        let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
+        print("deselected dates is \(selectedDates)")
+         setFBData_WaterDate(dateList: selectedDates)
+    }
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         print("did select date \(self.dateFormatter.string(from: date))")
         let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
@@ -137,8 +143,6 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     }
     func setFBData_WaterDate(dateList: [String]){
          if (CurrentPlantList.count == 1){
-            var i = 0
-            
             CurrentPlantList[0].private_waterDate = dateList
             refUser.child("users").child(User.uid).child("MyPlants").child(CurrentPlantList[0].name).setValue(["Explanation": CurrentPlantList[0].Explanation,"NumericalData": CurrentPlantList[0].NumericalData,"name": CurrentPlantList[0].name,"PrivateFrequency": CurrentPlantList[0].NumericalData, "private_waterDate":  CurrentPlantList[0].private_waterDate])
             /*let key = refUser.child("users").child(User.uid).child("MyPlants").child(CurrentPlantList[0].name).child("PrivateFrequency").childByAutoId().key
