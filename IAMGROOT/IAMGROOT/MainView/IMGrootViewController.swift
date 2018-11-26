@@ -22,24 +22,8 @@ class IMGrootViewController: UIViewController {
         super.viewDidLoad()
         setScrollView()
         setMainTextLabel()
-        setRoundButton()
         setExpString()
         // Do any additional setup after loading the view.
-    }
-    func setRoundButton(){
-        growingPlantButton.layer.cornerRadius = growingPlantButton.frame.height / 2
-        growingPlantButton.clipsToBounds = true
-        growingPlantButton.layer.borderWidth = 1
-        growingPlantButton.layer.borderColor = UIColor.white.cgColor
-        ToolButton.layer.cornerRadius = ToolButton.frame.height / 2
-        ToolButton.clipsToBounds = true
-        ToolButton.layer.borderWidth = 1
-        ToolButton.layer.borderColor = UIColor.white.cgColor
-        choicePlantButton.layer.cornerRadius = choicePlantButton.frame.height / 2
-        choicePlantButton.clipsToBounds = true
-        choicePlantButton.layer.borderWidth = 1
-        choicePlantButton.layer.borderColor = UIColor.white.cgColor
-        
     }
     func setScrollView(){
         scrollView.contentSize.height=1000

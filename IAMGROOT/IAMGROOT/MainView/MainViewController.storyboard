@@ -432,6 +432,9 @@
                                     <constraint firstAttribute="width" constant="45" id="lJE-Nu-JYQ"/>
                                 </constraints>
                                 <state key="normal" image="setting"/>
+                                <connections>
+                                    <segue destination="z56-Wa-Cc0" kind="show" id="Gxx-f6-Dyy"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXU-rD-buZ">
                                 <rect key="frame" x="58" y="378" width="42" height="17"/>
@@ -650,7 +653,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMs-XK-JlZ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMs-XK-JlZ" customClass="RoundedButton" customModule="IAMGROOT" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="55" width="315" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="2tf-Fl-DKZ"/>
@@ -668,7 +671,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEb-xY-Oyj">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEb-xY-Oyj" customClass="RoundedButton" customModule="IAMGROOT" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="130" width="315" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="Dxi-Ui-gNm"/>
@@ -686,7 +689,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mx6-WD-Z0X">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mx6-WD-Z0X" customClass="RoundedButton" customModule="IAMGROOT" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="205" width="315" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="qji-9A-Wcr"/>
@@ -797,13 +800,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BIk-fZ-MTA">
-                                <rect key="frame" x="89" y="128" width="197" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlV-LK-LoQ" customClass="RoundedButton" customModule="IAMGROOT" customModuleProvider="target">
+                                <rect key="frame" x="64" y="119" width="162" height="163"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal" image="buttonImage2"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만든이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyG-kd-pGe">
+                                <rect key="frame" x="137" y="200" width="100" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="48"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zV6-6j-1Cq"/>
@@ -1079,6 +1087,7 @@
     <resources>
         <image name="Image" width="460.79998779296875" height="300.48001098632812"/>
         <image name="buttonImage" width="153.60000610351562" height="67.44000244140625"/>
+        <image name="buttonImage2" width="1280" height="800"/>
         <image name="cat-flower" width="464.6400146484375" height="309.1199951171875"/>
         <image name="detail" width="256" height="256"/>
         <image name="friendProfile" width="1920" height="1381"/>
