@@ -143,13 +143,13 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택한 식물 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neb-T2-nUg">
-                                <rect key="frame" x="16" y="375" width="92.5" height="21"/>
+                                <rect key="frame" x="16" y="375" width="103" height="21"/>
                                 <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxU-4O-H0y">
-                                <rect key="frame" x="108.5" y="375" width="0.0" height="21"/>
+                                <rect key="frame" x="119" y="375" width="0.0" height="21"/>
                                 <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -157,7 +157,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxF-Ma-7BJ">
                                 <rect key="frame" x="285" y="370" width="82" height="30"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="식물정보 추가"/>
+                                <state key="normal" title="식물정보 추가">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -622,7 +624,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QzO-Ac-ZhO">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1600"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLk-hU-lCL">
                                                 <rect key="frame" x="30" y="300" width="315" height="100"/>
@@ -632,6 +634,9 @@
                                                 <state key="normal" image="therapy">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="MainButton:" destination="SjF-dc-80Y" eventType="touchUpInside" id="ogQ-q7-z4s"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horticultural therapy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH4-jN-3R6">
                                                 <rect key="frame" x="59" y="344" width="256" height="36"/>
@@ -653,6 +658,9 @@
                                                 <state key="normal" backgroundImage="buttonImage">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="GrowingPlantAct:" destination="SjF-dc-80Y" eventType="touchUpInside" id="eSq-Gk-GXD"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물 생육에 필요한 것 알기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5g-kQ-DMb">
                                                 <rect key="frame" x="50" y="70" width="275" height="36"/>
@@ -668,6 +676,9 @@
                                                 <state key="normal" backgroundImage="buttonImage">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="ToolAct:" destination="SjF-dc-80Y" eventType="touchUpInside" id="qG5-Fc-wGL"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원예에 필요한 도구" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8u-Se-qJa">
                                                 <rect key="frame" x="50" y="145" width="275" height="36"/>
@@ -683,6 +694,9 @@
                                                 <state key="normal" backgroundImage="buttonImage">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="choiceAct:" destination="SjF-dc-80Y" eventType="touchUpInside" id="t3Y-ki-gm0"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물 선택하기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxV-AG-Hc9">
                                                 <rect key="frame" x="54" y="217" width="275" height="36"/>
@@ -714,7 +728,7 @@
                                             <constraint firstItem="BXv-3n-Kmg" firstAttribute="leading" secondItem="QzO-Ac-ZhO" secondAttribute="leading" constant="38" id="TaD-VE-4fh"/>
                                             <constraint firstAttribute="trailing" secondItem="mx6-WD-Z0X" secondAttribute="trailing" constant="30" id="YNk-HA-Z68"/>
                                             <constraint firstItem="DEb-xY-Oyj" firstAttribute="leading" secondItem="QzO-Ac-ZhO" secondAttribute="leading" constant="30" id="ZpB-to-cQW"/>
-                                            <constraint firstAttribute="height" constant="2000" id="jEc-kl-34P"/>
+                                            <constraint firstAttribute="height" constant="1600" id="jEc-kl-34P"/>
                                             <constraint firstItem="z8u-Se-qJa" firstAttribute="top" secondItem="tMs-XK-JlZ" secondAttribute="bottom" constant="30" id="kAs-Ts-aZI"/>
                                             <constraint firstItem="mx6-WD-Z0X" firstAttribute="top" secondItem="DEb-xY-Oyj" secondAttribute="bottom" constant="15" id="nB2-xh-JnW"/>
                                             <constraint firstItem="lLk-hU-lCL" firstAttribute="leading" secondItem="QzO-Ac-ZhO" secondAttribute="leading" constant="30" id="nVP-ft-Z6Y"/>
@@ -774,6 +788,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7c-ke-B0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="612" y="83.208395802098963"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="H92-ZI-gfP">
+            <objects>
+                <viewController id="z56-Wa-Cc0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Ao-WR-TVu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BIk-fZ-MTA">
+                                <rect key="frame" x="89" y="128" width="197" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zV6-6j-1Cq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7mi-8y-ppK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474.39999999999998" y="1604.3478260869567"/>
         </scene>
         <!--Plant Info Popup View Controller-->
         <scene sceneID="zYg-G6-WVi">
@@ -1035,7 +1073,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTi-Pr-eM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1248.8" y="1765.8170914542729"/>
+            <point key="canvasLocation" x="1260" y="1964"/>
         </scene>
     </scenes>
     <resources>
