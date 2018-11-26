@@ -625,7 +625,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLk-hU-lCL">
-                                                <rect key="frame" x="30" y="30" width="315" height="100"/>
+                                                <rect key="frame" x="30" y="300" width="315" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="KKU-Hp-66q"/>
                                                 </constraints>
@@ -634,51 +634,93 @@
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horticultural therapy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH4-jN-3R6">
-                                                <rect key="frame" x="59" y="74" width="256" height="36"/>
+                                                <rect key="frame" x="59" y="344" width="256" height="36"/>
                                                 <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="111" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXv-3n-Kmg">
-                                                <rect key="frame" x="38" y="186" width="307" height="20.5"/>
+                                                <rect key="frame" x="38" y="456" width="307" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J41-0F-5CO">
-                                                <rect key="frame" x="30" y="1880" width="315" height="90"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMs-XK-JlZ">
+                                                <rect key="frame" x="30" y="55" width="315" height="60"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="tp1-JP-cMF"/>
+                                                    <constraint firstAttribute="height" constant="60" id="2tf-Fl-DKZ"/>
                                                 </constraints>
-                                                <state key="normal" image="buttonImage" backgroundImage="buttonImage">
+                                                <state key="normal" backgroundImage="buttonImage">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물 생육에 필요한 것 알기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rr-CJ-0Ur">
-                                                <rect key="frame" x="30" y="1905" width="315" height="36"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물 생육에 필요한 것 알기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5g-kQ-DMb">
+                                                <rect key="frame" x="50" y="70" width="275" height="36"/>
+                                                <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEb-xY-Oyj">
+                                                <rect key="frame" x="30" y="130" width="315" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="Dxi-Ui-gNm"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="buttonImage">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원예에 필요한 도구" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8u-Se-qJa">
+                                                <rect key="frame" x="50" y="145" width="275" height="36"/>
+                                                <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mx6-WD-Z0X">
+                                                <rect key="frame" x="30" y="205" width="315" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="qji-9A-Wcr"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="buttonImage">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물 선택하기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxV-AG-Hc9">
+                                                <rect key="frame" x="54" y="217" width="275" height="36"/>
                                                 <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.14197263121604919" green="0.13950112462043762" blue="0.039994228631258011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.045598126947879791" green="0.11754066497087479" blue="0.039181303232908249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="1Rr-CJ-0Ur" firstAttribute="leading" secondItem="QzO-Ac-ZhO" secondAttribute="leading" constant="30" id="1Q1-XQ-MBq"/>
+                                            <constraint firstAttribute="trailing" secondItem="tMs-XK-JlZ" secondAttribute="trailing" constant="30" id="1RE-UB-tHb"/>
                                             <constraint firstAttribute="trailing" secondItem="BXv-3n-Kmg" secondAttribute="trailing" constant="30" id="2iy-Yh-221"/>
+                                            <constraint firstItem="hxV-AG-Hc9" firstAttribute="top" secondItem="DEb-xY-Oyj" secondAttribute="bottom" constant="27" id="3hC-3M-IwC"/>
                                             <constraint firstItem="BXv-3n-Kmg" firstAttribute="top" secondItem="lLk-hU-lCL" secondAttribute="bottom" constant="56" id="3oN-8K-Yqj"/>
-                                            <constraint firstItem="lLk-hU-lCL" firstAttribute="top" secondItem="QzO-Ac-ZhO" secondAttribute="top" constant="30" id="6Eh-22-4mS"/>
+                                            <constraint firstItem="mx6-WD-Z0X" firstAttribute="leading" secondItem="QzO-Ac-ZhO" secondAttribute="leading" constant="30" id="4as-IS-bZJ"/>
+                                            <constraint firstItem="lLk-hU-lCL" firstAttribute="top" secondItem="QzO-Ac-ZhO" secondAttribute="top" constant="300" id="6Eh-22-4mS"/>
+                                            <constraint firstItem="z8u-Se-qJa" firstAttribute="leading" secondItem="QzO-Ac-ZhO" secondAttribute="leading" constant="50" id="6tz-t0-397"/>
+                                            <constraint firstAttribute="trailing" secondItem="z8u-Se-qJa" secondAttribute="trailing" constant="50" id="7E0-Hb-9bn"/>
+                                            <constraint firstAttribute="trailing" secondItem="u5g-kQ-DMb" secondAttribute="trailing" constant="50" id="9QS-oF-Mhy"/>
                                             <constraint firstAttribute="trailing" secondItem="lLk-hU-lCL" secondAttribute="trailing" constant="30" id="9tU-Po-Ngt"/>
+                                            <constraint firstItem="tMs-XK-JlZ" firstAttribute="top" secondItem="QzO-Ac-ZhO" secondAttribute="top" constant="55" id="ASR-Be-Knx"/>
+                                            <constraint firstItem="u5g-kQ-DMb" firstAttribute="top" secondItem="QzO-Ac-ZhO" secondAttribute="top" constant="70" id="ArM-HN-j4J"/>
                                             <constraint firstItem="hH4-jN-3R6" firstAttribute="leading" secondItem="QzO-Ac-ZhO" secondAttribute="leading" constant="59" id="AyO-eW-Svd"/>
+                                            <constraint firstItem="DEb-xY-Oyj" firstAttribute="top" secondItem="tMs-XK-JlZ" secondAttribute="bottom" constant="15" id="CGN-h9-eC7"/>
+                                            <constraint firstItem="hxV-AG-Hc9" firstAttribute="leading" secondItem="QzO-Ac-ZhO" secondAttribute="leading" constant="54" id="Ohv-t2-6S6"/>
+                                            <constraint firstAttribute="trailing" secondItem="DEb-xY-Oyj" secondAttribute="trailing" constant="30" id="Ol2-2d-eVY"/>
+                                            <constraint firstAttribute="trailing" secondItem="hxV-AG-Hc9" secondAttribute="trailing" constant="46" id="P6k-yS-M8e"/>
+                                            <constraint firstItem="u5g-kQ-DMb" firstAttribute="leading" secondItem="QzO-Ac-ZhO" secondAttribute="leading" constant="50" id="Sr4-F8-Nmu"/>
                                             <constraint firstItem="BXv-3n-Kmg" firstAttribute="leading" secondItem="QzO-Ac-ZhO" secondAttribute="leading" constant="38" id="TaD-VE-4fh"/>
-                                            <constraint firstItem="J41-0F-5CO" firstAttribute="leading" secondItem="QzO-Ac-ZhO" secondAttribute="leading" constant="30" id="WxH-x2-ijN"/>
+                                            <constraint firstAttribute="trailing" secondItem="mx6-WD-Z0X" secondAttribute="trailing" constant="30" id="YNk-HA-Z68"/>
+                                            <constraint firstItem="DEb-xY-Oyj" firstAttribute="leading" secondItem="QzO-Ac-ZhO" secondAttribute="leading" constant="30" id="ZpB-to-cQW"/>
                                             <constraint firstAttribute="height" constant="2000" id="jEc-kl-34P"/>
-                                            <constraint firstAttribute="trailing" secondItem="J41-0F-5CO" secondAttribute="trailing" constant="30" id="kMG-ri-0UE"/>
-                                            <constraint firstAttribute="bottom" secondItem="J41-0F-5CO" secondAttribute="bottom" constant="30" id="krg-Zj-s9d"/>
-                                            <constraint firstAttribute="bottom" secondItem="1Rr-CJ-0Ur" secondAttribute="bottom" constant="59" id="nGk-kp-i4s"/>
+                                            <constraint firstItem="z8u-Se-qJa" firstAttribute="top" secondItem="tMs-XK-JlZ" secondAttribute="bottom" constant="30" id="kAs-Ts-aZI"/>
+                                            <constraint firstItem="mx6-WD-Z0X" firstAttribute="top" secondItem="DEb-xY-Oyj" secondAttribute="bottom" constant="15" id="nB2-xh-JnW"/>
                                             <constraint firstItem="lLk-hU-lCL" firstAttribute="leading" secondItem="QzO-Ac-ZhO" secondAttribute="leading" constant="30" id="nVP-ft-Z6Y"/>
                                             <constraint firstAttribute="trailing" secondItem="hH4-jN-3R6" secondAttribute="trailing" constant="60" id="ohw-eL-44e"/>
-                                            <constraint firstItem="hH4-jN-3R6" firstAttribute="top" secondItem="QzO-Ac-ZhO" secondAttribute="top" constant="74" id="r6v-t8-76w"/>
-                                            <constraint firstAttribute="trailing" secondItem="1Rr-CJ-0Ur" secondAttribute="trailing" constant="30" id="xfy-8p-XUk"/>
+                                            <constraint firstItem="hH4-jN-3R6" firstAttribute="top" secondItem="QzO-Ac-ZhO" secondAttribute="top" constant="344" id="r6v-t8-76w"/>
+                                            <constraint firstItem="tMs-XK-JlZ" firstAttribute="leading" secondItem="QzO-Ac-ZhO" secondAttribute="leading" constant="30" id="wsq-n5-YlK"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -701,7 +743,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="I'MGROOT" id="B01-lJ-05A"/>
                     <connections>
+                        <outlet property="ToolButton" destination="DEb-xY-Oyj" id="JAi-AQ-BRt"/>
+                        <outlet property="choicePlantButton" destination="mx6-WD-Z0X" id="iRl-XY-Ld4"/>
                         <outlet property="expLabel" destination="BXv-3n-Kmg" id="bdX-Ni-HCg"/>
+                        <outlet property="growingPlantButton" destination="tMs-XK-JlZ" id="xNC-LA-gh9"/>
                         <outlet property="scrollView" destination="cR1-lC-8CA" id="djD-T2-4jI"/>
                     </connections>
                 </viewController>
