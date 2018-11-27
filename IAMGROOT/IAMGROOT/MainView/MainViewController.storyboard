@@ -930,6 +930,9 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="25"/>
                                                         <state key="normal" title="평가하기"/>
+                                                        <connections>
+                                                            <action selector="starRatingBtn:" destination="C0r-4N-U8b" eventType="touchUpInside" id="Opz-qu-2Fx"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -943,7 +946,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="xLS-pz-yje"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIj-0a-saS" customClass="CosmosView" customModule="Cosmos">
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIj-0a-saS" customClass="CosmosView" customModule="Cosmos">
                                                 <rect key="frame" x="69" y="300" width="237" height="43"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
@@ -1115,6 +1118,7 @@
                         <outlet property="naviBar" destination="p7H-J0-SrY" id="IFG-6Z-UaI"/>
                         <outlet property="placeLabel" destination="u5v-Mc-s6H" id="n1U-5P-YmQ"/>
                         <outlet property="plantName" destination="o3m-hg-iQe" id="6Eb-Ng-Cnj"/>
+                        <outlet property="starRatingView" destination="XIj-0a-saS" id="7TS-t8-tzZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTi-Pr-eM2" userLabel="First Responder" sceneMemberID="firstResponder"/>

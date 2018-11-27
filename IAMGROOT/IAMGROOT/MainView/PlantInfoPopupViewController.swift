@@ -8,8 +8,10 @@
 
 import UIKit
 import Firebase
+import Cosmos
 class PlantInfoPopupViewController: UIViewController {
     var  plant = [Plant]()
+    @IBOutlet weak var starRatingView: CosmosView!
     @IBOutlet weak var plantName: UILabel!
     @IBOutlet weak var naviBar: UINavigationBar!
     @IBOutlet weak var ExpLable: UILabel!
@@ -34,8 +36,17 @@ class PlantInfoPopupViewController: UIViewController {
         viewborder()
         userGrowingModeButton()
         // Do any additional setup after loading the view.
+         starRatingView.didFinishTouchingCosmos = didFinishTouchingCosmos
     }
     
+    @IBAction func starRatingBtn(_ sender: Any) {
+         starRatingView.isHidden = false
+    }
+    private func didFinishTouchingCosmos(_ rating: Double) {
+        starRatingView.isHidden = true
+       // self.ratingLabel.text = ViewController.formatValue(rating)
+      //  ratingLabel.textColor = UIColor(red: 183/255, green: 186/255, blue: 204/255, alpha: 1)
+    }
     func changeInfoLabe(){
         plantName.attributedText = NSAttributedString(string: plant[0].name)
         ExpLable.attributedText = NSAttributedString(string: plant[0].explanation)
