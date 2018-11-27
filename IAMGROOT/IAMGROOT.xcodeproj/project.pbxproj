@@ -23,6 +23,7 @@
 		BF5FAD25219C38DB001397EF /* SearchPlantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5FAD24219C38DB001397EF /* SearchPlantsTableViewCell.swift */; };
 		BF7F71BF21AB0F1F00744C31 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F71BE21AB0F1F00744C31 /* FriendsTableViewCell.swift */; };
 		BF7F720121AC692100744C31 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F720021AC692100744C31 /* RoundedButton.swift */; };
+		BF7F720321ACD5C300744C31 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F720221ACD5C300744C31 /* SettingViewController.swift */; };
 		BF808350219462DB00A81B1E /* FBLoginConnectPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDD097021786698009728C0 /* FBLoginConnectPageViewController.storyboard */; };
 		BF8083582195718A00A81B1E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083572195718A00A81B1E /* FBSDKCoreKit.framework */; };
 		BF80835A2195718A00A81B1E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083592195718A00A81B1E /* FBSDKLoginKit.framework */; };
@@ -88,6 +89,7 @@
 		BF5FAD24219C38DB001397EF /* SearchPlantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlantsTableViewCell.swift; sourceTree = "<group>"; };
 		BF7F71BE21AB0F1F00744C31 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		BF7F720021AC692100744C31 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		BF7F720221ACD5C300744C31 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		BF8083552195718A00A81B1E /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8083572195718A00A81B1E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8083592195718A00A81B1E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -385,6 +387,7 @@
 				BF8C5E5E21A168B600BEA4DF /* ProfileCellTableViewCell.swift */,
 				BF14012821A9346B004B44B8 /* IMGrootViewController.swift */,
 				BF7F71BE21AB0F1F00744C31 /* FriendsTableViewCell.swift */,
+				BF7F720221ACD5C300744C31 /* SettingViewController.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -744,6 +747,7 @@
 				BF8083842195788000A81B1E /* MainPrivateViewController.swift in Sources */,
 				BF7F71BF21AB0F1F00744C31 /* FriendsTableViewCell.swift in Sources */,
 				BFD0B1E32174DDBE002B94D1 /* IAMGROOT.xcdatamodeld in Sources */,
+				BF7F720321ACD5C300744C31 /* SettingViewController.swift in Sources */,
 				BF1DEABA217ED69400EB818B /* MainTabBarController.swift in Sources */,
 				BFD0B1DD2174DDBE002B94D1 /* ViewController.swift in Sources */,
 				BFD0B1DB2174DDBE002B94D1 /* AppDelegate.swift in Sources */,

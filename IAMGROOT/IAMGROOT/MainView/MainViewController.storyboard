@@ -420,10 +420,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="d6S-jE-J0x" id="Yrg-1e-Qhn"/>
-                                    <outlet property="delegate" destination="d6S-jE-J0x" id="tOt-NW-QAK"/>
-                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5C-K8-4MF">
                                 <rect key="frame" x="53" y="401" width="45" height="45"/>
@@ -792,28 +788,55 @@
             </objects>
             <point key="canvasLocation" x="612" y="83.208395802098963"/>
         </scene>
-        <!--View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="H92-ZI-gfP">
             <objects>
-                <viewController id="z56-Wa-Cc0" sceneMemberID="viewController">
+                <viewController id="z56-Wa-Cc0" customClass="SettingViewController" customModule="IAMGROOT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ao-WR-TVu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlV-LK-LoQ" customClass="RoundedButton" customModule="IAMGROOT" customModuleProvider="target">
-                                <rect key="frame" x="64" y="119" width="162" height="163"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="buttonImage2"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlV-LK-LoQ" customClass="RoundedButton" customModule="IAMGROOT" customModuleProvider="target">
+                                <rect key="frame" x="71" y="200" width="232" height="66"/>
+                                <color key="backgroundColor" red="0.49249583479999998" green="0.74199557299999996" blue="0.45288264750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="45"/>
+                                <state key="normal" title="만든이"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만든이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyG-kd-pGe">
-                                <rect key="frame" x="137" y="200" width="100" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="48"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEw-EO-Wnp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.045598126947879791" green="0.11754066497087479" blue="0.039181303232908249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem id="Rsy-K5-6KM">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" image="nav_back" id="1OH-N4-Byb">
+                                            <inset key="imageInsets" minX="-128" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="naviBar_back:" destination="z56-Wa-Cc0" id="Tjx-4H-1Fu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rmarkd32145@naver.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHp-Qk-Fhh">
+                                <rect key="frame" x="102" y="310" width="170" height="21"/>
+                                <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PHp-Qk-Fhh" firstAttribute="top" secondItem="wlV-LK-LoQ" secondAttribute="bottom" constant="44" id="8O0-83-Pxm"/>
+                            <constraint firstItem="JEw-EO-Wnp" firstAttribute="trailing" secondItem="zV6-6j-1Cq" secondAttribute="trailing" id="94n-E4-j1o"/>
+                            <constraint firstItem="zV6-6j-1Cq" firstAttribute="trailing" secondItem="wlV-LK-LoQ" secondAttribute="trailing" constant="72" id="9cV-aF-66h"/>
+                            <constraint firstItem="JEw-EO-Wnp" firstAttribute="leading" secondItem="zV6-6j-1Cq" secondAttribute="leading" id="Gyx-rN-C24"/>
+                            <constraint firstItem="JEw-EO-Wnp" firstAttribute="top" secondItem="zV6-6j-1Cq" secondAttribute="top" id="TO7-dT-wpx"/>
+                            <constraint firstItem="zV6-6j-1Cq" firstAttribute="trailing" secondItem="PHp-Qk-Fhh" secondAttribute="trailing" constant="103" id="a8p-jm-uEW"/>
+                            <constraint firstItem="wlV-LK-LoQ" firstAttribute="leading" secondItem="zV6-6j-1Cq" secondAttribute="leading" constant="71" id="dHo-ew-sft"/>
+                            <constraint firstItem="wlV-LK-LoQ" firstAttribute="top" secondItem="zV6-6j-1Cq" secondAttribute="top" constant="180" id="hXT-gc-BBm"/>
+                            <constraint firstItem="PHp-Qk-Fhh" firstAttribute="leading" secondItem="zV6-6j-1Cq" secondAttribute="leading" constant="102" id="yDk-Xw-nsG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zV6-6j-1Cq"/>
                     </view>
                 </viewController>
@@ -1087,7 +1110,6 @@
     <resources>
         <image name="Image" width="460.79998779296875" height="300.48001098632812"/>
         <image name="buttonImage" width="153.60000610351562" height="67.44000244140625"/>
-        <image name="buttonImage2" width="1280" height="800"/>
         <image name="cat-flower" width="464.6400146484375" height="309.1199951171875"/>
         <image name="detail" width="256" height="256"/>
         <image name="friendProfile" width="1920" height="1381"/>

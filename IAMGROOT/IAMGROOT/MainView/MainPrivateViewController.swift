@@ -77,7 +77,7 @@ class MainPrivateViewController: UIViewController, UITableViewDelegate, UITableV
         self.view.sendSubviewToBack(backgroundView)
     }
     
-    //table view
+    //table view - plant
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return showTableViewPlantsList.count
     }
