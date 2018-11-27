@@ -219,7 +219,8 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         //todo user에 물주기,분갈이,장소날짜업데이트
         cell.plantName.text = plant.name
         cell.potF.text = plant.Flowerpot
-        cell.waterF.text = plant.f_winter
+        cell.waterF.text = plant.explanation
+        cell.placeF.text = plant.place
         cell.pid.text = String(plant.pid)
         //버튼에 인덱스 보냄
         cell.detailButton.tag = indexPath.row

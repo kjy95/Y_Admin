@@ -81,7 +81,7 @@ class PlantInfoPopupViewController: UIViewController {
             
             alert.addAction(UIAlertAction(title: "네", style: UIAlertAction.Style.default, handler: {
                 _ in self.userPlantUpdate()
-                 self.alert_growing()
+                 //self.alert_growing()
             }))
             alert.addAction(UIAlertAction(title: "아니요", style: UIAlertAction.Style.cancel, handler: {
                 _ in

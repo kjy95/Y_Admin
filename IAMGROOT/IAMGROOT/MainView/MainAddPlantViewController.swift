@@ -22,7 +22,7 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
         plantsTableView.delegate = self
         settingFBRDB()
         setPlantsListModel()
-        
+        self.hideKeyboard()
     }
     
     func settingFBRDB(){
@@ -109,5 +109,22 @@ class MainAddPlantViewController: UIViewController , UITableViewDelegate, UITabl
         infoViewController.modalTransitionStyle = .flipHorizontal
         infoViewController.size
         present(infoViewController, animated: true, completion: nil)
+    }
+}
+extension UIViewController
+{
+    func hideKeyboard()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(UIViewController.dismissKeyboard))
+        
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
     }
 }
