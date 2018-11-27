@@ -84,7 +84,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상세보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGW-0d-KiA">
-                                                    <rect key="frame" x="310.5" y="58" width="38.5" height="13"/>
+                                                    <rect key="frame" x="306.5" y="58" width="42.5" height="13"/>
                                                     <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -284,7 +284,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상세보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxW-DX-vkH">
-                                                    <rect key="frame" x="310.5" y="58" width="38.5" height="13"/>
+                                                    <rect key="frame" x="306.5" y="58" width="42.5" height="13"/>
                                                     <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -349,25 +349,25 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다음 물주기 날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2L-Gp-slV">
-                                                    <rect key="frame" x="115" y="4" width="106" height="19"/>
+                                                    <rect key="frame" x="115" y="4" width="118" height="19"/>
                                                     <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="16"/>
                                                     <color key="textColor" red="0.086967967450000003" green="0.5442402959" blue="0.49153250459999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZt-h9-TST">
-                                                    <rect key="frame" x="115" y="32" width="55.5" height="19"/>
+                                                    <rect key="frame" x="115" y="32" width="61.5" height="19"/>
                                                     <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="16"/>
                                                     <color key="textColor" red="0.086967967450000003" green="0.5442402959" blue="0.49153250459999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다음 장소 날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWN-gG-SCv">
-                                                    <rect key="frame" x="115" y="58.5" width="92" height="19"/>
+                                                    <rect key="frame" x="115" y="58.5" width="102.5" height="19"/>
                                                     <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="16"/>
                                                     <color key="textColor" red="0.086967967450000003" green="0.5442402959" blue="0.49153250459999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상세보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX9-SU-P5r">
-                                                    <rect key="frame" x="310.5" y="58" width="38.5" height="13"/>
+                                                    <rect key="frame" x="306.5" y="58" width="42.5" height="13"/>
                                                     <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -524,19 +524,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장미" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfX-KF-TEh">
-                                                    <rect key="frame" x="15" y="1" width="42" height="28"/>
+                                                    <rect key="frame" x="15" y="1" width="46.5" height="29"/>
                                                     <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="24"/>
                                                     <color key="textColor" red="0.15885907411575317" green="0.34957233071327209" blue="0.49146360158920288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkD-ab-ObC">
-                                                    <rect key="frame" x="15" y="35" width="59" height="20"/>
+                                                    <rect key="frame" x="15" y="36" width="45" height="20"/>
                                                     <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
                                                     <color key="textColor" red="0.10960499197244644" green="0.59111499786376953" blue="0.65105092525482178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="highlightedColor" red="0.73209935426712036" green="0.9375157356262207" blue="0.93183040618896484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물주기 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBC-BS-BYk">
-                                                    <rect key="frame" x="17" y="57" width="78.5" height="20"/>
+                                                    <rect key="frame" x="17" y="58" width="61.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
                                                     <color key="textColor" red="0.67309480905532837" green="0.94908374547958374" blue="0.94883710145950317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="highlightedColor" red="0.73209935426712036" green="0.9375157356262207" blue="0.93183040618896484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -819,7 +819,7 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rmarkd32145@naver.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHp-Qk-Fhh">
-                                <rect key="frame" x="102" y="310" width="170" height="21"/>
+                                <rect key="frame" x="102" y="310" width="170" height="20"/>
                                 <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -885,13 +885,13 @@
                                                 <rect key="frame" x="0.0" y="221" width="375" height="145"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="꽃이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3m-hg-iQe">
-                                                        <rect key="frame" x="29" y="8" width="317" height="30.5"/>
+                                                        <rect key="frame" x="29" y="8" width="317" height="31.5"/>
                                                         <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="26"/>
                                                         <color key="textColor" red="0.086967967450618744" green="0.54424029588699341" blue="0.49153250455856323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATT-tk-Acw">
-                                                        <rect key="frame" x="8" y="46" width="359" height="24"/>
+                                                        <rect key="frame" x="8" y="47" width="359" height="24"/>
                                                         <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -943,53 +943,65 @@
                                                     <constraint firstAttribute="height" constant="50" id="xLS-pz-yje"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIj-0a-saS" customClass="CosmosView" customModule="Cosmos">
+                                                <rect key="frame" x="69" y="300" width="237" height="43"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                        <real key="value" value="43"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxP-KK-kwX">
                                                 <rect key="frame" x="0.0" y="416" width="375" height="700"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="분갈이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bj1-bk-12w">
-                                                        <rect key="frame" x="23" y="19" width="60" height="27"/>
+                                                        <rect key="frame" x="23" y="19" width="66.5" height="28"/>
                                                         <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="23"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물주기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ue-hJ-aCc">
-                                                        <rect key="frame" x="23" y="112.5" width="60" height="27"/>
+                                                        <rect key="frame" x="23" y="113.5" width="66.5" height="28"/>
                                                         <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="23"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPW-jT-JYa">
-                                                        <rect key="frame" x="23" y="206" width="40" height="27"/>
+                                                        <rect key="frame" x="23" y="208" width="44.5" height="28"/>
                                                         <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="23"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1년에 1번 분갈이 해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wR4-RE-2ip">
-                                                        <rect key="frame" x="23" y="55" width="139" height="16"/>
+                                                        <rect key="frame" x="23" y="56" width="139" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="봄: 1개월에 1번 물을 주세요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0w-22-YUA">
-                                                        <rect key="frame" x="23" y="148.5" width="146.5" height="16"/>
+                                                        <rect key="frame" x="23" y="150.5" width="146.5" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="분갈이 설명" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgl-zd-qj2">
-                                                        <rect key="frame" x="23" y="79" width="330" height="20.5"/>
+                                                        <rect key="frame" x="23" y="80" width="330" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물주기 설명" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZ2-Ig-x7I">
-                                                        <rect key="frame" x="23" y="172.5" width="330" height="20.5"/>
+                                                        <rect key="frame" x="23" y="174.5" width="330" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장소설명" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5v-Mc-s6H">
-                                                        <rect key="frame" x="23" y="266" width="330" height="20.5"/>
+                                                        <rect key="frame" x="23" y="269" width="330" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1001,13 +1013,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKm-HC-lGK">
-                                                        <rect key="frame" x="302" y="243" width="33" height="16"/>
+                                                        <rect key="frame" x="302" y="245" width="33" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="봄: 양지에 놓는게 좋아요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHi-Gt-S4H">
-                                                        <rect key="frame" x="23" y="242" width="131" height="16"/>
+                                                        <rect key="frame" x="23" y="245" width="131" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1056,8 +1068,11 @@
                                             <constraint firstItem="5sU-PL-F3Y" firstAttribute="leading" secondItem="3YX-C4-eq7" secondAttribute="leading" id="Ves-HV-aEf"/>
                                             <constraint firstItem="4m1-hP-mSH" firstAttribute="leading" secondItem="3YX-C4-eq7" secondAttribute="leading" id="VhW-o0-LjW"/>
                                             <constraint firstItem="nK0-hc-Vvi" firstAttribute="leading" secondItem="3YX-C4-eq7" secondAttribute="leading" id="WnQ-WC-1FU"/>
+                                            <constraint firstItem="XIj-0a-saS" firstAttribute="leading" secondItem="3YX-C4-eq7" secondAttribute="leading" constant="69" id="eUZ-I2-jhG"/>
                                             <constraint firstAttribute="trailing" secondItem="pxP-KK-kwX" secondAttribute="trailing" id="ei0-tf-hM1"/>
                                             <constraint firstAttribute="trailing" secondItem="5sU-PL-F3Y" secondAttribute="trailing" id="oSN-xj-bfQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="XIj-0a-saS" secondAttribute="trailing" constant="69" id="pph-GA-4Bg"/>
+                                            <constraint firstItem="XIj-0a-saS" firstAttribute="top" secondItem="4m1-hP-mSH" secondAttribute="bottom" constant="108" id="tsc-M9-AEt"/>
                                             <constraint firstItem="5sU-PL-F3Y" firstAttribute="top" secondItem="nK0-hc-Vvi" secondAttribute="bottom" id="zW6-Ie-JKr"/>
                                         </constraints>
                                     </view>
@@ -1104,7 +1119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTi-Pr-eM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260" y="1964"/>
+            <point key="canvasLocation" x="1260" y="1963.7181409295354"/>
         </scene>
     </scenes>
     <resources>

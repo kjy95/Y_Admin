@@ -25,8 +25,6 @@
 		BF7F720121AC692100744C31 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F720021AC692100744C31 /* RoundedButton.swift */; };
 		BF7F720321ACD5C300744C31 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F720221ACD5C300744C31 /* SettingViewController.swift */; };
 		BF808350219462DB00A81B1E /* FBLoginConnectPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDD097021786698009728C0 /* FBLoginConnectPageViewController.storyboard */; };
-		BF8083582195718A00A81B1E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083572195718A00A81B1E /* FBSDKCoreKit.framework */; };
-		BF80835A2195718A00A81B1E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8083592195718A00A81B1E /* FBSDKLoginKit.framework */; };
 		BF80835C2195718A00A81B1E /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF80835B2195718A00A81B1E /* FirebaseAuth.framework */; };
 		BF80835E2195718A00A81B1E /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF80835D2195718A00A81B1E /* FirebaseCore.framework */; };
 		BF8083602195718A00A81B1E /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF80835F2195718A00A81B1E /* FirebaseDatabase.framework */; };
@@ -222,8 +220,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF23DD9B21A5B45A00434475 /* FSCalendar.framework in Frameworks */,
-				BF8083582195718A00A81B1E /* FBSDKCoreKit.framework in Frameworks */,
-				BF80835A2195718A00A81B1E /* FBSDKLoginKit.framework in Frameworks */,
 				BF80835C2195718A00A81B1E /* FirebaseAuth.framework in Frameworks */,
 				BF80835E2195718A00A81B1E /* FirebaseCore.framework in Frameworks */,
 				BF8083602195718A00A81B1E /* FirebaseDatabase.framework in Frameworks */,
@@ -675,7 +671,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-IAMGROOT/Pods-IAMGROOT-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
@@ -695,7 +692,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",

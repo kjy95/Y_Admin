@@ -5,12 +5,13 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
-  - BoringSSL-GRPC (0.0.2):
-    - BoringSSL-GRPC/Implementation (= 0.0.2)
-    - BoringSSL-GRPC/Interface (= 0.0.2)
-  - BoringSSL-GRPC/Implementation (0.0.2):
-    - BoringSSL-GRPC/Interface (= 0.0.2)
-  - BoringSSL-GRPC/Interface (0.0.2)
+  - BoringSSL (10.0.6):
+    - BoringSSL/Implementation (= 10.0.6)
+    - BoringSSL/Interface (= 10.0.6)
+  - BoringSSL/Implementation (10.0.6):
+    - BoringSSL/Interface (= 10.0.6)
+  - BoringSSL/Interface (10.0.6)
+  - Cosmos (17.0.0)
   - FBSDKCoreKit (4.38.1):
     - Bolts (~> 1.9)
   - FBSDKLoginKit (4.38.1):
@@ -152,22 +153,22 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (5.3.6):
     - GoogleUtilities/Logger
-  - "gRPC-C++ (0.0.4)":
-    - "gRPC-C++/Implementation (= 0.0.4)"
-    - "gRPC-C++/Interface (= 0.0.4)"
-  - "gRPC-C++/Implementation (0.0.4)":
-    - "gRPC-C++/Interface (= 0.0.4)"
-    - gRPC-Core (= 1.17.0-pre1)
+  - "gRPC-C++ (0.0.5)":
+    - "gRPC-C++/Implementation (= 0.0.5)"
+    - "gRPC-C++/Interface (= 0.0.5)"
+  - "gRPC-C++/Implementation (0.0.5)":
+    - "gRPC-C++/Interface (= 0.0.5)"
+    - gRPC-Core (= 1.14.0)
     - nanopb (~> 0.3)
-  - "gRPC-C++/Interface (0.0.4)"
-  - gRPC-Core (1.17.0-pre1):
-    - gRPC-Core/Implementation (= 1.17.0-pre1)
-    - gRPC-Core/Interface (= 1.17.0-pre1)
-  - gRPC-Core/Implementation (1.17.0-pre1):
-    - BoringSSL-GRPC (= 0.0.2)
-    - gRPC-Core/Interface (= 1.17.0-pre1)
+  - "gRPC-C++/Interface (0.0.5)"
+  - gRPC-Core (1.14.0):
+    - gRPC-Core/Implementation (= 1.14.0)
+    - gRPC-Core/Interface (= 1.14.0)
+  - gRPC-Core/Implementation (1.14.0):
+    - BoringSSL (~> 10.0)
+    - gRPC-Core/Interface (= 1.14.0)
     - nanopb (~> 0.3)
-  - gRPC-Core/Interface (1.17.0-pre1)
+  - gRPC-Core/Interface (1.14.0)
   - GTMOAuth2 (1.1.6):
     - GTMSessionFetcher (~> 1.1)
   - GTMSessionFetcher (1.2.1):
@@ -190,6 +191,7 @@ PODS:
     - TwitterCore (>= 3.2.0)
 
 DEPENDENCIES:
+  - Cosmos (~> 17.0)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -202,7 +204,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Bolts
-    - BoringSSL-GRPC
+    - BoringSSL
+    - Cosmos
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Firebase
@@ -235,7 +238,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  BoringSSL-GRPC: 2a230d9cd93e7ce39916044f645cebb31f37dde6
+  BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
+  Cosmos: 309e489f21ffc91a1eeecfebef7f817cd2fcfba6
   FBSDKCoreKit: 8d47857400e2f5bdea697a80daff882e91c84ef6
   FBSDKLoginKit: 4621c690d9dd8628031a4791497062183ea34b0d
   Firebase: 6df9a6114bc9f106a98fe83d5438d4d9833c2019
@@ -255,8 +259,8 @@ SPEC CHECKSUMS:
   GoogleSignIn: 11183592dc63e105475c7305a325045ff95e02b7
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
-  "gRPC-C++": d4f661e0354347788b4aabc95a3dd3173a935338
-  gRPC-Core: 5906a06d5938ed2dec946f0c903c70897f04c2e2
+  "gRPC-C++": 19eec1ffd34de29453f5fab5b4697ad0f240ad51
+  gRPC-Core: f4836515817c0eb479aeeb9cc27c91c4ba62a9f6
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
@@ -266,6 +270,6 @@ SPEC CHECKSUMS:
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: ce0f72025ee9d95b7fd6ff67ea55203ac5c0ba0e
+PODFILE CHECKSUM: 221341d88dcd00e3256136daf5caec3c99efaffd
 
 COCOAPODS: 1.5.3
