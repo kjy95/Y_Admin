@@ -13,4 +13,5 @@ pod 'GoogleSignIn'
  pod 'GoogleMaps'
   pod 'GooglePlaces'
  pod 'FSCalendar'
+pod 'Cosmos', '~> 17.0'
  end

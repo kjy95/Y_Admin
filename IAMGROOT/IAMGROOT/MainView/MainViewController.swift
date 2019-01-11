@@ -158,13 +158,13 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         infoWaterDate(date :convertedArray)
         
     }
-    func infoWaterDate(date :[Date] ){
+    func infoWaterDate(date :[Date] ){// 4 --> 7, 30-->1, 5-->30/5:=6
         //앞으로 물줘야 하는 날짜 하루를 알려줌
         print("self.calendar.maximumDate")
         print(self.calendar.selectedDates.max())
         print( self.calendar.selectedDates.max()?.compare(Date()).rawValue as Any)//현재 날짜(Date())와 비교, 크면 1, 작으면 -1
         if  self.calendar.selectedDates.max()?.compare(Date()).rawValue == -1{
-            self.calendar.select(Calendar.current.date(byAdding: .day, value: Int((CurrentPlantList[0].PrivateFrequency!["f_fall"] as! NSString) as String)!, to: self.calendar.selectedDates.max()!))
+            self.calendar.select(Calendar.current.date(byAdding: .day, value: 30/Int((CurrentPlantList[0].PrivateFrequency!["f_fall"] as! NSString) as String)!, to: self.calendar.selectedDates.max()!))
                 //print("최근꺼에서 +한 것을 select**")///todo 좀 다른 방식으로 표시
                 self.CurrentPlantList[0].private_waterDate.append(self.dateFormatter.string(from: self.calendar.selectedDates.max()!))
                setFBData_WaterDate()
@@ -181,7 +181,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
             
             
             //if 1  번
-            self.calendar.select(Calendar.current.date(byAdding: .day, value: Int((CurrentPlantList[0].PrivateFrequency!["f_fall"] as! NSString) as String)!, to: self.calendar.selectedDates.max()!))
+            self.calendar.select(Calendar.current.date(byAdding: .day, value: 30/Int((CurrentPlantList[0].PrivateFrequency!["f_fall"] as! NSString) as String)!, to: self.calendar.selectedDates.max()!))
             
             self.CurrentPlantList[0].private_waterDate.append(self.dateFormatter.string(from: self.calendar.selectedDates.max()!))
             setFBData_WaterDate()

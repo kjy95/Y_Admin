@@ -25,6 +25,8 @@ class MainPrivateViewController: UIViewController, UITableViewDelegate, UITableV
     var ref: DatabaseReference!
     var  plantsList = [Plant]()//all plantlist
     var  showTableViewPlantsList = [Plant]()//select some plantlist from plantsList
+    @IBOutlet weak var friendButton: UIButton!
+    @IBOutlet weak var plantButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,26 @@ class MainPrivateViewController: UIViewController, UITableViewDelegate, UITableV
     @IBAction func logoutButton(_ sender: Any) {
         print("button")
         logout()
+    }
+    @IBAction func friendButton(_ sender: Any) {
+        showFriendTable()
+        hidePlantTable()
+    }
+    @IBAction func plantButton(_ sender: Any) {
+        showPlantTable()
+        hideFriendTable()
+    }
+    func showPlantTable(){
+        plantTableView.isHidden = false
+    }
+    func hidePlantTable(){
+        plantTableView.isHidden = true
+    }
+    func showFriendTable(){
+        friendTableView.isHidden = false
+    }
+    func hideFriendTable(){
+        friendTableView.isHidden = true
     }
     func settingFBRDB(){
         // Get a secondary database instance by URL
