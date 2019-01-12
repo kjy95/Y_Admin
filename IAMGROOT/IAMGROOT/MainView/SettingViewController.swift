@@ -10,6 +10,7 @@ import UIKit
 
 class SettingViewController: UIViewController {
 
+    @IBOutlet weak var settingPermitFriendRecommendButton: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,5 +30,16 @@ class SettingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func switchRecommend(_ sender: Any) {
+        sendFBFriendRecommendSetting()
+    }
+    
+    
+    func getSettingPermitFriendRecommendButtonState()->Bool{
+        return settingPermitFriendRecommendButton.isOn
+    }
+    func sendFBFriendRecommendSetting(){
+        //todo
+        
+    }
 }

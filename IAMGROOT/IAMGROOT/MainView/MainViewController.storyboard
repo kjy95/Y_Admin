@@ -819,7 +819,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlV-LK-LoQ" customClass="RoundedButton" customModule="IAMGROOT" customModuleProvider="target">
-                                <rect key="frame" x="71" y="200" width="232" height="66"/>
+                                <rect key="frame" x="71" y="120" width="232" height="66"/>
                                 <color key="backgroundColor" red="0.49249583479999998" green="0.74199557299999996" blue="0.45288264750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="45"/>
                                 <state key="normal" title="만든이"/>
@@ -841,26 +841,45 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rmarkd32145@naver.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHp-Qk-Fhh">
-                                <rect key="frame" x="102" y="310" width="170" height="20"/>
+                                <rect key="frame" x="102" y="230" width="170" height="20"/>
                                 <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다른 사용자의 추천 친구목록에 보이기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDp-TW-PJB">
+                                <rect key="frame" x="16" y="323" width="241" height="24"/>
+                                <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q11-bK-Ow6">
+                                <rect key="frame" x="310" y="318" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchRecommend:" destination="z56-Wa-Cc0" eventType="valueChanged" id="tf8-a1-bRn"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PHp-Qk-Fhh" firstAttribute="top" secondItem="wlV-LK-LoQ" secondAttribute="bottom" constant="44" id="8O0-83-Pxm"/>
                             <constraint firstItem="JEw-EO-Wnp" firstAttribute="trailing" secondItem="zV6-6j-1Cq" secondAttribute="trailing" id="94n-E4-j1o"/>
                             <constraint firstItem="zV6-6j-1Cq" firstAttribute="trailing" secondItem="wlV-LK-LoQ" secondAttribute="trailing" constant="72" id="9cV-aF-66h"/>
+                            <constraint firstItem="cDp-TW-PJB" firstAttribute="leading" secondItem="zV6-6j-1Cq" secondAttribute="leading" constant="16" id="DhE-ci-aVj"/>
                             <constraint firstItem="JEw-EO-Wnp" firstAttribute="leading" secondItem="zV6-6j-1Cq" secondAttribute="leading" id="Gyx-rN-C24"/>
                             <constraint firstItem="JEw-EO-Wnp" firstAttribute="top" secondItem="zV6-6j-1Cq" secondAttribute="top" id="TO7-dT-wpx"/>
                             <constraint firstItem="zV6-6j-1Cq" firstAttribute="trailing" secondItem="PHp-Qk-Fhh" secondAttribute="trailing" constant="103" id="a8p-jm-uEW"/>
+                            <constraint firstItem="q11-bK-Ow6" firstAttribute="top" secondItem="JEw-EO-Wnp" secondAttribute="bottom" constant="254" id="cxk-4G-lVZ"/>
                             <constraint firstItem="wlV-LK-LoQ" firstAttribute="leading" secondItem="zV6-6j-1Cq" secondAttribute="leading" constant="71" id="dHo-ew-sft"/>
-                            <constraint firstItem="wlV-LK-LoQ" firstAttribute="top" secondItem="zV6-6j-1Cq" secondAttribute="top" constant="180" id="hXT-gc-BBm"/>
+                            <constraint firstItem="wlV-LK-LoQ" firstAttribute="top" secondItem="zV6-6j-1Cq" secondAttribute="top" constant="100" id="hXT-gc-BBm"/>
+                            <constraint firstItem="zV6-6j-1Cq" firstAttribute="trailing" secondItem="q11-bK-Ow6" secondAttribute="trailing" constant="16" id="oOd-Jm-iCa"/>
+                            <constraint firstItem="cDp-TW-PJB" firstAttribute="top" secondItem="PHp-Qk-Fhh" secondAttribute="bottom" constant="73" id="pHv-V1-fUT"/>
                             <constraint firstItem="PHp-Qk-Fhh" firstAttribute="leading" secondItem="zV6-6j-1Cq" secondAttribute="leading" constant="102" id="yDk-Xw-nsG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zV6-6j-1Cq"/>
                     </view>
+                    <connections>
+                        <outlet property="settingPermitFrendRecommendButton" destination="q11-bK-Ow6" id="DX5-FR-Q3m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mi-8y-ppK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
