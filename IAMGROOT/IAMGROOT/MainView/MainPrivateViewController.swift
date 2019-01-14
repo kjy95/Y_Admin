@@ -35,6 +35,10 @@ class MainPrivateViewController: UIViewController, UITableViewDelegate, UITableV
         setPlantsListModel()
        // showgooglemap(x:"53",y:"54")
     } 
+    @IBAction func AddFriendButton(_ sender: Any) {
+         let myViewController = AddFriendViewController(nibName: "AddFriendVC", bundle: nil)
+        self.present(myViewController, animated: true, completion: nil)
+    }
     @IBAction func logoutButton(_ sender: Any) {
         print("button")
         logout()
@@ -47,6 +51,8 @@ class MainPrivateViewController: UIViewController, UITableViewDelegate, UITableV
         showPlantTable()
         hideFriendTable()
     }
+    
+ 
     func showPlantTable(){
         plantTableView.isHidden = false
     }

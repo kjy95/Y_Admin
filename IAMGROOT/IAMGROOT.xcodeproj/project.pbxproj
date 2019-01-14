@@ -49,6 +49,8 @@
 		BFD0B2122175A736002B94D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B2102175A736002B94D1 /* GoogleService-Info.plist */; };
 		BFD0B2132175A736002B94D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFD0B2102175A736002B94D1 /* GoogleService-Info.plist */; };
 		BFDAF745219DEA7F00757F03 /* PlantInfoPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDAF744219DEA7F00757F03 /* PlantInfoPopupViewController.swift */; };
+		BFFD6B7521EC98F40082EE40 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFD6B7421EC98F40082EE40 /* AddFriendViewController.swift */; };
+		BFFD6B7721ECA2120082EE40 /* AddFriendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFD6B7621ECA2120082EE40 /* AddFriendVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +214,8 @@
 		BFDD09D321789ED9009728C0 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		BFDD09D421789ED9009728C0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		BFDD09D521789ED9009728C0 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		BFFD6B7421EC98F40082EE40 /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
+		BFFD6B7621ECA2120082EE40 /* AddFriendVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFriendVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,6 +447,7 @@
 		BFD0B1D92174DDBD002B94D1 /* IAMGROOT */ = {
 			isa = PBXGroup;
 			children = (
+				BFFD6B7121EC97AD0082EE40 /* AddFriend */,
 				BF8083852196B65100A81B1E /* ImageView */,
 				BF1DEABB217F338200EB818B /* Model */,
 				BFD0B2102175A736002B94D1 /* GoogleService-Info.plist */,
@@ -484,6 +489,15 @@
 				BFDD097021786698009728C0 /* FBLoginConnectPageViewController.storyboard */,
 			);
 			path = FBLogin;
+			sourceTree = "<group>";
+		};
+		BFFD6B7121EC97AD0082EE40 /* AddFriend */ = {
+			isa = PBXGroup;
+			children = (
+				BFFD6B7421EC98F40082EE40 /* AddFriendViewController.swift */,
+				BFFD6B7621ECA2120082EE40 /* AddFriendVC.xib */,
+			);
+			path = AddFriend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -598,6 +612,7 @@
 				BF5FAD132196C461001397EF /* Pissjar Sans.ttf in Resources */,
 				BFD0B1E52174DDC2002B94D1 /* Assets.xcassets in Resources */,
 				BFD0B2112175A736002B94D1 /* GoogleService-Info.plist in Resources */,
+				BFFD6B7721ECA2120082EE40 /* AddFriendVC.xib in Resources */,
 				BF808350219462DB00A81B1E /* FBLoginConnectPageViewController.storyboard in Resources */,
 				BF1DEAB6217C738F00EB818B /* MainViewController.storyboard in Resources */,
 				BFD0B1E02174DDBE002B94D1 /* Main.storyboard in Resources */,
@@ -748,6 +763,7 @@
 				BF7F720321ACD5C300744C31 /* SettingViewController.swift in Sources */,
 				BF1DEABA217ED69400EB818B /* MainTabBarController.swift in Sources */,
 				BFD0B1DD2174DDBE002B94D1 /* ViewController.swift in Sources */,
+				BFFD6B7521EC98F40082EE40 /* AddFriendViewController.swift in Sources */,
 				BFD0B1DB2174DDBE002B94D1 /* AppDelegate.swift in Sources */,
 				BF8C5E5F21A168B600BEA4DF /* ProfileCellTableViewCell.swift in Sources */,
 				BF5FAD23219AC6C4001397EF /* Plant.swift in Sources */,
