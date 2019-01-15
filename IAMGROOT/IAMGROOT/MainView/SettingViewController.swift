@@ -7,19 +7,23 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingViewController: UIViewController {
 
     @IBOutlet weak var settingPermitFriendRecommendButton: UISwitch!
+    var FriendRecommendSetting: Bool!
+    var ref: DatabaseReference!
+    var refUser: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setSettingButton()
     }
-    
- 
+    func setSettingButton(){
+        //todo
+    }
     @IBAction func naviBar_back(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: User.FriendRecommendSetting, completion: nil)
     }
     /*
     // MARK: - Navigation
@@ -39,7 +43,16 @@ class SettingViewController: UIViewController {
         return settingPermitFriendRecommendButton.isOn
     }
     func sendFBFriendRecommendSetting(){
-        //todo
-        
+        settingFBRDB()
+        updateSettingFriendData()
+    }
+    func settingFBRDB(){
+        // Get a secondary database instance by URL
+        ref = Database.database(url: "https://atticyadmin.firebaseio.com/").reference()
+        refUser = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()
+    }
+    func updateSettingFriendData(){
+        User.FriendRecommendSetting = settingPermitFriendRecommendButton.isOn
+        refUser.child("users/\(User.uid!)/Setting/FriendRecommend").setValue(User.FriendRecommendSetting)
     }
 }

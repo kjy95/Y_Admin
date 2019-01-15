@@ -19,7 +19,7 @@ class User : NSObject{//Store Data Globally
     static var myPlants = [[]]
     static var myPlantEvaluation = [String]()
     //setting
-    static var settingPermitFriendRecommend: Bool!
+    static var FriendRecommendSetting: Bool!
     
     
     
