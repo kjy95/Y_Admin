@@ -35,6 +35,7 @@ class SettingViewController: UIViewController {
     }
     */
     @IBAction func switchRecommend(_ sender: Any) {
+        print(settingPermitFriendRecommendButton.isOn)
         sendFBFriendRecommendSetting()
     }
     
