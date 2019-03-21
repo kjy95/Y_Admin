@@ -23,6 +23,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     var  checkIsLoadedTV = false
     @IBOutlet weak var plantsTableView: UITableView!
     var  showTableViewPlantsList = [Plant]()//select some plantlist from plantsList
+    var f_waterSeason : String!//
     
     @IBOutlet weak var SPNLabel: UILabel!
     //Take a Google Map Object. Don't make outlet from Storyboard, Break the outlet of GMSMapView if you made an outlet
@@ -30,7 +31,6 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     @IBOutlet weak var calendar: FSCalendar!
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
@@ -48,7 +48,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         settingFBRDB()
         setPlantsListModel()
         setCalendar()
-        
+        f_waterSeason = getCurrentSeason()
     }
     func settingFBRDB(){
         // Get a secondary database instance by URL
@@ -80,7 +80,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
    
     
     func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        //print("did deselect date \(self.dateFormatter.string(from: date))")
+        //print("did deselect date \(self.dateFormatter.string(from: date))")//선택취소했을때
         let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
         //print("deselected dates is \(selectedDates)")
         setFBData_WaterDate(dateList: selectedDates)
@@ -101,17 +101,18 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         }
     }
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        //print("did select date \(self.dateFormatter.string(from: date))")
-        let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
-        //print("selected dates is \(selectedDates)")
-        setFBData_WaterDate(dateList: selectedDates)
-        selectCalendarDate()
+        //현재 날짜일 때만 클릭가능
+        if self.dateFormatter.string(from: date) == self.dateFormatter.string(from: Date()) {
+            //print("did select date \(self.dateFormatter.string(from: date))")
+            let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
+            //print("selected dates is \(selectedDates)")
+            setFBData_WaterDate(dateList: selectedDates)
+            print("Both dates are same")
+            selectCalendarDate()
+        }else{
+            self.calendar.deselect(date)
+        }
         
-        if (CurrentPlantList.count == 1){
-            print(CurrentPlantList[0].name)
-                print(date)
-                print(self.dateFormatter.string(from: date))
-            }
         
         
     }
@@ -158,40 +159,26 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         infoWaterDate(date :convertedArray)
         
     }
-    func infoWaterDate(date :[Date] ){// 4 --> 7, 30-->1, 5-->30/5:=6
-        //앞으로 물줘야 하는 날짜 하루를 알려줌
+    func infoWaterDate(date :[Date]){// 4 --> 7, 30-->1, 5-->30/5:=6
+        //todo 앞으로 물줘야 하는 날짜 하루를 저장해줌.
         print("self.calendar.maximumDate")
-        print(self.calendar.selectedDates.max())
-        print( self.calendar.selectedDates.max()?.compare(Date()).rawValue as Any)//현재 날짜(Date())와 비교, 크면 1, 작으면 -1
-        if  self.calendar.selectedDates.max()?.compare(Date()).rawValue == -1{
-            self.calendar.select(Calendar.current.date(byAdding: .day, value: 30/Int((CurrentPlantList[0].PrivateFrequency!["f_fall"] as! NSString) as String)!, to: self.calendar.selectedDates.max()!))
-                //print("최근꺼에서 +한 것을 select**")///todo 좀 다른 방식으로 표시
-                self.CurrentPlantList[0].private_waterDate.append(self.dateFormatter.string(from: self.calendar.selectedDates.max()!))
-               setFBData_WaterDate()
-        }else if(self.calendar.selectedDates.max()?.compare(Date()).rawValue == 1 && self.calendar.selectedDates.count == 1){
-            //현재 날짜보다 큰 날짜 만 선택되어 있을때는 모두 지운다.
-            self.calendar.deselect(self.calendar.selectedDates.max()!)
-            self.CurrentPlantList[0].private_waterDate.removeAll()
-            //next, FB upload
-            setFBData_WaterDate()
-        }else if(self.calendar.selectedDates.max()?.compare(Date()).rawValue == 1 && self.calendar.selectedDates.count > 1){
-            //현재 날짜보다 큰 날짜가 선택되어 있고 그전 날짜를 지웠는데 그 전전 날짜가 남았을 때. 마지막 날짜를 지우고 --> if 1  번과 같이함.
-            self.CurrentPlantList[0].private_waterDate.remove(at: self.CurrentPlantList[0].private_waterDate.firstIndex(of: self.dateFormatter.string(from: self.calendar.selectedDates.max()!))!)
-            self.calendar.deselect(self.calendar.selectedDates.max()!)
-            
-            
-            //if 1  번
-            self.calendar.select(Calendar.current.date(byAdding: .day, value: 30/Int((CurrentPlantList[0].PrivateFrequency!["f_fall"] as! NSString) as String)!, to: self.calendar.selectedDates.max()!))
-            
+        //print(self.calendar.selectedDates.max())
+        //print(self.calendar.selectedDates.max()?.compare(Date()).rawValue as Any)//현재 날짜(Date())와 비교, 크면 1, 작으면 -1
+        self.calendar.select(Calendar.current.date(byAdding: .day, value: 30/Int((CurrentPlantList[0].PrivateFrequency![f_waterSeason] as! NSString) as String)!, to: self.calendar.selectedDates.max()!))
+            //print("최근꺼에서 +한 것을 select**")///todo 좀 다른 방식으로 표시
             self.CurrentPlantList[0].private_waterDate.append(self.dateFormatter.string(from: self.calendar.selectedDates.max()!))
-            setFBData_WaterDate()
-        }
+            self.CurrentPlantList[0].private_wouldWaterDate = self.dateFormatter.string(from: (self.calendar.selectedDates.max()?.addingTimeInterval(30))!)
+                print("@@@")
+            print(self.dateFormatter.string(from: (self.calendar.selectedDates.max()?.addingTimeInterval(30))!))
+            
+               setFBData_WaterDate()
+        
     }
-   
+   //todo 앞으로 물 줘야하는 날 index 추가, 앞으로 줘야하는 날 추가 캘린더 표시코드 삭제
     func setFBData_WaterDate(dateList: [String]){
          if (CurrentPlantList.count == 1){
             CurrentPlantList[0].private_waterDate = dateList
-            refUser.child("users").child(User.uid).child("MyPlants").child(CurrentPlantList[0].name).setValue(["Explanation": CurrentPlantList[0].Explanation,"NumericalData": CurrentPlantList[0].NumericalData,"name": CurrentPlantList[0].name,"PrivateFrequency": CurrentPlantList[0].NumericalData, "private_waterDate":  CurrentPlantList[0].private_waterDate])
+            refUser.child("users").child(User.uid).child("MyPlants").child(CurrentPlantList[0].name).setValue(["Explanation": CurrentPlantList[0].Explanation,"NumericalData": CurrentPlantList[0].NumericalData,"name": CurrentPlantList[0].name,"PrivateFrequency": CurrentPlantList[0].NumericalData, "private_waterDate":  CurrentPlantList[0].private_waterDate, "private_wouldWaterDate" :CurrentPlantList[0].private_wouldWaterDate ])
             /*let key = refUser.child("users").child(User.uid).child("MyPlants").child(CurrentPlantList[0].name).child("PrivateFrequency").childByAutoId().key
             let post = ["private_waterDate": CurrentPlantList[0].private_waterDate]
             let childUpdates = [key: post]
@@ -297,13 +284,13 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         let calendar = Calendar.current
         let month = calendar.component(.month, from: date)
         if (month==3 || month==4 || month==5){
-            return "spring"
+            return "f_spring"
         }else if(month==6 || month==7 || month==8){
-            return "summer"
+            return "f_summer"
         }else if(month==9 || month==10 || month==11){
-            return "fall"
+            return "f_fall"
         }else if(month==12 || month==1 || month==2){
-            return "winter"
+            return "f_winter"
         }else{
             return "error"
         }
