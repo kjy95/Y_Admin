@@ -107,7 +107,7 @@ class PlantInfoPopupViewController: UIViewController {
     }
     func userPlantUpdate(){
        
-           ref.child("users").child(User.uid).child("MyPlants").child(plant[0].name).setValue(["Explanation": plant[0].Explanation,"NumericalData": plant[0].NumericalData,"name": plant[0].name, "PrivateFrequency": plant[0].NumericalData])
+        ref.child("users").child(User.uid).child("MyPlants").child(plant[0].name).setValue(["Explanation": plant[0].Explanation,"NumericalData": plant[0].NumericalData,"name": plant[0].name, "PrivateFrequency": plant[0].NumericalData])
     }
     func presentCalendar(){
         self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)

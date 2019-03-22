@@ -108,6 +108,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
             //print("selected dates is \(selectedDates)")
             setFBData_WaterDate(dateList: selectedDates)
             print("Both dates are same")
+            self.calendar.select(date)
             selectCalendarDate()
         }else{
             self.calendar.deselect(date)
@@ -164,14 +165,18 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
         print("self.calendar.maximumDate")
         //print(self.calendar.selectedDates.max())
         //print(self.calendar.selectedDates.max()?.compare(Date()).rawValue as Any)//현재 날짜(Date())와 비교, 크면 1, 작으면 -1
-        self.calendar.select(Calendar.current.date(byAdding: .day, value: 30/Int((CurrentPlantList[0].PrivateFrequency![f_waterSeason] as! NSString) as String)!, to: self.calendar.selectedDates.max()!))
+        //self.calendar.select(Calendar.current.date(byAdding: .day, value: 30/Int((CurrentPlantList[0].PrivateFrequency![f_waterSeason] as! NSString) as String)!, to: self.calendar.selectedDates.max()!))
             //print("최근꺼에서 +한 것을 select**")///todo 좀 다른 방식으로 표시
+        if !self.calendar.selectedDates.isEmpty{
             self.CurrentPlantList[0].private_waterDate.append(self.dateFormatter.string(from: self.calendar.selectedDates.max()!))
             self.CurrentPlantList[0].private_wouldWaterDate = self.dateFormatter.string(from: (self.calendar.selectedDates.max()?.addingTimeInterval(30))!)
-                print("@@@")
-            print(self.dateFormatter.string(from: (self.calendar.selectedDates.max()?.addingTimeInterval(30))!))
             
-               setFBData_WaterDate()
+            self.calendar.select(Calendar.current.date(byAdding: .day, value: 30/Int((CurrentPlantList[0].PrivateFrequency!["f_fall"] as! NSString) as String)!, to: self.calendar.selectedDates.max()!))
+            self.CurrentPlantList[0].private_wouldWaterDate = self.dateFormatter.string(from: (self.calendar.selectedDates.max())!)
+            self.calendar.deselect(self.calendar.selectedDates.max()!)
+            setFBData_WaterDate()
+        }
+        
         
     }
    //todo 앞으로 물 줘야하는 날 index 추가, 앞으로 줘야하는 날 추가 캘린더 표시코드 삭제
@@ -187,7 +192,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
     }
     func setFBData_WaterDate(){
         if (CurrentPlantList.count == 1){
-            refUser.child("users").child(User.uid).child("MyPlants").child(CurrentPlantList[0].name).setValue(["Explanation": CurrentPlantList[0].Explanation,"NumericalData": CurrentPlantList[0].NumericalData,"name": CurrentPlantList[0].name,"PrivateFrequency": CurrentPlantList[0].NumericalData, "private_waterDate":  CurrentPlantList[0].private_waterDate])
+            refUser.child("users").child(User.uid).child("MyPlants").child(CurrentPlantList[0].name).setValue(["Explanation": CurrentPlantList[0].Explanation,"NumericalData": CurrentPlantList[0].NumericalData,"name": CurrentPlantList[0].name,"PrivateFrequency": CurrentPlantList[0].NumericalData, "private_waterDate":  CurrentPlantList[0].private_waterDate, "private_wouldWaterDate" :CurrentPlantList[0].private_wouldWaterDate ])
             /*let key = refUser.child("users").child(User.uid).child("MyPlants").child(CurrentPlantList[0].name).child("PrivateFrequency").childByAutoId().key
              let post = ["private_waterDate": CurrentPlantList[0].private_waterDate]
              let childUpdates = [key: post]
@@ -249,6 +254,7 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
             if CurrentPlantList.count == 1{
                 deselectCalendarDate()
                 CurrentPlantList[0] = plantsList[pid!]
+                
             }else if(CurrentPlantList.count == 0){
                 CurrentPlantList.append(plantsList[pid!])
             }
@@ -311,6 +317,9 @@ class MainViewController : UIViewController, FSCalendarDelegate, FSCalendarDataS
                 let plants = Plant(Explanation: (Explanation)!,NumericalData:  (NumericalData)!, name: name as! String, pid: count)
                 if plantObject?["private_waterDate"] as! [String]! != nil{
                     plants.private_waterDate = plantObject?["private_waterDate"] as! [String]!
+                }
+                if plantObject?["private_wouldWaterDate"] as! String! != nil{
+                    plants.private_wouldWaterDate = plantObject?["private_wouldWaterDate"] as! String!
                 }
                 plants.PrivateFrequency = PrivateFrequency
                 self.plantsList.append(plants)
