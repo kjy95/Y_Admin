@@ -16,6 +16,7 @@ import GooglePlaces
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
  
+    var  plantsList = [Plant]()//all plantlist
     
     var window: UIWindow? 
     func prepareloginScene(){
@@ -35,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
             self.setUserProfile()
             self.sendNewUserFirebaseRealtimeDB()
             prepareMainViewController()
+            self.setPlantsListModel()
         }
     }
     func setUserProfile(){
@@ -53,6 +55,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
         ref.child("users").child(User.uid).child("profile").setValue(["uid": User.uid,"email": User.email,"phoneNum": User.phoneNum, "name": User.name, "accessibilityLanguage": User.accessibilityLanguage])
         
     }
+    func setPlantsListModel(){
+        var refUser: DatabaseReference!
+        
+        refUser = Database.database(url: "https://atticyadmin-10a61.firebaseio.com/").reference()
+         refUser.child("users").child(User.uid).child("MyPlants").observe(DataEventType.value, with: { (snapshot) in
+            
+            self.plantsList.removeAll()
+            var count = 0
+            for plants in snapshot.children.allObjects as! [DataSnapshot]{
+                let plantObject = plants.value as? [String: AnyObject]
+                let NumericalData = plantObject?["NumericalData"] as? [String: AnyObject]
+                let Explanation = plantObject?["Explanation"] as? [String: AnyObject]
+                let PrivateFrequency = plantObject?["PrivateFrequency"] as? [String: AnyObject]
+                let name = plantObject!["name"]
+                
+                let plants = Plant(Explanation: (Explanation)!,NumericalData:  (NumericalData)!, name: name as! String, pid: count)
+                if plantObject?["private_waterDate"] as! [String]! != nil{
+                    plants.private_waterDate = plantObject?["private_waterDate"] as! [String]!
+                }
+                if plantObject?["private_wouldWaterDate"] as! String! != nil{
+                    plants.private_wouldWaterDate = plantObject?["private_wouldWaterDate"] as! String!
+                    print("##")
+                    print(plants.private_wouldWaterDate)
+                }
+                plants.PrivateFrequency = PrivateFrequency
+                self.plantsList.append(plants)
+                count += 1
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+    }
+    
     func googleMapSettingManager(){
         //google map
         GMSServices.provideAPIKey("AIzaSyALHhSpSP4KFGXrTgMbPUq7oeoxZ-98O5k")
