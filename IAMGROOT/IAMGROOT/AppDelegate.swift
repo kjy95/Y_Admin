@@ -63,6 +63,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
             
             self.plantsList.removeAll()
             var count = 0
+            var userDefaultWouldWaterDatePlantList = [String]()
+            var userDefaultWouldWaterDatePlantNameList = [String]()
             for plants in snapshot.children.allObjects as! [DataSnapshot]{
                 let plantObject = plants.value as? [String: AnyObject]
                 let NumericalData = plantObject?["NumericalData"] as? [String: AnyObject]
@@ -76,12 +78,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
                 }
                 if plantObject?["private_wouldWaterDate"] as! String! != nil{
                     plants.private_wouldWaterDate = plantObject?["private_wouldWaterDate"] as! String!
-                    print("##")
-                    print(plants.private_wouldWaterDate)
+                    userDefaultWouldWaterDatePlantList.append(plants.private_wouldWaterDate)
+                    userDefaultWouldWaterDatePlantNameList.append(name as! String)
+                   
+                    
+                    
                 }
                 plants.PrivateFrequency = PrivateFrequency
                 self.plantsList.append(plants)
                 count += 1
+            }
+            if let userDefaults = UserDefaults(suiteName: "group.com.kjy.IAMGROOT"){
+                userDefaults.set(userDefaultWouldWaterDatePlantList, forKey: "userDefaultWouldWaterDatePlantList")
+                userDefaults.set(userDefaultWouldWaterDatePlantNameList, forKey: "userDefaultWouldWaterDatePlantNameList")
+                userDefaults.synchronize()
+            
+            }
+            if let userDefaults = UserDefaults(suiteName: "group.com.kjy.IAMGROOT"){
+                let userDefaultWouldWaterDatePlantList = userDefaults.stringArray(forKey: "userDefaultWouldWaterDatePlantList") ?? [String]()
+                let userDefaultWouldWaterDatePlantNameList = userDefaults.stringArray(forKey: "userDefaultWouldWaterDatePlantNameList") ?? [String]()
+                print("#")
+                print(userDefaultWouldWaterDatePlantList)
             }
         }) { (error) in
             print(error.localizedDescription)
